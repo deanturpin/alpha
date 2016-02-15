@@ -1,15 +1,33 @@
 #include <iostream>
+#include <string>
+
+// http://www.fileformat.info/info/unicode/char/2764/index.htm
 
 int main()
 {
 	using namespace std;
 
-	string codepoints("Unicode \u2764");
+	// Normal string
+	{
+		cout << "Normal strings \"\u2764\"" << endl;
 
-	cout << codepoints << endl;
+		string codepoint("\u2764");
+		cout << "cout \"" << codepoint << "\"" << endl;
 
-	for (auto x:codepoints)
-		cout << hex << (int) x << endl;
+		for (auto x:codepoint)
+			cout << hex << static_cast<int>(x) << endl;
+	}
+
+	// Wide string
+	{
+		cout << "\nWide strings \"\u2764\"" << endl;
+
+		wstring codepoint(L"\u2765");
+		wcout << "wcout \"" << codepoint << "\"" << endl;
+
+		for (auto x:codepoint)
+			cout << hex << static_cast<int>(x) << endl;
+	}
 
 	return 0;
 }
