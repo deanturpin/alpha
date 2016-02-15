@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Quiet wrappers for push and pop
+# function pushd {
+# 	pushd $1 > /dev/null
+# }
+# 
+# function popd {
+# 	pushd $1 > /dev/null
+# }
+
+for dir in *
+do
+	if [[ -d $dir ]]
+	then
+		pushd $dir
+		make
+		popd
+	fi
+done
+
