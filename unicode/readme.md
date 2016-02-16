@@ -1,4 +1,5 @@
 ## Unicode tests
 
-##TODO
+#=#TODO
 - unicode to ascii bitmap preview
+- try to_wstring

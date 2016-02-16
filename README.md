@@ -1,2 +1,3 @@
 ###TODO
--Create default makefile
+*Create default makefile
+*Recursive
