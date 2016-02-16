@@ -1,8 +1,6 @@
 #include <iostream>
 #include <string>
 
-// http://www.fileformat.info/info/unicode/char/2764/index.htm
-
 int main()
 {
 	using namespace std;
