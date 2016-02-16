@@ -1,12 +1,12 @@
 #include <string>
 #include <vector>
+#include <random>
 #include <iostream>
+#include <unistd.h>
 
 int main()
 {
 	using namespace std;
-
-	cout << "Hark" << endl;
 
 	// Populate replies
 	vector<string> replies;
@@ -19,13 +19,14 @@ int main()
 
 	while (1)
 	{
-		// Wait for a request
-		string request;
-		cin >> request;
-		cout << request << endl;
+		std::default_random_engine generator;
+		std::uniform_int_distribution<int> distribution(0, replies.size() - 1);
+		int i = distribution(generator);
 
 		// Send a reply
-		cout << replies.front();
+		cout << i << "\t" << replies.at(i) << endl;
+
+		sleep(1);
 	}
 
 	return 0;

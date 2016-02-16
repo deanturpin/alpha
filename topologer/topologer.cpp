@@ -18,9 +18,6 @@ int main()
 
 	map<string, vector<string>>hosts;
 
-	// TODO - extract CIDR
-	// TODO - create IP map
-
 	while (regex_search(host_file, match, expression))
 	{
 		hosts[match[1]].push_back(match[2]);

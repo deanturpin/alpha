@@ -14,13 +14,14 @@ int main()
 
 	map<char, int> histogram;
 
+	// Frequency analysis
 	for (auto c:file.str())
 		++histogram[c];
 
 	cout << "Histogram size " << histogram.size() << endl;
 
 	for (auto h:histogram)
-		cout << h.first << "\t" << h.second << endl;
+		cout << static_cast<int>(h.first) << "\t" << h.second << endl;
 
 	return 0;
 }
