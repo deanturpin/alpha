@@ -16,10 +16,9 @@ int main()
 	auto f = file.str();
 	smatch match;
 
-	if (regex_search(f, match, regex("<path d=.*>")))
+	if (regex_search(f, match, regex("<path d=\"([^\"]*)\".*>")))
 	{
-		auto path = *match.begin();
-		cout << path << endl;
+		cout << match[1] << endl;
 
 		// Have path, extract the points
 	}
