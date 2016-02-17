@@ -4,10 +4,10 @@
 all: unicode bitmap
 
 unicode: unicode.o
-	g++ -o $@ $<
+	clang++ -o $@ $<
 
 bitmap: bitmap.o
-	g++ -o $@ $<
+	clang++ -o $@ $<
 
 clean:
 	rm -f unicode unicode.o

@@ -4,9 +4,9 @@
 
 # Binaries
 config/template
-gpg/gpg
 hark/hark
 qonda/qonda
 topologer/topologer
 unicode/bitmap
 unicode/unicode
+encrypt/gpg

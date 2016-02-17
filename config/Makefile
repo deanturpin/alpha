@@ -4,7 +4,7 @@
 all: template
 
 template: template.o
-	g++ -o $@ $<
+	clang++ -o $@ $<
 
 clean:
 	rm -f template{,.o}
