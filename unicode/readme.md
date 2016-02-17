@@ -6,6 +6,7 @@ curl http://www.fileformat.info/info/unicode/char/0950/devanagari_om.svg | ./bit
 ![alt text](https://github.com/deanturpin/alpha/blob/master/unicode/images/om_plot.png "Excel plot of om symbol")
 
 #TODO
+* allow white space after command
 * unicode to ascii bitmap preview
 * try to_wstring
 * try wregex
