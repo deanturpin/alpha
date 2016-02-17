@@ -9,7 +9,7 @@ for dir in $base/*
 do
 	if [[ -d $dir ]]
 	then
-		echo -e "\n$dir"
+		echo -e "\n$(basename $dir)"
 		pushd $dir > /dev/null
 		if [[ -e Makefile ]]
 		then
