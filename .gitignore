@@ -1,11 +1,12 @@
-# Ignore all
-# *
-
-# Unignore all with extensions
-# !*.*
-
-# Unignore all dirs
-# !*/
-
+# Intermediate files
 *.o
 *.swp
+
+# Binaries
+config/template
+gpg/gpg
+hark/hark
+qonda/qonda
+topologer/topologer
+unicode/bitmap
+unicode/unicode
