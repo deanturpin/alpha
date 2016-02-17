@@ -1,5 +1,5 @@
 %.o:%.cpp
-	g++ -Wall -Wextra -pedantic -pedantic-errors -std=c++14 -o $*.o -c $*.cpp
+	clang++ -Wall -Wextra -pedantic -pedantic-errors -std=c++14 -o $*.o -c $*.cpp
 
 topologer: topologer.o
 	g++ -o $@ $<
