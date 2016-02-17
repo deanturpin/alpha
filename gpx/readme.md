@@ -1,3 +1,10 @@
+#Text-based GPX processing and What 3 Words integration
+
+#TODO
+- [ ] Ubuntu widget
+- [ ] ascii map
+- [ ] Add hotspot generator
+
 #Extract
 ##Usage
 ```bash
