@@ -5,4 +5,4 @@ gpg: gpg.o
 	g++ -o $@ $<
 
 clean:
-	rm -f gpg{,.o}
+	rm -f gpg gpg.o

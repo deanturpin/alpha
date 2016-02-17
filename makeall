@@ -14,7 +14,7 @@ do
 	if [[ -d $dir ]]
 	then
 		pushd $dir
-		make
+		make -j
 		popd
 	fi
 done

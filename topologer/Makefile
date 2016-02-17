@@ -5,4 +5,4 @@ topologer: topologer.o
 	g++ -o $@ $<
 
 clean:
-	rm -f topologer{,.o}
+	rm -f topologer topologer.o

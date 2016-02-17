@@ -5,4 +5,4 @@ hark: hark.o
 	g++ -o $@ $<
 
 clean:
-	rm -f hark{,.o}
+	rm -f hark hark.o

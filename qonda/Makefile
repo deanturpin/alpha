@@ -5,4 +5,4 @@ qonda: qonda.o
 	g++ -o $@ $<
 
 clean:
-	rm -f qonda{,.o}
+	rm -f qonda qonda.o
