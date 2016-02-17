@@ -1,0 +1,26 @@
+#!/bin/bash
+
+base=..
+
+# Clean
+echo clean and make
+
+for dir in $base/*
+do
+	if [[ -d $dir ]]
+	then
+		echo -e "\n$dir"
+		pushd $dir > /dev/null
+		if [[ -e Makefile ]]
+		then
+			make -j clean
+			make -j
+		else
+			echo Nothing to build
+		fi
+		popd > /dev/null
+	fi
+done
+
+# echo cppcheck
+# echo regress
