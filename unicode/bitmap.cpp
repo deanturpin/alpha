@@ -11,45 +11,25 @@ int main()
 	const int height = 40;
 
 	// Create bitmap
-	/*
-	bitset<width> line = 0b0101'0101'0101'0101;
-	vector<bitset<width>> bitmap;
-	for (auto i = 0; i < height; ++i)
-		bitmap.push_back(line);
-
-	// Print bitmap
-	for (const auto l:bitmap)
-		cout << l << endl;
-	*/
-
-	// Create bitmap
-	vector<bool> raster(width, false);
-
-	vector<vector<bool>> bitmap;
-	for (auto i = 0; i < height; ++i)
-		bitmap.push_back(raster);
+	vector<vector<bool>> bitmap(height, vector<bool> (width, false));
 
 	// Top border
-	// wcout << "/" << wstring(width, L"\u2500") << "\\" << endl;
-	wstring horizontal;
-	for (auto i = 0; i < width; ++i)
-		horizontal += L"\u2500";
-
-	wcout << "+" << horizontal << "+" << endl;
+	const string horizontal(width + 2, '-');
+	cout << horizontal << endl;
 
 	// Bitmap
 	for (auto r:bitmap)
 	{
-		wcout << L"\u2502";
+		cout << "|";
 
 		for (auto b:r)
-			wcout << (b ? 'O' : ' ');
+			cout << (b ? 'O' : ' ');
 
-		wcout << "|" << endl;
+		cout << "|" << endl;
 	}
 
 	// Bottom border
-	wcout << "+" << horizontal << "+" << endl;
+	cout << horizontal << endl;
 
 	return 0;
 }
