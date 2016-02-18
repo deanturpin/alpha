@@ -3,6 +3,7 @@
 - [ ] Recursive
 - [ ] Add c++ regex explorer (deep c++)
 - [ ] Lambda expressions
+- [ ] Boost port
 - [x] Regression testing
 - [x] Run cppcheck over everything
 - [x] Try c++14 bit type (and digit representation)

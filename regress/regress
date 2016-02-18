@@ -7,6 +7,8 @@ echo
 echo cppcheck
 cppcheck --enable=all $base
 
+# cppcheck --enable=all ../ --check-config -I /usr/include/c++/5/ -I /usr/include -I /usr/include/i386-linux-gnu/c++/5/ -I/usr/lib/gcc/i686-linux-gnu/5/include -I/usr/include/i386-linux-gnu/bits/ -I/usr/include/i386-linux-gnu/ -I/usr/lib/grub/i386-pc/
+
 # Clean and make
 for dir in $base/*
 do

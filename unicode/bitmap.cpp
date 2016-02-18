@@ -10,8 +10,6 @@ int main()
 	stringstream file;
 	file << cin.rdbuf();
 
-	int blah;
-
 	// Extract path tag
 	auto f = file.str();
 	smatch match;
