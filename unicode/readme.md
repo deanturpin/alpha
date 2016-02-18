@@ -6,11 +6,11 @@ curl http://www.fileformat.info/info/unicode/char/0950/devanagari_om.svg | ./bit
 ![alt text](https://github.com/deanturpin/alpha/blob/master/unicode/images/om_plot.png "Excel plot of om symbol")
 
 #TODO
-* allow white space after command
-* unicode to ascii bitmap preview
-* try to_wstring
-* try wregex
-* explore regex - how simple can we make it?
-* add border
-* add framerate
-* add axes
+- [ ] Allow white space after command
+- [ ] Unicode to ascii bitmap preview
+- [ ] Try to_wstring
+- [ ] Try wregex
+- [ ] Explore regex - how simple can we make it?
+- [ ] Add border
+- [ ] Add framerate
+- [ ] Add axes

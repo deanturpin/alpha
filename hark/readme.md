@@ -1,3 +1,3 @@
-###TODO
-* try thread sleep
-* other distributions
+#TODO
+- [ ] Try thread sleep
+- [ ] Other distributions (random number generator)

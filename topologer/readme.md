@@ -10,6 +10,6 @@ g++ -o topologer topologer.o
 ```
 
 ## TODO
-- Verify mode - test all the IPs defined in a hosts file
-- extract CIDR
-- create IP map
+- [ ] Verify mode - test all the IPs defined in a hosts file
+- [ ] Extract CIDR
+- [ ] Create IP map
