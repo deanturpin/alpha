@@ -1,8 +1,7 @@
-%.o:%.cpp
-	clang++ -Wall -Wextra -pedantic -pedantic-errors -std=c++1z -o $*.o -c $*.cpp
+include ../rules.mak
 
 topologer: topologer.o
-	clang++ -o $@ $<
+	$(CC) -o $@ $<
 
 clean:
 	rm -f topologer topologer.o

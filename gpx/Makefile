@@ -1,5 +1,4 @@
-%.o:%.cpp
-	clang++ -Wall -Wextra -pedantic -pedantic-errors -std=c++14 -o $*.o -c $*.cpp
+include ../rules.mak
 
 elevation: elevation.o
 	clang++ -o $@ $<
