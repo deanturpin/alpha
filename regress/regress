@@ -23,6 +23,8 @@ do
 done
 
 # Run cppcheck
+echo
+echo cppcheck
 cppcheck $base
 
 # echo regress
