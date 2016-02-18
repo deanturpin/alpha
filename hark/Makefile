@@ -1,7 +1,7 @@
 include ../rules.mak
 
 hark: hark.o
-	clang++ -o $@ $<
+	$(CC) -o $@ $<
 
 clean:
-	rm -f hark hark.o
+	rm hark hark.o

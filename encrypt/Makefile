@@ -1,7 +1,7 @@
 include ../rules.mak
 
 gpg: gpg.o
-	clang++ -o $@ $<
+	$(CC) -o $@ $<
 
 clean:
-	rm -f gpg gpg.o
+	rm gpg gpg.o

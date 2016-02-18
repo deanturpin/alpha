@@ -3,11 +3,11 @@ include ../rules.mak
 all: unicode bitmap
 
 unicode: unicode.o
-	clang++ -o $@ $<
+	$(CC) -o $@ $<
 
 bitmap: bitmap.o
-	clang++ -o $@ $<
+	$(CC) -o $@ $<
 
 clean:
-	rm -f unicode unicode.o
-	rm -f bitmap bitmap.o
+	rm unicode unicode.o
+	rm bitmap bitmap.o

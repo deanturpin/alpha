@@ -1,7 +1,7 @@
 include ../rules.mak
 
 elevation: elevation.o
-	clang++ -o $@ $<
+	$(CC) -o $@ $<
 
 clean:
-	rm -f elevation elevation.o
+	rm elevation elevation.o

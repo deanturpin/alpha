@@ -1,7 +1,7 @@
 include ../rules.mak
 
 template: template.o
-	clang++ -o $@ $<
+	$(CC) -o $@ $<
 
 clean:
-	rm -f template template.o
+	rm template template.o

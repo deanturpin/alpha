@@ -4,4 +4,4 @@ topologer: topologer.o
 	$(CC) -o $@ $<
 
 clean:
-	rm -f topologer topologer.o
+	rm topologer topologer.o

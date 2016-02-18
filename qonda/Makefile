@@ -1,7 +1,7 @@
 include ../rules.mak
 
 qonda: qonda.o
-	clang++ -o $@ $<
+	$(CC) -o $@ $<
 
 clean:
-	rm -f qonda qonda.o
+	rm qonda qonda.o
