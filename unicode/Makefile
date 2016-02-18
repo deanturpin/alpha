@@ -1,6 +1,6 @@
 include ../rules.mak
 
-all: unicode bitmap
+all: unicode bitmap svg
 
 unicode: unicode.o
 	$(CC) -o $@ $<
@@ -8,6 +8,10 @@ unicode: unicode.o
 bitmap: bitmap.o
 	$(CC) -o $@ $<
 
+svg: svg.o
+	$(CC) -o $@ $<
+
 clean:
-	rm unicode unicode.o
-	rm bitmap bitmap.o
+	$(RM) unicode unicode.o
+	$(RM) bitmap bitmap.o
+	$(RM) svg svg.o
