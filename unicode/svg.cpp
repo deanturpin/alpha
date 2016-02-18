@@ -4,23 +4,34 @@
 
 namespace asc
 {
+	using namespace std;
+
 	class bitmap
 	{
 		public:
 
+			// Constructor
 			bitmap(const unsigned int width, const unsigned int height)
+				: bm(height, vector<bool> (width, false)) // Initialise bitmap
 			{
-				using namespace std;
+				cout << "New " << width << " by " << height << endl;
+			}
 
-				// Create bitmap
-				vector<vector<bool>> bitmap(height, vector<bool> (width, false));
+			// Add a point to the bitmap
+			void set(const unsigned int x, const unsigned int y)
+			{
+				bm[x][y] = true;
+			}
 
+			// Render bitmap
+			void render()
+			{
 				// Top border
-				const string horizontal(width + 2, '-');
+				const string horizontal(bm.front().size() + 2, '-');
 				cout << horizontal << endl;
 
 				// Bitmap
-				for (auto r:bitmap)
+				for (auto r:bm)
 				{
 					cout << "|";
 
@@ -33,6 +44,10 @@ namespace asc
 				// Bottom border
 				cout << horizontal << endl;
 			}
+
+		private:
+
+			vector<vector<bool>> bm;
 	};
 }
 
@@ -78,8 +93,22 @@ int main()
 		cout << "Y " << *y_range.first << " to " << *y_range.second << endl;
 
 		// Create bitmap
-		// asc::bitmap b(150,40);
-			
+		const unsigned int width = 100;
+		const unsigned int height = 50;
+		asc::bitmap b(width,height);
+
+		// Populate
+		auto j = X.cbegin();
+		auto k = Y.cbegin();
+		for (; j != X.cend() && k != Y.cend(); ++j, ++k)
+		{
+			const unsigned int _x = floor((height - 1) * *j / *x_range.second);
+			const unsigned int _y = floor((height - 1) * *k / *y_range.second);
+
+			b.set(_y, _x);
+		}
+
+		b.render();
 	}
 	else
 		cout << "No match" << endl;
