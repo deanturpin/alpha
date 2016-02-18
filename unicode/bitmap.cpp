@@ -35,10 +35,3 @@ namespace asc
 			}
 	};
 }
-
-int main()
-{
-	asc::bitmap b(140, 40);
-
-	return 0;
-}
