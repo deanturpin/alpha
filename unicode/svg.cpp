@@ -98,9 +98,7 @@ int main()
 		asc::bitmap b(width,height);
 
 		// Populate
-		auto j = X.cbegin();
-		auto k = Y.cbegin();
-		for (; j != X.cend() && k != Y.cend(); ++j, ++k)
+		for (auto j = X.cbegin(), k = Y.cbegin(); j != X.cend() && k != Y.cend(); ++j, ++k)
 		{
 			const unsigned int _x = floor((height - 1) * *j / *x_range.second);
 			const unsigned int _y = floor((height - 1) * *k / *y_range.second);
