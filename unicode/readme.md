@@ -11,6 +11,7 @@ curl http://www.fileformat.info/info/unicode/char/0950/devanagari_om.svg | ./bit
 - [ ] Try to_wstring
 - [ ] Try wregex
 - [ ] Explore regex - how simple can we make it?
-- [ ] Add border
+- [x] Add border
+- [ ] Unicode border
 - [ ] Add framerate
 - [ ] Add axes
