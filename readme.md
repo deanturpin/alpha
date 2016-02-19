@@ -1,4 +1,5 @@
 ###TODO
+- [ ] lowercase makefiles 
 - [ ] Add c++ regex explorer (deep c++)
 - [ ] Lambda expressions
 - [ ] Boost port
