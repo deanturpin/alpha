@@ -2,7 +2,7 @@
 #include <string>
 #include <bitset>
 
-int main()
+int unicode()
 {
 	using namespace std;
 

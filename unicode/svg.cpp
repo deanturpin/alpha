@@ -38,17 +38,17 @@ int main()
 		}
 
 		// Calculate range
-		const auto x_range = minmax_element(X.cbegin(), X.cend());
-		const auto y_range = minmax_element(Y.cbegin(), Y.cend());
+		const auto x_max = *max_element(X.cbegin(), X.cend());
+		const auto y_max = *max_element(Y.cbegin(), Y.cend());
 
 		// Create bitmap
-		asc::bitmap b(164,60);
+		class asc::bitmap b(164,60);
 
 		// Populate
 		for (auto j = X.cbegin(), k = Y.cbegin(); j != X.cend() && k != Y.cend(); ++j, ++k)
 		{
-			const unsigned int _x = floor((b.height - 1) * *j / *x_range.second);
-			const unsigned int _y = floor((b.height - 1) * *k / *y_range.second);
+			const unsigned int _x = floor((b.height - 1) * *j / x_max);
+			const unsigned int _y = floor((b.height - 1) * *k / y_max);
 
 			b.set(_y, _x);
 		}
