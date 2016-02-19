@@ -1,11 +1,12 @@
 ###TODO
-- [ ] Create default makefile
-- [ ] Recursive
 - [ ] Add c++ regex explorer (deep c++)
 - [ ] Lambda expressions
 - [ ] Boost port
 - [ ] git submodules
 - [ ] Use colours for regression report
+- [ ] Make bitmap a library
+- [x] Create default makefile
+- [x] Recursive make
 - [x] Regression testing
 - [x] Run cppcheck over everything
 - [x] Try c++14 bit type (and digit representation)

@@ -1,10 +1,8 @@
 CC=clang++
+RM=rm -f
 
 %.o:%.cpp
 	$(CC) -Wall -Wextra -pedantic -pedantic-errors -std=c++1z -o $*.o -c $*.cpp
-
-# Target name is the enclosing directory
-# target := $(shell basename `pwd`)
 
 # Target name is the same for all projects (makes .gitignore simple)
 target := foo
@@ -16,5 +14,3 @@ $(target) : $(objects)
 
 clean:
 	$(RM) $(target) $(objects)
-
-RM=rm -f
