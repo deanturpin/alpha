@@ -1,64 +1,8 @@
 #include <iostream>
 #include <sstream>
-#include <vector>
-
-namespace asc
-{
-	using namespace std;
-
-	class bitmap
-	{
-		public:
-
-			// Constructor
-			bitmap(const unsigned int w, const unsigned int h)
-				: width(w)
-				, height(h)
-				, bm(h, vector<bool> (w, false))
-			{
-			}
-
-			// Add a point to the bitmap
-			void set(const unsigned int x, const unsigned int y)
-			{
-				bm[x][y] = true;
-			}
-
-			// Render bitmap
-			void render()
-			{
-				// Top border
-				const string horizontal(bm.front().size(), '-');
-				cout << "+" << horizontal << "+" << endl;
-
-				// Bitmap
-				for (auto r:bm)
-				{
-					cout << "|";
-
-					for (auto b:r)
-						cout << (b ? 'O' : ' ');
-
-					cout << "|" << endl;
-				}
-
-				// Bottom border
-				cout << "+" << horizontal << "+" << endl;
-			}
-
-			// Bitmap properties
-			const unsigned int width;
-			const unsigned int height;
-
-		private:
-
-			vector<vector<bool>> bm;
-	};
-}
-
-#include <iostream>
-#include <sstream>
 #include <regex>
+
+#include "bitmap.h"
 
 int main()
 {
@@ -116,10 +60,3 @@ int main()
 
 	return 0;
 }
-
-// M - Start a new sub-path at the given (x,y) coordinate. M (uppercase) indicates that absolute coordinates will follow; m (lowercase) indicates that relative coordinates will follow. 
-
-// Q - Draws a quadratic Bézier curve from the current point to (x,y) using (x1,y1) as the control point. Q (uppercase) indicates that absolute coordinates will follow; q (lowercase) indicates that relative coordinates will follow. Multiple sets of coordinates may be specified to draw a polybézier. At the end of the command, the new current point becomes the final (x,y) coordinate pair used in the polybézier.
-
-// Z - Close the current subpath by drawing a straight line from the current point to current subpath's initial point. Since the Z and z commands take no parameters, they have an identical effect.
-
