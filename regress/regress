@@ -14,17 +14,16 @@ for dir in $base/*
 do
 	if [[ -d $dir ]]
 	then
-		echo
-		echo -e $(basename $dir)
+		project=$(basename $dir)
 
 		pushd $dir > /dev/null
 		if [[ -e Makefile ]]
 		then
 			# cppcheck --enable=all $dir
-			make -j clean
-			make -j
+			make -j clean > /dev/null
+			make -j > /dev/null && echo $project OK || echo $project FAIL
 		else
-			echo Nothing to build
+			echo $project nothing to build
 		fi
 		popd > /dev/null
 	fi

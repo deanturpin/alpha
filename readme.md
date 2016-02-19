@@ -5,6 +5,7 @@
 - [ ] Lambda expressions
 - [ ] Boost port
 - [ ] git submodules
+- [ ] Use colours for regression report
 - [x] Regression testing
 - [x] Run cppcheck over everything
 - [x] Try c++14 bit type (and digit representation)
