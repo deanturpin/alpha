@@ -1,6 +1,6 @@
 #include <iostream>
 #include <sstream>
-#include <regex>
+#include <vector>
 
 namespace asc
 {
@@ -11,10 +11,11 @@ namespace asc
 		public:
 
 			// Constructor
-			bitmap(const unsigned int width, const unsigned int height)
-				: bm(height, vector<bool> (width, false)) // Initialise bitmap
+			bitmap(const unsigned int w, const unsigned int h)
+				: width(w)
+				, height(h)
+				, bm(h, vector<bool> (w, false))
 			{
-				cout << "New " << width << " by " << height << endl;
 			}
 
 			// Add a point to the bitmap
@@ -27,8 +28,8 @@ namespace asc
 			void render()
 			{
 				// Top border
-				const string horizontal(bm.front().size() + 2, '-');
-				cout << horizontal << endl;
+				const string horizontal(bm.front().size(), '-');
+				cout << "+" << horizontal << "+" << endl;
 
 				// Bitmap
 				for (auto r:bm)
@@ -42,14 +43,22 @@ namespace asc
 				}
 
 				// Bottom border
-				cout << horizontal << endl;
+				cout << "+" << horizontal << "+" << endl;
 			}
+
+			// Bitmap properties
+			const unsigned int width;
+			const unsigned int height;
 
 		private:
 
 			vector<vector<bool>> bm;
 	};
 }
+
+#include <iostream>
+#include <sstream>
+#include <regex>
 
 int main()
 {
@@ -88,20 +97,14 @@ int main()
 		const auto x_range = minmax_element(X.cbegin(), X.cend());
 		const auto y_range = minmax_element(Y.cbegin(), Y.cend());
 
-		cout << "Codepoints " << X.size() << endl;
-		cout << "X " << *x_range.first << " to " << *x_range.second << endl;
-		cout << "Y " << *y_range.first << " to " << *y_range.second << endl;
-
 		// Create bitmap
-		const unsigned int width = 100;
-		const unsigned int height = 50;
-		asc::bitmap b(width,height);
+		asc::bitmap b(164,60);
 
 		// Populate
 		for (auto j = X.cbegin(), k = Y.cbegin(); j != X.cend() && k != Y.cend(); ++j, ++k)
 		{
-			const unsigned int _x = floor((height - 1) * *j / *x_range.second);
-			const unsigned int _y = floor((height - 1) * *k / *y_range.second);
+			const unsigned int _x = floor((b.height - 1) * *j / *x_range.second);
+			const unsigned int _y = floor((b.height - 1) * *k / *y_range.second);
 
 			b.set(_y, _x);
 		}
