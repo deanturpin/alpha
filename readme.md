@@ -1,6 +1,6 @@
 ###TODO
 - [ ] lowercase makefiles 
-- [ [ add cppcheck phony target
+- [ ] add cppcheck phony target
 - [ ] Add c++ regex explorer (deep c++)
 - [ ] Lambda expressions
 - [ ] Boost port
