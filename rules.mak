@@ -12,5 +12,9 @@ objects := $(patsubst %.cpp,%.o,$(wildcard *.cpp))
 $(target) : $(objects)
 	$(CC) -o $@ $(objects)
 
+.PHONY: cppcheck
+cppcheck:
+	cppcheck --enable=all .
+
 clean:
 	$(RM) $(target) $(objects)

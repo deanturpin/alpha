@@ -1,12 +1,12 @@
 ###TODO
-- [ ] lowercase makefiles 
-- [ ] add cppcheck phony target
 - [ ] Add c++ regex explorer (deep c++)
 - [ ] Lambda expressions
 - [ ] Boost port
 - [ ] git submodules
 - [ ] Use colours for regression report
 - [ ] Make bitmap a library
+- [x] lowercase makefiles 
+- [x] add cppcheck phony target
 - [x] Create default makefile
 - [x] Recursive make
 - [x] Regression testing
