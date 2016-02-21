@@ -1,4 +1,7 @@
 ###TODO
+- [x] Make regress script a makefile
+- [ ] Generate list of directories to build (not hardcoded)
+- [ ] Consolidate makefile and rules.mak
 - [ ] Add c++ regex explorer (deep c++)
 - [ ] Lambda expressions
 - [ ] Boost port
