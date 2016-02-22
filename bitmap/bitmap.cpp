@@ -19,11 +19,7 @@ namespace asc
 	// Add a point to the bitmap
 	void bitmap::set(const unsigned int x, const unsigned int y)
 	{
-		// TBD - check limits
-		auto _x = min(x, width);
-		auto _y = min(y, height);
-
-		bm[height - _y - 1][_x] = true;
+		bm[height - min(y, height) - 1][min(x, width)] = true;
 	}
 
 	// Render bitmap
