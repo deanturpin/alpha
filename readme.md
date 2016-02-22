@@ -1,5 +1,6 @@
 ###TODO
 - [x] Make regress script a makefile
+- [ ] Auto pointers, shared pointers
 - [ ] Generate list of directories to build (not hardcoded)
 - [ ] Consolidate makefile and rules.mak
 - [ ] Add c++ regex explorer (deep c++)
