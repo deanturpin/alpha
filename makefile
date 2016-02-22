@@ -1,7 +1,9 @@
 #projects := config encrypt gpx hark qonda svg topologer unicode
 
-.PHONY: all
-all:
+all: cppcheck clean foo
+
+.PHONY: foo
+foo:
 	$(MAKE) -C config foo
 	$(MAKE) -C encrypt foo
 	$(MAKE) -C gpx foo
