@@ -1,4 +1,5 @@
 #include <vector>
+#include <algorithm>
 #include "riff.h"
 #include "../bitmap/bitmap.h"
 
@@ -8,25 +9,34 @@ int main()
 
 	// Read header
 	struct riff::header h;
-
 	cin.read(reinterpret_cast<char *>(&h), sizeof h);
 
-	// Read a few seconds of samples
-	const unsigned int samples_in_batch = h.sample_rate * 10;
-	vector<short> samples(h.data.size > samples_in_batch ? samples_in_batch : h.data.size);
+	// Read samples
+	const unsigned int total = h.data.size;
+	vector<short> samples(total);
+	cin.read(reinterpret_cast<char *>(samples.data()), samples.size() * sizeof(short));
 
-	while (cin.read(reinterpret_cast<char *>(&samples[0]), samples.size() * sizeof(short)));
-
-	cout << "Batch length " << samples.size() / h.sample_rate << "s" << endl;
+	cout << "WAV time " << samples.size() / h.sample_rate << "s" << endl;
 	cout << "Samples " << samples.size() << endl;
 
 	// Create bitmap
-	asc::bitmap b(150, 50);
+	asc::bitmap b(50, 50);
 
-	for (unsigned int i = 0; i <  b.width; ++i)
-		b.set(i, abs(samples.at(i)));
+	// const int target_samples = b.width;
 
-	b.render();
+	const unsigned int target = b.width;
+	const unsigned int batch = total / target;
+
+	cout << "Target samples " << total << endl;
+	cout << "Samples per bin " << batch << endl;
+
+	for (auto i = samples.cbegin(); i < samples.cend(); i += batch)
+		cout << (accumulate(i, i + batch, 0) / batch) << endl;
+
+	// for (unsigned int i = 0; i < b.width; ++i)
+		// b.set(i, abs(resamples.at(i)));
+
+	// b.render();
 
 	return 0;
 }

@@ -2,7 +2,7 @@
 #include <sstream>
 #include <regex>
 
-#include "bitmap.h"
+#include "../bitmap/bitmap.h"
 
 int main()
 {
@@ -42,7 +42,7 @@ int main()
 		const auto y_max = *max_element(Y.cbegin(), Y.cend());
 
 		// Create bitmap
-		asc::bitmap b(164,60);
+		asc::bitmap b(164, 60);
 
 		// Populate
 		for (auto j = X.cbegin(), k = Y.cbegin(); j != X.cend() && k != Y.cend(); ++j, ++k)
@@ -50,7 +50,7 @@ int main()
 			const unsigned int _x = floor((b.height - 1) * *j / x_max);
 			const unsigned int _y = floor((b.height - 1) * *k / y_max);
 
-			b.set(_y, _x);
+			b.set(_x, _y);
 		}
 
 		b.render();
