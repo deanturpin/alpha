@@ -10,12 +10,13 @@ int main()
 	asc::bitmap b;
 
 	// b.set(-1, 10);
-	b.set(0, 0);
-	b.set(1, 2);
-	b.set(2, 4);
-	b.set(3, 6);
-	b.set(4, 8);
-	b.set(50, 48);
+	b.set(0, -5);
+	b.set(1, -4);
+	b.set(2, -3);
+	b.set(3, -2);
+	b.set(4, -1);
+	b.set(5, -0);
+	b.set(20, 20);
 
 	// Render it to screen
 	b.render();

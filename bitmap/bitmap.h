@@ -21,7 +21,7 @@ namespace asc
 			{
 				// Set default ranges
 				x_range.first = 0;
-				x_range.second = 100;
+				x_range.second = 150;
 
 				y_range.first = 0;
 				y_range.second = 50;
@@ -50,8 +50,11 @@ namespace asc
 				y_range.first = _bitmap.cbegin()->first;
 				y_range.second = _bitmap.crbegin()->first;
 
+				cout << "X " << x_range.first << ", " << x_range.second << endl;
+				cout << "Y " << y_range.first << ", " << y_range.second << endl;
+
 				// X axis
-				cout << string(x_range.second, '-') << x_range.second << endl;
+				// cout << "+" << string(x_range.second, '-') << x_range.second << endl;
 
 				for (auto i = y_range.first; i <= y_range.second; ++i)
 				{
@@ -64,7 +67,7 @@ namespace asc
 						bar += '*';
 					}
 
-					cout << "|" << bar << endl;
+					cout << (i == 0 ? "0" : "|") << bar << endl;
 				}
 
 				cout << y_range.second << endl;
