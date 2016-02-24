@@ -22,6 +22,7 @@ namespace asc
 				// Set default ranges
 				x_range.first = 0;
 				x_range.second = 100;
+
 				y_range.first = 0;
 				y_range.second = 50;
 			}
@@ -56,7 +57,7 @@ namespace asc
 				{
 					// Create a bar if an element exists
 					string bar;	
-					auto element = _bitmap.find(i);
+					const auto element = _bitmap.find(i);
 					if (element != _bitmap.cend())
 					{
 						bar = string(element->second, ' ');
