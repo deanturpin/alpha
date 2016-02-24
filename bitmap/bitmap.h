@@ -22,7 +22,6 @@ namespace asc
 				// Set default ranges
 				x_range.first = 0;
 				x_range.second = 100;
-
 				y_range.first = 0;
 				y_range.second = 50;
 			}
