@@ -23,37 +23,51 @@ namespace asc
 			// Set a point in the bitmap
 			void set(const int x, const int y)
 			{
-				_b[x].push_back(y);
+				// TBD - check y range for later
+
+				cout << "set " << x << ", " << y << endl;
+
+				_b[y] = x;
 			}
 
 			// Render the bitmap
 			void render()
 			{
+				const int start = _b.cbegin()->first;
+				const int end = _b.crbegin()->first;
+
+				// X axis
+				cout << string(50, '-') << endl;
+
 				/*
-				cout << "^" << endl;
-				for (const auto r:bm)
+				// Bitmap
+				for (auto i = start; i < end; ++i)
 				{
 					cout << "|";
 
-					for (auto b:r)
-						cout << (b ? '*' : ' ');
+					auto it = _b.find(i);
+					if (it != _b.end())
+						cout << string(it->second, ' ') << "*";
 
 					cout << endl;
 				}
-
-				// X axis
-				cout << "0" << string(width, '-') << ">" << endl;
 				*/
 
-				for (const auto x:_b)
-					for (const auto y:x.second)
-						cout << x.first << ", " << y << endl;
+				// Y axix
+				// cout << "-" << endl;
+
+				for (const auto &p:_b)
+					cout << p.first << "\t|" << string(p.second, ' ') << "*" << endl;
 			}
 
 		private:
 
 			// The internal bitmap
-			map<int, vector<int>> _b;
+			map<int, int> _b;
+
+			// Ranges
+			// int ymin;
+			// int ymax;
 	};
 }
 
