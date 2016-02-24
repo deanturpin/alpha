@@ -42,13 +42,13 @@ int main()
 		const auto y_max = *max_element(Y.cbegin(), Y.cend());
 
 		// Create bitmap
-		asc::bitmap b(164, 60);
+		asc::bitmap b;
 
 		// Populate
 		for (auto j = X.cbegin(), k = Y.cbegin(); j != X.cend() && k != Y.cend(); ++j, ++k)
 		{
-			const unsigned int _x = floor((b.height - 1) * *j / x_max);
-			const unsigned int _y = floor((b.height - 1) * *k / y_max);
+			const unsigned int _x = floor(50 * *j / x_max);
+			const unsigned int _y = floor(50 * *k / y_max);
 
 			b.set(_x, _y);
 		}
