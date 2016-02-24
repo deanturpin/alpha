@@ -27,15 +27,12 @@ namespace asc
 
 				cout << "set " << x << ", " << y << endl;
 
-				_b[y] = x;
+				_bitmap[y] = x;
 			}
 
 			// Render the bitmap
 			void render()
 			{
-				const int start = _b.cbegin()->first;
-				const int end = _b.crbegin()->first;
-
 				// X axis
 				cout << string(50, '-') << endl;
 
@@ -45,8 +42,8 @@ namespace asc
 				{
 					cout << "|";
 
-					auto it = _b.find(i);
-					if (it != _b.end())
+					auto it = _bitmap.find(i);
+					if (it != _bitmap.end())
 						cout << string(it->second, ' ') << "*";
 
 					cout << endl;
@@ -56,14 +53,31 @@ namespace asc
 				// Y axix
 				// cout << "-" << endl;
 
-				for (const auto &p:_b)
-					cout << p.first << "\t|" << string(p.second, ' ') << "*" << endl;
+				// for (const auto &p:_bitmap)
+					// cout << p.first << "\t|" << string(p.second, ' ') << "*" << endl;
+				
+				// const int start = _bitmap.cbegin()->first;
+				// const int end = _bitmap.crbegin()->first;
+
+				for (auto i = _bitmap.cbegin()->first; i <= _bitmap.crbegin()->first; ++i)
+				{
+					// Create a bar if an element exists
+					string bar;	
+					auto element = _bitmap.find(i);
+					if (element != _bitmap.cend())
+					{
+						bar = string(element->second, ' ');
+						bar += '*';
+					}
+
+					cout << i << "\t|" << bar << endl;
+				}
 			}
 
 		private:
 
 			// The internal bitmap
-			map<int, int> _b;
+			map<int, int> _bitmap;
 
 			// Ranges
 			// int ymin;
