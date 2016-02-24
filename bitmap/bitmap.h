@@ -37,7 +37,7 @@ namespace asc
 				x_range.first = min(x_range.first, x);
 				x_range.second = max(x_range.second, x);
 
-				cout << "set " << x << ", " << y << endl;
+				// cout << "set " << x << ", " << y << endl;
 
 				// Write to bitmap
 				_bitmap[y].push_back(x);

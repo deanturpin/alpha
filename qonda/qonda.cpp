@@ -16,27 +16,15 @@ int main()
 	vector<short> samples(total);
 	cin.read(reinterpret_cast<char *>(samples.data()), samples.size() * sizeof(short));
 
-	cout << "WAV time " << samples.size() / h.sample_rate << "s" << endl;
-	cout << "Samples " << samples.size() << endl;
-
 	// Create bitmap
 	asc::bitmap b;
 
-	// const int target_samples = b.width;
+	// Populate
+	for (int i = 0; i < 100; ++i)
+		b.set(i, samples.at(i + 10) / 2);
 
-	// const unsigned int target = b.width;
-	// const unsigned int batch = total / target;
-
-	// cout << "Target samples " << total << endl;
-	// cout << "Samples per bin " << batch << endl;
-
-	// for (auto i = samples.cbegin(); i < samples.cend(); i += batch)
-		// cout << (accumulate(i, i + batch, 0) / batch) << endl;
-
-	// for (unsigned int i = 0; i < b.width; ++i)
-		// b.set(i, abs(resamples.at(i)));
-
-	// b.render();
+	// Render
+	b.render();
 
 	return 0;
 }
