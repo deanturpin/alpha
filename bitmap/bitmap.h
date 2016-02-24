@@ -16,50 +16,44 @@ namespace asc
 	{
 		public:
 
-			// Constructor/destructor
-			bitmap() { ; }
+			// Constructor
+			bitmap()
+			{
+				// Set default ranges
+				x_range.first = 0;
+				x_range.second = 100;
+
+				y_range.first = 0;
+				y_range.second = 50;
+			}
+			
+			// Destructor
 			~bitmap() { ; }
 
 			// Set a point in the bitmap
 			void set(const int x, const int y)
 			{
-				// TBD - check y range for later
+				// Check X range
+				x_range.first = min(x_range.first, x);
+				x_range.second = max(x_range.second, x);
 
 				cout << "set " << x << ", " << y << endl;
 
+				// Write to bitmap
 				_bitmap[y] = x;
 			}
 
 			// Render the bitmap
 			void render()
 			{
+				// Extract Y range
+				y_range.first = _bitmap.cbegin()->first;
+				y_range.second = _bitmap.crbegin()->first;
+
 				// X axis
-				cout << string(50, '-') << endl;
+				cout << string(x_range.second, '-') << x_range.second << endl;
 
-				/*
-				// Bitmap
-				for (auto i = start; i < end; ++i)
-				{
-					cout << "|";
-
-					auto it = _bitmap.find(i);
-					if (it != _bitmap.end())
-						cout << string(it->second, ' ') << "*";
-
-					cout << endl;
-				}
-				*/
-
-				// Y axix
-				// cout << "-" << endl;
-
-				// for (const auto &p:_bitmap)
-					// cout << p.first << "\t|" << string(p.second, ' ') << "*" << endl;
-				
-				// const int start = _bitmap.cbegin()->first;
-				// const int end = _bitmap.crbegin()->first;
-
-				for (auto i = _bitmap.cbegin()->first; i <= _bitmap.crbegin()->first; ++i)
+				for (auto i = y_range.first; i <= y_range.second; ++i)
 				{
 					// Create a bar if an element exists
 					string bar;	
@@ -70,8 +64,10 @@ namespace asc
 						bar += '*';
 					}
 
-					cout << i << "\t|" << bar << endl;
+					cout << "|" << bar << endl;
 				}
+
+				cout << y_range.second << endl;
 			}
 
 		private:
@@ -80,8 +76,8 @@ namespace asc
 			map<int, int> _bitmap;
 
 			// Ranges
-			// int ymin;
-			// int ymax;
+			pair<int, int> x_range;
+			pair<int, int> y_range;
 	};
 }
 
