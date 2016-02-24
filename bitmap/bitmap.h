@@ -40,7 +40,7 @@ namespace asc
 				cout << "set " << x << ", " << y << endl;
 
 				// Write to bitmap
-				_bitmap[y] = x;
+				_bitmap[y].push_back(x);
 			}
 
 			// Render the bitmap
@@ -53,19 +53,17 @@ namespace asc
 				cout << "X " << x_range.first << ", " << x_range.second << endl;
 				cout << "Y " << y_range.first << ", " << y_range.second << endl;
 
-				// X axis
-				// cout << "+" << string(x_range.second, '-') << x_range.second << endl;
+				cout << y_range.first << endl;
 
 				for (auto i = y_range.first; i <= y_range.second; ++i)
 				{
 					// Create a bar if an element exists
-					string bar;	
+					string bar(x_range.second, ' ');	
 					const auto element = _bitmap.find(i);
+
 					if (element != _bitmap.cend())
-					{
-						bar = string(element->second, ' ');
-						bar += '*';
-					}
+						for (auto &e:element->second)
+							bar.at(e) = '*';
 
 					cout << (i == 0 ? "0" : "|") << bar << endl;
 				}
@@ -76,7 +74,7 @@ namespace asc
 		private:
 
 			// The internal bitmap
-			map<int, int> _bitmap;
+			map<int, vector<int>> _bitmap;
 
 			// Ranges
 			pair<int, int> x_range;
