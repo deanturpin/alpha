@@ -1,6 +1,6 @@
-#include <string>
+// #include <string>
 #include <vector>
-#include <random>
+// #include <random>
 #include <iostream>
 #include <unistd.h>
 
@@ -19,12 +19,11 @@ int main()
 
 	while (1)
 	{
-		std::default_random_engine generator;
-		std::uniform_int_distribution<int> distribution(0, replies.size() - 1);
-		int i = distribution(generator);
+		// std::default_random_engine generator;
+		// std::uniform_int_distribution<int> distribution(0, replies.size() - 1);
+		// int i = distribution(generator);
 
-		// Send a reply
-		cout << i << "\t" << replies.at(i) << endl;
+		cout << replies.at(static_cast<unsigned int>(1.0 * rand() * replies.size() / RAND_MAX)) << endl;
 
 		sleep(1);
 	}
