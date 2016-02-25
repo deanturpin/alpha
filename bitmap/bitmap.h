@@ -18,32 +18,29 @@ namespace asc
 
 			// Constructor
 			bitmap()
-			{
-				// Set default ranges
-				// x_range.first = 0;
-				// x_range.second = 150;
+				: x_scale(1)
+				, y_scale(1)
+					{ ; }
 
-				// y_range.first = 0;
-				// y_range.second = 50;
-			}
-			
 			// Destructor
 			~bitmap() { ; }
 
 			// Set a point in the bitmap
 			void set(const int x, const int y)
 			{
+				// Scale parameters
+				const int _x = x / x_scale;
+				const int _y = y / y_scale;
+
 				// Check ranges
-				x_range.first = min(x_range.first, x);
-				x_range.second = max(x_range.second, x);
+				x_range.first = min(x_range.first, _x);
+				x_range.second = max(x_range.second, _x);
 
-				y_range.first = min(y_range.first, y);
-				y_range.second = max(y_range.second, y);
-
-				cout << "set " << x << ", " << y << endl;
+				y_range.first = min(y_range.first, _y);
+				y_range.second = max(y_range.second, _y);
 
 				// Write to bitmap
-				_bitmap[y].push_back(x);
+				_bitmap[_y].push_back(_x);
 			}
 
 			// Print some props
@@ -51,6 +48,12 @@ namespace asc
 			{
 				cout << "X " << x_range.first << ", " << x_range.second << endl;
 				cout << "Y " << y_range.first << ", " << y_range.second << endl;
+			}
+
+			void scale(const int x, const int y)
+			{
+				x_scale = x;
+				y_scale = y;
 			}
 
 			// Render the bitmap
@@ -92,6 +95,10 @@ namespace asc
 			// Ranges
 			pair<int, int> x_range;
 			pair<int, int> y_range;
+
+			// Scaling
+			int x_scale;
+			int y_scale;
 	};
 }
 

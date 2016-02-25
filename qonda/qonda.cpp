@@ -19,10 +19,11 @@ int main()
 
 	// Create bitmap
 	asc::bitmap b;
+	b.scale(400, 400);
 
 	// Populate
-	for (int i = 0; i < 165; ++i)
-		b.set(i, samples.at(i) / 10);
+	for (int i = 0; i < 400 * 165; ++i)
+		b.set(i, samples.at(i));
 
 	b.properties();
 
