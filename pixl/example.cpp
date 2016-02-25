@@ -1,32 +1,42 @@
 #include <iostream>
 
-#include "bitmap.h"
+#include "pixl.h"
 
 int main()
 {
 	using namespace std;
 
 	// Create bitmap
-	asc::bitmap b;
+	mega::pixl p;
 
-	// b.set(-1, 10);
-	b.set(0, -5);
-	b.set(1, -4);
-	b.set(2, -3);
-	b.set(3, -2);
-	b.set(4, -1);
-	b.set(5, -0);
-	b.set(20, 20);
-	b.set(20, 21);
-	b.set(20, 22);
-	b.set(21, 22);
-	b.set(22, 22);
-	b.set(23, 22);
-	b.set(24, 22);
-	b.set(25, 22);
+	p.set(26, 29);
+	p.set(28, 23);
+	p.set(42, 23);
+	p.set(50, 27);
+	p.set(50, 31);
+	p.set(46, 35);
+	p.set(37, 41);
+	p.set(33, 43);
+	p.set(28, 48);
+	p.set(27, 49);
+	p.set(26, 50);
+	p.set(25, 50);
+	p.set(24, 49);
+	p.set(23, 48);
+	p.set(19, 44);
+	p.set(15, 41);
+	p.set(5, 35);
+	p.set(2, 31);
+	p.set(2, 27);
+	p.set(9, 23);
+	p.set(18, 23);
+	p.set(24, 26);
+
+	// Print properties
+	p.properties();
 
 	// Render it to screen
-	b.render();
+	p.render();
 
 	return 0;
 }

@@ -2,7 +2,7 @@
 #include <sstream>
 #include <regex>
 
-#include "../bitmap/bitmap.h"
+#include "pixl.h"
 
 int main()
 {
@@ -42,7 +42,7 @@ int main()
 		const auto y_max = *max_element(Y.cbegin(), Y.cend());
 
 		// Create bitmap
-		asc::bitmap b;
+		mega::pixl b;
 
 		// Populate
 		for (auto j = X.cbegin(), k = Y.cbegin(); j != X.cend() && k != Y.cend(); ++j, ++k)

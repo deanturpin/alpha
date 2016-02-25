@@ -1,7 +1,7 @@
 #include <vector>
 #include <algorithm>
 #include "riff.h"
-#include "../bitmap/bitmap.h"
+#include "pixl.h"
 
 int main()
 {
@@ -16,19 +16,19 @@ int main()
 	vector<short> samples(total);
 	cin.read(reinterpret_cast<char *>(samples.data()), samples.size() * sizeof(short));
 
-
 	// Create bitmap
-	asc::bitmap b;
-	b.scale(400, 400);
+	mega::pixl p;
+	p.scale(800, 400);
 
 	// Populate
 	for (int i = 0; i < 400 * 165; ++i)
-		b.set(i, samples.at(i));
+		p.set(i, samples.at(i));
 
-	b.properties();
+	// Print properties
+	p.properties();
 
 	// Render
-	b.render();
+	p.render();
 
 	return 0;
 }

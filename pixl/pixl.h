@@ -8,22 +8,22 @@
 #include <vector>
 #include <map>
 
-namespace asc
+namespace mega
 {
 	using namespace std;
 
-	class bitmap
+	class pixl
 	{
 		public:
 
 			// Constructor
-			bitmap()
+			pixl()
 				: x_scale(1)
 				, y_scale(1)
 					{ ; }
 
 			// Destructor
-			~bitmap() { ; }
+			~pixl() { ; }
 
 			// Set a point in the bitmap
 			void set(const int x, const int y)
@@ -40,7 +40,7 @@ namespace asc
 				y_range.second = max(y_range.second, _y);
 
 				// Write to bitmap
-				_bitmap[_y].push_back(_x);
+				bitmap[_y].push_back(_x);
 			}
 
 			// Print some props
@@ -60,24 +60,23 @@ namespace asc
 			void render()
 			{
 				// Extract Y range
-				y_range.first = _bitmap.cbegin()->first;
-				y_range.second = _bitmap.crbegin()->first;
+				y_range.first = bitmap.cbegin()->first;
+				y_range.second = bitmap.crbegin()->first;
 
-				// cout << y_range.first << endl;
-
-				const auto y_max = max(y_range.first, y_range.second);
+				// const auto y_max = max(y_range.first, y_range.second);
 
 				string bar(x_range.second + 1, ' ');
 
-				for (auto i = -y_max; i <= y_max; ++i)
+				// for (auto i = y_min; i <= y_max; ++i)
+				for (auto i = y_range.first; i <= y_range.second; ++i)
 				{
 					// Create an empty bar or an axis
 					bar.assign(bar.size(), (i == 0 ? '-' : ' '));
 
 					// Search for elements on current line
-					const auto element = _bitmap.find(i);
+					const auto element = bitmap.find(i);
 
-					if (element != _bitmap.cend())
+					if (element != bitmap.cend())
 						for (auto &e:element->second)
 							bar.at(e) = '*';
 
@@ -90,7 +89,7 @@ namespace asc
 		private:
 
 			// The internal bitmap
-			map<int, vector<int>> _bitmap;
+			map<int, vector<int>> bitmap;
 
 			// Ranges
 			pair<int, int> x_range;

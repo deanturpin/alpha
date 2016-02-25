@@ -5,7 +5,7 @@ RM=rm -f
 # -O2
 
 %.o:%.cpp
-	$(CC) -Wall -Wextra -pedantic -pedantic-errors -std=c++1z -o $*.o -c $*.cpp
+	$(CC) -Wall -Wextra -pedantic -pedantic-errors -std=c++1z -I../pixl -o $*.o -c $*.cpp
 
 # Target name is the same for all projects (makes .gitignore simple)
 target := foo
