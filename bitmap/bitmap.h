@@ -20,11 +20,11 @@ namespace asc
 			bitmap()
 			{
 				// Set default ranges
-				x_range.first = 0;
-				x_range.second = 150;
+				// x_range.first = 0;
+				// x_range.second = 150;
 
-				y_range.first = 0;
-				y_range.second = 50;
+				// y_range.first = 0;
+				// y_range.second = 50;
 			}
 			
 			// Destructor
@@ -33,14 +33,24 @@ namespace asc
 			// Set a point in the bitmap
 			void set(const int x, const int y)
 			{
-				// Check X range
+				// Check ranges
 				x_range.first = min(x_range.first, x);
 				x_range.second = max(x_range.second, x);
 
-				// cout << "set " << x << ", " << y << endl;
+				y_range.first = min(y_range.first, y);
+				y_range.second = max(y_range.second, y);
+
+				cout << "set " << x << ", " << y << endl;
 
 				// Write to bitmap
 				_bitmap[y].push_back(x);
+			}
+
+			// Print some props
+			void properties()
+			{
+				cout << "X " << x_range.first << ", " << x_range.second << endl;
+				cout << "Y " << y_range.first << ", " << y_range.second << endl;
 			}
 
 			// Render the bitmap
@@ -50,22 +60,25 @@ namespace asc
 				y_range.first = _bitmap.cbegin()->first;
 				y_range.second = _bitmap.crbegin()->first;
 
-				cout << "X " << x_range.first << ", " << x_range.second << endl;
-				cout << "Y " << y_range.first << ", " << y_range.second << endl;
+				// cout << y_range.first << endl;
 
-				cout << y_range.first << endl;
+				const auto y_max = max(y_range.first, y_range.second);
 
-				for (auto i = y_range.first; i <= y_range.second; ++i)
+				string bar(x_range.second + 1, ' ');
+
+				for (auto i = -y_max; i <= y_max; ++i)
 				{
-					// Create a bar if an element exists
-					string bar(x_range.second, ' ');	
+					// Create an empty bar or an axis
+					bar.assign(bar.size(), (i == 0 ? '-' : ' '));
+
+					// Search for elements on current line
 					const auto element = _bitmap.find(i);
 
 					if (element != _bitmap.cend())
 						for (auto &e:element->second)
 							bar.at(e) = '*';
 
-					cout << (i == 0 ? "0" : "|") << bar << endl;
+					cout << "|" << bar << endl;
 				}
 
 				cout << y_range.second << endl;

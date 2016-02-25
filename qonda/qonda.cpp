@@ -16,12 +16,15 @@ int main()
 	vector<short> samples(total);
 	cin.read(reinterpret_cast<char *>(samples.data()), samples.size() * sizeof(short));
 
+
 	// Create bitmap
 	asc::bitmap b;
 
 	// Populate
-	for (int i = 0; i < 100; ++i)
-		b.set(i, samples.at(i + 10) / 2);
+	for (int i = 0; i < 165; ++i)
+		b.set(i, samples.at(i) / 10);
+
+	b.properties();
 
 	// Render
 	b.render();
