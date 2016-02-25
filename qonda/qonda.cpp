@@ -16,16 +16,30 @@ int main()
 	vector<short> samples(total);
 	cin.read(reinterpret_cast<char *>(samples.data()), samples.size() * sizeof(short));
 
+	cout << "Samples " << samples.size() << endl;
+
 	// Create bitmap
 	mega::pixl p;
-	p.scale(800, 400);
+
+	// Target dimensions
+	const int x = 150;
+	// const int y = 50;
+
+	const int x_bin_size = samples.size() / x;
+	const int y_bin_size = 273;
+
+	// cout << "x bin size " << x_bin_size << endl;
 
 	// Populate
-	for (int i = 0; i < 400 * 165; ++i)
-		p.set(i, samples.at(i));
+	for (const auto &s:samples)
+	{
+		static int i = 0;
+		p.set(i++ / x_bin_size, s / y_bin_size);
+	}
 
 	// Print properties
 	p.properties();
+	// p.dump();
 
 	// Render
 	p.render();
