@@ -26,7 +26,7 @@ int main()
 	// const int y = 50;
 
 	const int x_bin_size = samples.size() / x;
-	const int y_bin_size = 273;
+	const int y_bin_size = 1200;
 
 	// cout << "x bin size " << x_bin_size << endl;
 
