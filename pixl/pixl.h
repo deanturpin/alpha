@@ -1,4 +1,4 @@
-// Simple ASCII bitmap
+// Simple ASCII bitmap for rapid prototyping on the command line
 // Just include this header - all methods are inline
 
 #ifndef ASC_BITMAP_H
@@ -8,7 +8,7 @@
 #include <vector>
 #include <map>
 
-namespace mega
+namespace beta
 {
 	using namespace std;
 

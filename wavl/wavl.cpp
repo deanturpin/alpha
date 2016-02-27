@@ -19,7 +19,7 @@ int main()
 	cout << "Samples " << samples.size() << endl;
 
 	// Create bitmap
-	mega::pixl p;
+	beta::pixl p;
 
 	// Target dimensions
 	const int x = 150;

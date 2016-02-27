@@ -42,7 +42,7 @@ int main()
 		const auto y_max = *max_element(Y.cbegin(), Y.cend());
 
 		// Create bitmap
-		mega::pixl b;
+		beta::pixl b;
 
 		// Populate
 		for (auto j = X.cbegin(), k = Y.cbegin(); j != X.cend() && k != Y.cend(); ++j, ++k)

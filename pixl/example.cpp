@@ -7,7 +7,7 @@ int main()
 	using namespace std;
 
 	// Create bitmap
-	mega::pixl p;
+	beta::pixl p;
 
 	p.set(26, 29);
 	p.set(28, 23);
