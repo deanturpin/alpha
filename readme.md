@@ -1,15 +1,15 @@
-###TODO
-- [x] Make regress script a makefile
+##TODO
 - [ ] Auto pointers, shared pointers
-- [x] Generate list of directories to build (not hardcoded) - not required
 - [ ] Consolidate makefile and rules.mak
 - [ ] Add c++ regex explorer (deep c++)
 - [ ] Lambda expressions
 - [ ] Boost port
 - [ ] git submodules
 - [ ] Use colours for regression report
-- [x] Make bitmap a library
 - [ ] Algorithm complexity refresher
+- [x] Make bitmap a library
+- [x] Generate list of directories to build (not hardcoded) - not required
+- [x] Make regress script a makefile
 - [x] lowercase makefiles 
 - [x] add cppcheck phony target
 - [x] Create default makefile

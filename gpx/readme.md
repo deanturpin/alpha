@@ -1,9 +1,9 @@
 #Text-based GPX processing and What 3 Words integration
 
-#TODO
-- [ ] Ubuntu widget
-- [ ] ascii map
+##TODO
+- [ ] ascii route
 - [ ] Add hotspot generator
+- [x] Ubuntu widget
 
 #Extract
 ##Usage

@@ -1,23 +1,19 @@
-# Extract plots from SVG and generate CSV
+## Extract plots from SVG and generate CSV
 ```bash
 curl http://www.fileformat.info/info/unicode/char/0950/devanagari_om.svg | ./bitmap  > om.csv && libreoffice om.csv
 ```
 
 ![alt text](https://github.com/deanturpin/alpha/blob/master/unicode/images/om_plot.png "Excel plot of om symbol")
 
-#TODO
+##TODO
 - [ ] Render should return a string or use operator<<
 - [ ] Allow white space after command
-- [x] Unicode to ascii bitmap preview
 - [ ] Try to_wstring
 - [ ] Try wregex
 - [ ] Explore regex - how simple can we make it?
-- [x] Add border
-- [x] Unicode border
 - [ ] Add framerate
-- [ ] Add axes
 
-#SVG format
+##SVG format
 M - Start a new sub-path at the given (x,y) coordinate. M (uppercase) indicates that absolute coordinates will follow; m (lowercase) indicates that relative coordinates will follow. 
 
 Q - Draws a quadratic Bézier curve from the current point to (x,y) using (x1,y1) as the control point. Q (uppercase) indicates that absolute coordinates will follow; q (lowercase) indicates that relative coordinates will follow. Multiple sets of coordinates may be specified to draw a polybézier. At the end of the command, the new current point becomes the final (x,y) coordinate pair used in the polybézier.
