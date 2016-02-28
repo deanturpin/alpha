@@ -1,8 +1,9 @@
 CC=clang++
 RM=rm -f
+FLAGS=-Wall -Wextra -pedantic -pedantic-errors -std=c++1z 
 
 %.o:%.cpp
-	$(CC) -Wall -Wextra -pedantic -pedantic-errors -std=c++1z -I../pixl -o $*.o -c $*.cpp
+	$(CC) $(FLAGS) -o $*.o -c $*.cpp
 
 # Target name is the same for all projects (makes .gitignore simple)
 target := foo
