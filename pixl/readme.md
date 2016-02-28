@@ -6,3 +6,37 @@
 - [x] Add border
 - [x] Unicode border - too complicated
 - [x] Add axes
+
+```bash
+$ ./foo
+X 0, 50
+Y 0, 50
+         *        *         *             *        
+                                                   
+                                                   
+                        *                          
+  *                                               *
+                                                   
+                          *                        
+                                                   
+  *                                               *
+                                                   
+                                                   
+                                                   
+     *                                        *    
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+               *                     *             
+                                                   
+                                 *                 
+                   *                               
+                                                   
+                                                   
+                                                   
+                       *    *                      
+                        *  *                       
+                         **
+```
