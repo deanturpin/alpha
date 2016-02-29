@@ -25,10 +25,10 @@ int main()
 		latlon << match[1] << " " << match[2];
 
 		int lat, lon;
-		latlon >> lon;
 		latlon >> lat;
+		latlon >> lon;
 
-		p.set(lon / 2, lat / 2);
+		p.set(lon / 20, lat / 20);
 
 		// Move on to the remainder
 		gpx = match.suffix().str();
