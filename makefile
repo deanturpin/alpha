@@ -1,7 +1,9 @@
-
 .SILENT:
 
 all: cppcheck clean foo
+
+# List of all directories containing a makefile
+source_dirs = $(dir $(wildcard */makefile))
 
 # cppcheck from top level
 .PHONY: cppcheck
@@ -12,24 +14,10 @@ cppcheck:
 .PHONY: foo
 foo:
 	echo Build all
-	$(MAKE) -C config foo
-	$(MAKE) -C encrypt foo
-	$(MAKE) -C gpx foo
-	$(MAKE) -C hark foo
-	$(MAKE) -C wavl foo
-	$(MAKE) -C svg foo
-	$(MAKE) -C topologer foo
-	$(MAKE) -C unicode foo
+	$(foreach dir, $(source_dirs), echo $(dir); make -j -C $(dir);)
 
 # Clean each project
 .PHONY: clean
 clean:
 	echo Clean all
-	$(MAKE) -C config clean
-	$(MAKE) -C encrypt clean
-	$(MAKE) -C gpx clean
-	$(MAKE) -C hark clean
-	$(MAKE) -C wavl clean
-	$(MAKE) -C svg clean
-	$(MAKE) -C topologer clean
-	$(MAKE) -C unicode clean
+	$(foreach dir, $(source_dirs), make -C $(dir) clean;)

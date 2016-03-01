@@ -12,7 +12,7 @@ target := foo
 # Compile and link all source files into a single executable
 objects := $(patsubst %.cpp,%.o,$(wildcard *.cpp))
 $(target) : $(objects)
-	echo Linking $@
+	echo Linking
 	$(CC) -o $@ $(objects)
 
 clean:
