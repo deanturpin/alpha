@@ -14,10 +14,9 @@ int main()
 	raw << cin.rdbuf();
 	string gpx = raw.str();
 
-	vector<pair<double, double>> coordinates;
-	smatch match;
-
+	// Create a bitmap
 	beta::pixl p;
+	smatch match;
 
 	while (regex_search(gpx, match, regex("lat=\".....(...).+\" lon=\"....(...).+\"")))
 	{

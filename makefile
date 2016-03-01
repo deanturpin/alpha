@@ -1,3 +1,6 @@
+
+.SILENT:
+
 all: cppcheck clean foo
 
 # cppcheck from top level
@@ -8,6 +11,7 @@ cppcheck:
 # Build each project
 .PHONY: foo
 foo:
+	echo Build all
 	$(MAKE) -C config foo
 	$(MAKE) -C encrypt foo
 	$(MAKE) -C gpx foo
@@ -20,6 +24,7 @@ foo:
 # Clean each project
 .PHONY: clean
 clean:
+	echo Clean all
 	$(MAKE) -C config clean
 	$(MAKE) -C encrypt clean
 	$(MAKE) -C gpx clean
