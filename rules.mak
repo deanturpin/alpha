@@ -1,3 +1,5 @@
+.SILENT:
+
 CC=clang++
 RM=rm -f
 FLAGS=-Wall -Wextra -pedantic -pedantic-errors -std=c++1z
@@ -12,9 +14,8 @@ target := foo
 # Compile and link all source files into a single executable
 objects := $(patsubst %.cpp,%.o,$(wildcard *.cpp))
 $(target) : $(objects)
-	echo Linking $(objects)
+	echo Linking -o $@ $(objects)
 	$(CC) -o $@ $(objects)
-	echo Linked $(objects)
 
 clean:
 	$(RM) $(target) $(objects)

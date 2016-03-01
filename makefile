@@ -14,7 +14,7 @@ cppcheck:
 .PHONY: foo
 foo:
 	echo Build all
-	$(foreach dir, $(source_dirs), echo $(dir); make -j -C $(dir)&)
+	$(foreach dir, $(source_dirs), echo $(dir); make -j -C $(dir);)
 	echo Complete
 
 # Clean each project

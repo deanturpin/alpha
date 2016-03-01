@@ -1,6 +1,10 @@
 #include <iostream>
 #include "pixl.h"
 
+// Prototypes
+void one();
+void two();
+
 int main()
 {
 	using namespace std;
@@ -16,6 +20,9 @@ int main()
 	// Render bitmap
 	p.properties();
 	p.render();
+
+	one();
+	two();
 
 	return 0;
 }
