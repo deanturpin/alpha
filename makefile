@@ -3,7 +3,7 @@
 all: cppcheck clean foo
 
 # List of all directories containing a makefile
-source_dirs = $(dir $(wildcard */makefile))
+source_dirs := $(dir $(wildcard */makefile))
 
 # cppcheck from top level
 .PHONY: cppcheck
@@ -14,7 +14,8 @@ cppcheck:
 .PHONY: foo
 foo:
 	echo Build all
-	$(foreach dir, $(source_dirs), echo $(dir); make -j -C $(dir);)
+	$(foreach dir, $(source_dirs), echo $(dir); make -j -C $(dir)&)
+	echo Complete
 
 # Clean each project
 .PHONY: clean
