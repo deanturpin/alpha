@@ -18,8 +18,8 @@ int main()
 
 	if (regex_search(f, match, regex("<path d=\"([^\"]*)\".*>")))
 	{
-		// vector<pair<double,double>> codepoints;
-		vector<double> X, Y;
+		// Create bitmap
+		beta::pixl b;
 
 		// Have path, extract the points
 		string path = match[1];
@@ -31,28 +31,13 @@ int main()
 			double x, y;
 			xy >> x;
 			xy >> y;
-			X.push_back(x);
-			Y.push_back(y);
+			b.set(x / 4, y / 4);
 
 			path = match.suffix();
 		}
 
-		// Calculate range
-		const auto x_max = *max_element(X.cbegin(), X.cend());
-		const auto y_max = *max_element(Y.cbegin(), Y.cend());
-
-		// Create bitmap
-		beta::pixl b;
-
-		// Populate
-		for (auto j = X.cbegin(), k = Y.cbegin(); j != X.cend() && k != Y.cend(); ++j, ++k)
-		{
-			const unsigned int _x = floor(50 * *j / x_max);
-			const unsigned int _y = floor(50 * *k / y_max);
-
-			b.set(_x, _y);
-		}
-
+		// Print bitmap
+		b.properties();
 		b.render();
 	}
 	else
