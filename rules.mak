@@ -15,3 +15,6 @@ $(target) : $(objects)
 
 clean:
 	$(RM) $(target) $(objects)
+
+.PHONY: fresh
+fresh: clean foo

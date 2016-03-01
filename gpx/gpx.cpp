@@ -28,7 +28,7 @@ int main()
 		latlon >> lat;
 		latlon >> lon;
 
-		p.set(lon / 20, lat / 20);
+		p.set(lon / 10, lat / 20);
 
 		// Move on to the remainder
 		gpx = match.suffix().str();

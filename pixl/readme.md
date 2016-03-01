@@ -1,4 +1,5 @@
 ##TODO
+- [ ] Add exception handling
 - [ ] Add resize method
 - [ ] Render should return a string or use operator<<
 - [ ] Add framerate

@@ -6,6 +6,7 @@
 
 #include <iostream>
 #include <vector>
+#include <limits>
 #include <map>
 
 namespace beta
@@ -17,7 +18,15 @@ namespace beta
 		public:
 
 			// Constructor
-			pixl() { ; }
+			pixl()
+			{
+				// Set ranges to min and max
+				x_range.first = numeric_limits<int>::max();
+				x_range.second = numeric_limits<int>::min();
+
+				y_range.first = numeric_limits<int>::max();
+				y_range.second = numeric_limits<int>::min();
+			}
 
 			// Destructor
 			~pixl() { ; }
@@ -32,6 +41,7 @@ namespace beta
 				y_range.first = min(y_range.first, y);
 				y_range.second = max(y_range.second, y);
 
+				// Add coordinates
 				points[y].push_back(x);
 			}
 
@@ -49,9 +59,10 @@ namespace beta
 				y_range.first = points.cbegin()->first;
 				y_range.second = points.crbegin()->first;
 
-				string bar(x_range.second + 1, ' ');
+				// Create a bar
+				string bar(x_range.second - x_range.first + 1, ' ');
 
-				for (auto i = y_range.first; i <= y_range.second; ++i)
+				for (auto i = y_range.second; i >= y_range.first; --i)
 				{
 					// Initialise empty bar
 					bar.assign(bar.size(), ' ');
@@ -59,9 +70,10 @@ namespace beta
 					// Search for elements on current line
 					const auto element = points.find(i);
 
+					// Populate and print bar
 					if (element != points.cend())
 						for (auto &e:element->second)
-							bar.at(e) = '*';
+							bar.at(e - x_range.first) = '*';
 
 					cout << bar << endl;
 				}
