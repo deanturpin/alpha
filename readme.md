@@ -1,4 +1,5 @@
 ##TODO
+- [ ] Simple audio driver
 - [ ] Auto pointers, shared pointers
 - [ ] Consolidate makefile and rules.mak
 - [ ] Add c++ regex explorer (deep c++)
