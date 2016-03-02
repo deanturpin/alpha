@@ -1,9 +1,8 @@
 #include <iostream>
 #include <sstream>
-#include <vector>
 #include <regex>
 
-#include "pixl.h"
+#include "pxl.h"
 
 int main()
 {
@@ -15,7 +14,7 @@ int main()
 	string gpx = raw.str();
 
 	// Create a bitmap
-	beta::pixl p;
+	pxl::pxl8 p;
 	smatch match;
 
 	while (regex_search(gpx, match, regex("lat=\".....(...).+\" lon=\"....(...).+\"")))

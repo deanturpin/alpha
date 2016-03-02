@@ -1,28 +1,36 @@
 #include <iostream>
-#include "pixl.h"
+#include "unistd.h"
+#include "pxl.h"
 
 // Prototypes
-void one();
-void two();
+void sine(std::vector<std::pair<int, int>> &);
 
 int main()
 {
 	using namespace std;
 
-	// Create a bitmap
-	beta::pixl p;
 
-	// Populate bitmap
-	for (int i = 0; i < 140; ++i)
-		for (auto j:{2, 10, 30, 50})
-			p.set(i, j);
+	for (int i = 0; i < 5; ++i)
+	{
+		// Create a bitmap
+		pxl::pxl8 p;
+		vector<pair<int, int>> coordinates;
 
-	// Render bitmap
-	p.properties();
-	p.render();
+		// Generate some points
+		sine(coordinates);
 
-	one();
-	two();
+		// Populate
+		for (const auto &c:coordinates)
+			p.set(c.first, c.second);
+
+		// Clear screen and render
+		system("clear");
+		cout << "Iteration " << i << endl;
+		p.properties();
+		p.render();
+
+		sleep(1);
+	}
 
 	return 0;
 }

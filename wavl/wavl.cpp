@@ -1,14 +1,14 @@
-#include <vector>
 #include <algorithm>
+#include <vector>
 #include "riff.h"
-#include "pixl.h"
+#include "pxl.h"
 
 int main()
 {
 	using namespace std;
 
 	// Read header
-	struct riff::header h;
+	riff::header h;
 	cin.read(reinterpret_cast<char *>(&h), sizeof h);
 
 	// Read samples
@@ -19,16 +19,13 @@ int main()
 	cout << "Samples " << samples.size() << endl;
 
 	// Create bitmap
-	beta::pixl p;
+	pxl::pxl8 p;
 
 	// Target dimensions
 	const int x = 150;
-	// const int y = 50;
 
 	const int x_bin_size = samples.size() / x;
 	const int y_bin_size = 1200;
-
-	// cout << "x bin size " << x_bin_size << endl;
 
 	// Populate
 	for (const auto &s:samples)
@@ -37,11 +34,8 @@ int main()
 		p.set(i++ / x_bin_size, s / y_bin_size);
 	}
 
-	// Print properties
+	// Print properties and render
 	p.properties();
-	// p.dump();
-
-	// Render
 	p.render();
 
 	return 0;
