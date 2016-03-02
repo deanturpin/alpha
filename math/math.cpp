@@ -2,7 +2,8 @@
 #include "pixl.h"
 
 // Prototypes
-void one();
+void sine(std::vector<std::pair<int, int>> &);
+// void two(std::vector<std::pair<int, int>>);
 void two();
 
 int main()
@@ -12,17 +13,19 @@ int main()
 	// Create a bitmap
 	beta::pixl p;
 
-	// Populate bitmap
-	for (int i = 0; i < 140; ++i)
-		for (auto j:{2, 10, 30, 50})
-			p.set(i, j);
+	// Generate some points
+	vector<pair<int, int>> coordinates;
+	sine(coordinates);
 
-	// Render bitmap
-	p.properties();
+	// Populate
+	for (const auto &c:coordinates)
+		p.set(c.first, c.second);
+
+	// Render
+	p.clear();
 	p.render();
 
-	one();
-	two();
+	// two();
 
 	return 0;
 }

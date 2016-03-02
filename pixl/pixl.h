@@ -45,11 +45,19 @@ namespace beta
 				points[y].push_back(x);
 			}
 
-			// Print some props
+			// Print some properties
 			void properties()
 			{
 				cout << "X " << x_range.first << ", " << x_range.second << endl;
 				cout << "Y " << y_range.first << ", " << y_range.second << endl;
+			}
+
+			// Print all points
+			void dump()
+			{
+				for (const auto &line:points)
+					for (const auto &p:line.second)
+						cout << line.first << ", " << p << endl;
 			}
 
 			// Render the points
@@ -77,6 +85,12 @@ namespace beta
 
 					cout << bar << endl;
 				}
+			}
+
+			// Clear the terminal
+			void clear()
+			{
+				system("clear");
 			}
 
 		private:

@@ -2,5 +2,5 @@
 
 void two()
 {
-	std::cout << "TWO" << std::endl;
+	// std::cout << "TWO" << std::endl;
 }
