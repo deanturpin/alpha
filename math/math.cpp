@@ -1,31 +1,35 @@
 #include <iostream>
+#include "unistd.h"
 #include "pixl.h"
 
 // Prototypes
 void sine(std::vector<std::pair<int, int>> &);
-// void two(std::vector<std::pair<int, int>>);
-void two();
 
 int main()
 {
 	using namespace std;
 
-	// Create a bitmap
-	beta::pixl p;
 
-	// Generate some points
-	vector<pair<int, int>> coordinates;
-	sine(coordinates);
+	for (int i = 0; i < 5; ++i)
+	{
+		// Create a bitmap
+		beta::pixl p;
+		vector<pair<int, int>> coordinates;
 
-	// Populate
-	for (const auto &c:coordinates)
-		p.set(c.first, c.second);
+		// Generate some points
+		sine(coordinates);
 
-	// Render
-	p.clear();
-	p.render();
+		// Populate
+		for (const auto &c:coordinates)
+			p.set(c.first, c.second);
 
-	// two();
+		// Clear screen and render
+		p.clear_screen();
+		cout << "Iteration " << i << endl;
+		p.render();
+
+		sleep(1);
+	}
 
 	return 0;
 }

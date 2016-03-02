@@ -20,12 +20,7 @@ namespace beta
 			// Constructor
 			pixl()
 			{
-				// Set ranges to min and max
-				x_range.first = numeric_limits<int>::max();
-				x_range.second = numeric_limits<int>::min();
-
-				y_range.first = numeric_limits<int>::max();
-				y_range.second = numeric_limits<int>::min();
+				initialise();
 			}
 
 			// Destructor
@@ -87,8 +82,19 @@ namespace beta
 				}
 			}
 
+			void initialise()
+			{
+				points.clear();
+				
+				// Set ranges to min and max for type
+				x_range.first = numeric_limits<int>::max();
+				x_range.second = numeric_limits<int>::min();
+				y_range.first = numeric_limits<int>::max();
+				y_range.second = numeric_limits<int>::min();
+			}
+
 			// Clear the terminal
-			void clear()
+			void clear_screen()
 			{
 				system("clear");
 			}
