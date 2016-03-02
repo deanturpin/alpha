@@ -38,7 +38,7 @@ int main()
 		p.properties();
 
 		// Render it to screen
-		// p.render();
+		p.render();
 	}
 
 	cout << "\nPXL9" << endl;
@@ -73,7 +73,7 @@ int main()
 		p.properties();
 
 		// Render it to screen
-		// p.render();
+		p.render();
 	}
 	return 0;
 }
