@@ -18,6 +18,7 @@ namespace pxl
 			pxl9()
 			{
 				cout << "pxl9 ctor" << endl;
+				// clear_screen();
 			}
 
 			// Destructor
@@ -26,32 +27,35 @@ namespace pxl
 				cout << "pxl9 dtor" << endl;
 			}
 
+			// Move to the top of the screen
+			void top()
+			{
+				system("tput cup 0 0");
+
+				// system("tput ed");
+				// tput cols
+				// tput lines
+				// clear points without resetting range
+			}
+
+
 			/*
+		private:
+
 			// Print all points
 			void dump()
 			{
-			for (const auto &line:points)
-			for (const auto &p:line.second)
-			cout << line.first << ", " << p << endl;
+				for (const auto &line:points)
+					for (const auto &p:line.second)
+						cout << line.first << ", " << p << endl;
 			}
 
 			// Clear the terminal
 			void clear_screen()
 			{
-			system("clear");
+				system("clear");
 			}
-
-			//
-			void top()
-			{
-			system("tput cup 0 0");
-			system("tput ed");
-			// tput cols
-			// tput lines
-
-			// clear points without resetting range
-			}
-			 */
+			*/
 	};
 }
 

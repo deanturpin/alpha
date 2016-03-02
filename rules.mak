@@ -20,5 +20,9 @@ $(target) : $(objects)
 clean:
 	$(RM) $(target) $(objects)
 
+run: $(target)
+	./run
+	# if [[ -e foo ]]; then echo running; else echo not running; fi
+
 .PHONY: fresh
 fresh: clean foo
