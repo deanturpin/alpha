@@ -1,9 +1,12 @@
 .SILENT:
 
-all: cppcheck clean foo
+all: cppcheck clean foo run
 
 # List of all directories containing a makefile
 source_dirs := $(dir $(wildcard */makefile))
+
+# List of all directories containing a run scripts
+run_dirs := $(dir $(wildcard */run))
 
 # cppcheck from top level
 # .PHONY: cppcheck
@@ -23,10 +26,6 @@ clean:
 	echo Clean all
 	$(foreach dir, $(source_dirs), make -C $(dir) clean;)
 
-# TODO - if there's a foo try and run it, otherwise look for params
 .PHONY: run
 run:
-	pushd wavl
-	./run
-	popd
-
+	$(foreach dir, $(run_dirs), make -C $(dir) run;)

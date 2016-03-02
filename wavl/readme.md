@@ -6,6 +6,8 @@ Write a song with a very limited palette of instruments and effects. (In fact, I
 ./foo < ../../csound/android/CSDPlayer/assets/Csound6AndroidExamples/Hunkins/ChimePad/14.wav
 
 ##TODO
+- [ ] Spectrum 
+- [ ] Monitor mic
 - [ ] Tone generator
 - [ ] Sequencer
 - [ ] Reverb (convolution/algorithmic)
