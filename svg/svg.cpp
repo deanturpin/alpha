@@ -2,7 +2,7 @@
 #include <sstream>
 #include <regex>
 
-#include "pixl.h"
+#include "pxl.h"
 
 int main()
 {
@@ -19,7 +19,7 @@ int main()
 	if (regex_search(f, match, regex("<path d=\"([^\"]*)\".*>")))
 	{
 		// Create bitmap
-		beta::pixl b;
+		pxl::pxl8 p;
 
 		// Have path, extract the points
 		string path = match[1];
@@ -31,14 +31,14 @@ int main()
 			double x, y;
 			xy >> x;
 			xy >> y;
-			b.set(x / 4, y / 4);
+			p.set(x / 4, y / 4);
 
 			path = match.suffix();
 		}
 
 		// Print bitmap
-		b.properties();
-		b.render();
+		p.properties();
+		p.render();
 	}
 	else
 		cout << "No match" << endl;

@@ -1,4 +1,5 @@
 ##TODO
+- [ ] Rename to pixl8? Or pxl::pxl8?
 - [ ] Add exception handling
 - [ ] Add resize method
 - [ ] Render should return a string or use operator<<

@@ -1,6 +1,6 @@
 #include <iostream>
 #include "unistd.h"
-#include "pixl.h"
+#include "pxl.h"
 
 // Prototypes
 void sine(std::vector<std::pair<int, int>> &);
@@ -13,7 +13,7 @@ int main()
 	for (int i = 0; i < 5; ++i)
 	{
 		// Create a bitmap
-		beta::pixl p;
+		pxl::pxl8 p;
 		vector<pair<int, int>> coordinates;
 
 		// Generate some points
@@ -24,8 +24,9 @@ int main()
 			p.set(c.first, c.second);
 
 		// Clear screen and render
-		p.clear_screen();
+		system("clear");
 		cout << "Iteration " << i << endl;
+		p.properties();
 		p.render();
 
 		sleep(1);

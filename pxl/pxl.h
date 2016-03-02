@@ -1,30 +1,34 @@
 // Simple ASCII bitmap for rapid prototyping on the command line
 // Just include this header - all methods are inline
 
-#ifndef ASC_BITMAP_H
-#define ASC_BITMAP_H
+#ifndef PXL_PXL_H
+#define PXL_PXL_H
 
 #include <iostream>
 #include <vector>
 #include <limits>
 #include <map>
 
-namespace beta
+namespace pxl
 {
 	using namespace std;
 
-	class pixl
+	class pxl8
 	{
 		public:
 
 			// Constructor
-			pixl()
+			pxl8()
 			{
+				cout << "pxl8 ctor" << endl;
 				initialise();
 			}
 
 			// Destructor
-			~pixl() { ; }
+			virtual ~pxl8()
+			{
+				cout << "pxl8 dtor" << endl;
+			}
 
 			// Set a point
 			void set(const int x, const int y)
@@ -45,14 +49,6 @@ namespace beta
 			{
 				cout << "X " << x_range.first << ", " << x_range.second << endl;
 				cout << "Y " << y_range.first << ", " << y_range.second << endl;
-			}
-
-			// Print all points
-			void dump()
-			{
-				for (const auto &line:points)
-					for (const auto &p:line.second)
-						cout << line.first << ", " << p << endl;
 			}
 
 			// Render the points
@@ -82,8 +78,11 @@ namespace beta
 				}
 			}
 
+			// Clear all members
 			void initialise()
 			{
+				cout << "Initialise" << endl;
+
 				points.clear();
 				
 				// Set ranges to min and max for type
@@ -91,12 +90,6 @@ namespace beta
 				x_range.second = numeric_limits<int>::min();
 				y_range.first = numeric_limits<int>::max();
 				y_range.second = numeric_limits<int>::min();
-			}
-
-			// Clear the terminal
-			void clear_screen()
-			{
-				system("clear");
 			}
 
 		private:

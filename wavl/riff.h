@@ -1,8 +1,8 @@
-#ifndef __RIFF_H__
+#ifndef RIFF_RIFF_H
+#define RIFF_RIFF_H
 
-#include <iostream>
+#include <ostream>
 
-// RIFF
 namespace riff
 {
 	using namespace std;
