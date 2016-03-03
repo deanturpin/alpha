@@ -1,5 +1,6 @@
-#include <iostream>
-#include "pxl9.h"
+// #include <iostream>
+#include <vector>
+#include "pxl.h"
 
 // Prototypes
 void sine(std::vector<std::pair<int, int>> &);
@@ -8,10 +9,11 @@ int main()
 {
 	using namespace std;
 
+	// Create a bitmap
+	pxl::pxl8 p;
+
 	for (int i = 0; i < 360; ++i)
 	{
-		// Create a bitmap
-		pxl::pxl9 p;
 		vector<pair<int, int>> coordinates;
 
 		// Generate some points
@@ -21,9 +23,8 @@ int main()
 		for (const auto &c:coordinates)
 			p.set(c.first, c.second);
 
-		// Clear screen and render
-		p.top();
 		p.render();
+		p.clear();
 	}
 
 	return 0;

@@ -1,3 +1,8 @@
+Requires ncurses
+```bash
+sudo apt-get install ncurses-dev
+```
+
 ##TODO
 - [ ] Rename to pixl8? Or pxl::pxl8?
 - [ ] Add exception handling

@@ -1,5 +1,3 @@
-.SILENT:
-
 all: cppcheck clean foo
 
 # List of all directories containing a makefile
@@ -14,15 +12,13 @@ cppcheck:
 
 # Build each project
 foo:
-	echo Build all
 	$(foreach dir, $(source_dirs), echo $(dir); make -j -C $(dir);)
-	echo Complete
 
 # Clean each project
 clean:
-	echo Clean all
 	$(foreach dir, $(source_dirs), make -C $(dir) clean;)
 
 # Call run script if present
+.PHONY: run
 run:
 	$(foreach dir, $(run_dirs), make -C $(dir) run;)

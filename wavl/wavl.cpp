@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <iostream>
 #include <vector>
 #include "riff.h"
 #include "pxl.h"
@@ -34,8 +35,6 @@ int main()
 		p.set(i++ / x_bin_size, s / y_bin_size);
 	}
 
-	// Print properties and render
-	p.properties();
 	p.render();
 
 	return 0;
