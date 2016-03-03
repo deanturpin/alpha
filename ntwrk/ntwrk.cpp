@@ -1,7 +1,7 @@
 #include <iostream>
 // #include <sstream>
 // #include <vector>
-// #include <regex>
+#include <regex>
 
 int main()
 {
@@ -24,7 +24,15 @@ int main()
 
 	string line;
 	while (getline(cin, line))
-		cout << line << endl;
+	{
+		string prefix("norm\t");
+		if (regex_search(line, regex("#")))
+			prefix = "comm\t";
+		else if (regex_search(line, regex("^$")))
+			prefix = "empt\t";
+
+		cout << prefix << line << endl;
+	}
 
 	// Ping each IP
 	// system(string("ping -w 1 " + ip).c_str());
