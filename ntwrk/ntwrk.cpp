@@ -1,7 +1,6 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
-// #include <map>
 #include <regex>
 
 int main()
@@ -23,8 +22,12 @@ int main()
 		host_file = match.suffix().str();
 	}
 
+	// Ping each IP
 	for (auto &ip:ips)
+	{
 		cout << ip << endl;
+		system(string("ping -w 1 " + ip).c_str());
+	}
 
 	return 0;
 }
