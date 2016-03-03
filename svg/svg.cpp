@@ -36,8 +36,6 @@ int main()
 			path = match.suffix();
 		}
 
-		// Print bitmap
-		p.properties();
 		p.render();
 	}
 	else

@@ -32,7 +32,6 @@ int main()
 		gpx = match.suffix().str();
 	}
 
-	p.properties();
 	p.render();
 
 	return 0;
