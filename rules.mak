@@ -16,9 +16,7 @@ $(target) : $(objects)
 clean:
 	$(RM) $(target) $(objects)
 
-.PHONY: run
-run:
+run: foo
 	./foo
 
-.PHONY: fresh
 fresh: clean foo
