@@ -8,6 +8,7 @@
 - [ ] git submodules
 - [ ] Use colours for regression report
 - [ ] Algorithm complexity refresher
+- [ ] Threads refresher
 - [x] Make bitmap a library
 - [x] Generate list of directories to build (not hardcoded) - not required
 - [x] Make regress script a makefile

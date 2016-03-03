@@ -4,13 +4,15 @@ sudo apt-get install ncurses-dev
 ```
 
 ##TODO
-- [ ] Rename to pixl8? Or pxl::pxl8?
 - [ ] Add exception handling
 - [ ] Add resize method
-- [ ] Render should return a string or use operator<<
 - [ ] Add framerate
-- [ ] calculate current shell size 
-- [ ] Investigate clear screen options
+- [ ] Keyboard shortcuts (zoom, pan)
+- [ ] Fit to page
+- [x] calculate current shell size  - not required with ncurses
+- [x] Investigate clear screen options - not required with ncurses
+- [x] Rename to pixl8? Or pxl::pxl8?
+- [x] Render should return a string or use operator<< - not required with ncurses
 - [x] Reset display - return to top of shell
 - [x] Add mega:: namespace?
 - [x] Add border
@@ -18,9 +20,7 @@ sudo apt-get install ncurses-dev
 - [x] Add axes
 
 ```bash
-$ ./foo
-X 0, 50
-Y 0, 50
+$ make run
          *        *         *             *        
                                                    
                                                    

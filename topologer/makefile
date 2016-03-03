@@ -1,4 +1,4 @@
 include ../rules.mak
 
-run:
+run: foo
 	./foo < hosts

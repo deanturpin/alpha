@@ -1,7 +1,7 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
-#include <map>
+// #include <map>
 #include <regex>
 
 int main()
@@ -13,25 +13,18 @@ int main()
 	raw << cin.rdbuf();
 	string host_file = raw.str();
 
+	vector<string> ips;
+
+	// Extract all IPs
 	smatch match;
-	regex expression("(\\d*\\.\\d*\\.\\d*)\\.\\d*\\s*(.*)");
-
-	map<string, vector<string>>hosts;
-
-	while (regex_search(host_file, match, expression))
+	while (regex_search(host_file, match, regex("[0-9.]{7,}")))
 	{
-		hosts[match[1]].push_back(match[2]);
-
-		// Move on to the rest of the file
+		ips.push_back(match[0]);
 		host_file = match.suffix().str();
 	}
 
-	for (auto host:hosts)
-	{
-		cout << host.first << ".0" << endl;
-		for (auto name:host.second)
-			cout << "\t" << name << endl;
-	}
+	for (auto &ip:ips)
+		cout << ip << endl;
 
 	return 0;
 }

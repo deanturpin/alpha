@@ -17,8 +17,6 @@ int main()
 	vector<short> samples(total);
 	cin.read(reinterpret_cast<char *>(samples.data()), samples.size() * sizeof(short));
 
-	cout << "Samples " << samples.size() << endl;
-
 	// Create bitmap
 	pxl::pxl8 p;
 
@@ -32,7 +30,7 @@ int main()
 	for (const auto &s:samples)
 	{
 		static int i = 0;
-		p.set(i++ / x_bin_size, s / y_bin_size);
+		p.set(i++ / x_bin_size, 30 + s / y_bin_size);
 	}
 
 	p.render();
