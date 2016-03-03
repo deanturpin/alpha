@@ -1,6 +1,6 @@
 .SILENT:
 
-all: cppcheck clean foo run
+all: cppcheck clean foo
 
 # List of all directories containing a makefile
 source_dirs := $(dir $(wildcard */makefile))

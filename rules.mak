@@ -22,7 +22,7 @@ clean:
 
 .PHONY: run
 run:
-	./run
+	./foo
 
 .PHONY: fresh
 fresh: clean foo

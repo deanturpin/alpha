@@ -1,3 +1,0 @@
-#!/bin/bash
-
-./foo < /usr/lib/libreoffice/share/gallery/sounds/kling.wav
