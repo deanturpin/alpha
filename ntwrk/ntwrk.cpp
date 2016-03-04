@@ -34,6 +34,17 @@ int main()
 		cout << prefix << line << endl;
 	}
 
+	/*
+	string str = "File names are readme.txt and my.cmd.";
+	sregex_iterator it(str.begin(), str.end(), regex("[a-zA-Z]*"));
+	sregex_iterator it_end;
+
+	while (it != it_end)
+	{
+		cout << *it << endl;
+	}
+	*/
+
 	// Ping each IP
 	// system(string("ping -w 1 " + ip).c_str());
 	// for (auto &ip:ips)

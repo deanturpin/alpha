@@ -7,7 +7,7 @@
 - [ ] Boost port
 - [ ] git submodules
 - [ ] Use colours for regression report
-- [ ] Algorithm complexity refresher
+- [ ] Algorithm complexity refresher - Big O
 - [ ] Threads refresher
 - [x] Make bitmap a library
 - [x] Generate list of directories to build (not hardcoded) - not required

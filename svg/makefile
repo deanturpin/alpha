@@ -2,5 +2,5 @@ include ../rules.mak
 FLAGS+=-I../pxl
 LFLAGS=-lncurses
 
-run:
+run: foo
 	./foo < heavy_black_heart.svg
