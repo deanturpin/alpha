@@ -31,7 +31,7 @@ int main()
 			double x, y;
 			xy >> x;
 			xy >> y;
-			p.set(x / 4, y / 4);
+			p.set(x / 4, y / 8);
 
 			path = match.suffix();
 		}
