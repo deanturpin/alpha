@@ -21,12 +21,6 @@ namespace pxl
 
 				// Hide the cursor
 				curs_set(0);
-
-				// Print splashscreen
-				// move(30, 30);
-				// addstr("PXL8");
-
-				render();
 			}
 
 			// Destructor
@@ -52,51 +46,15 @@ namespace pxl
 				erase();
 			}
 
-			/*
 			int width() const
 			{
-				return cols;
+				return COLS;
 			}
 
 			int height() const
 			{
-				return lines;
+				return LINES;
 			}
-
-		private:
-
-			const int lines = 64;
-			const int cols = 166;
-
-			// vector<pair<int, int>> coords;
-			*/
-
-			/*
-			// Move to the top of the screen
-			void top()
-			{
-				system("tput cup 0 0");
-
-				// system("tput ed");
-				// tput cols
-				// tput lines
-				// clear points without resetting range
-			}
-
-			// Print all points
-			void dump()
-			{
-				for (const auto &line:points)
-					for (const auto &p:line.second)
-						cout << line.first << ", " << p << endl;
-			}
-
-			// Clear the terminal
-			void clear_screen()
-			{
-				system("clear");
-			}
-			*/
 	};
 }
 
