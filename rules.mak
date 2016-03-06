@@ -16,7 +16,4 @@ $(target) : $(objects)
 clean:
 	$(RM) $(target) $(objects)
 
-# run: foo
-	# ./foo
-
 fresh: clean foo

@@ -18,7 +18,7 @@ int main()
 	smatch match;
 
 	vector<pair<double, double>> points;
-	vector<double> lats;
+	vector<double> lats, lons;
 
 	while (regex_search(gpx, match, regex("lat=\"([0-9.-]+)\" lon=\"([0-9.-]+)\"")))
 	{
@@ -31,6 +31,7 @@ int main()
 
 		points.push_back(make_pair(lat, lon));
 		lats.push_back(lat);
+		lons.push_back(lon);
 
 		// p.set(lon / 5, lat / 10);
 
@@ -41,11 +42,16 @@ int main()
 	cout << "Points " << points.size() << endl;
 
 	// Calculate range
-	const auto min = *min_element(lats.cbegin(), lats.cend());
-	const auto max = *max_element(lats.cbegin(), lats.cend());
+	const auto lat_min = *min_element(lats.cbegin(), lats.cend());
+	const auto lat_max = *max_element(lats.cbegin(), lats.cend());
+	cout << "Min lat " << lat_min << endl;
+	cout << "Max lat " << lat_max << endl;
 
-	cout << "Min " << min << endl;
-	cout << "Max " << max << endl;
+	const auto lon_min = *min_element(lons.cbegin(), lons.cend());
+	const auto lon_max = *max_element(lons.cbegin(), lons.cend());
+	cout << "Min lon " << lon_min << endl;
+	cout << "Max lon " << lon_max << endl;
+
 	// cout << "Max " << max << endl;
 	// cout << "Max " << *minmax.second << endl;
 
