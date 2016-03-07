@@ -1,5 +1,5 @@
-#ifndef PXL_PXL9_H
-#define PXL_PXL9_H
+#ifndef PXL_PXL8_H
+#define PXL_PXL8_H
 
 #include <curses.h>
 
