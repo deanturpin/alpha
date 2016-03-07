@@ -1,4 +1,5 @@
 ## TODO
+- [ ] Don't match comments
 - [ ] Create IP map
 - [ ] ascii map
 - [ ] Extract CIDR

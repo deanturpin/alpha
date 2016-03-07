@@ -1,12 +1,14 @@
+127.0.0.1 localhost
+
 # 192.168.0.0/27
 
 192.168.0.1 neque
 8.8.8.8 real1
 8.8.4.4 real2
 
-192.168.0.2 architecto
-192.168.0.3 nemo
-192.168.0.4 velit
+# 192.168.0.2 architectocomment
+# 192.168.0.3 nemocomment
+# 192.168.0.4 velitcomment
 192.168.0.5 maxime
 192.168.0.6 ea
 192.168.0.7 occaecati

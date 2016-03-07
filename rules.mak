@@ -1,6 +1,6 @@
 CC=clang++
 RM=rm -f
-FLAGS := -Wall -Wextra -pedantic -pedantic-errors -std=c++1z
+FLAGS := -Wall -Wextra -pedantic -pedantic-errors -std=c++1z -g
 
 %.o:%.cpp
 	$(CC) $(FLAGS) -o $*.o -c $*.cpp
