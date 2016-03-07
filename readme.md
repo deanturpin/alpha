@@ -1,16 +1,10 @@
 ##TODO
 - [ ] Simple audio driver
-- [ ] Auto pointers, shared pointers
 - [ ] Consolidate makefile and rules.mak
 - [ ] Add c++ regex explorer (deep c++)
-- [ ] Lambda expressions
 - [ ] Boost port
 - [ ] git submodules
 - [ ] Use colours for regression report
-- [ ] Algorithm complexity refresher - Big O
-- [ ] Threads refresher
-- [ ] GDB refresher - something newer than DDD?
-- [ ] IPV6 refresher
 - [x] Make bitmap a library
 - [x] Generate list of directories to build (not hardcoded) - not required
 - [x] Make regress script a makefile
