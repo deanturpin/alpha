@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo Create main routine from all cpp files in the current directory
+

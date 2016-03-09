@@ -29,31 +29,11 @@ namespace tst
 		cout << R"((?:[0-9]{1,3}\.?){4}\s+\S+)" << endl;
 	}
 
-	void mutable_keyword()
-	{
-		cout << "Mutable keywords" << endl;
-
-		struct A
-		{
-			// Variable is increment despite being a const method
-			void const_member_function() const { ++m; }
-			mutable int m;
-		};
-
-		A a;
-		a.const_member_function(); 
-	}
-
-	void init()
-	{
-		cout << "Initialisation" << endl;
-		vector<int> vec {1, 2, 3, 4, 5, 6, 7};
-		cout << "Size " << vec.size() << endl;
-	}
-
+	void mutable_keyword();
 	void loops();
 	void lambda();
 	void classes();
+	void init();
 }
 
 
@@ -66,6 +46,7 @@ int main()
 	tst::lambda();
 	tst::init();
 	tst::loops();
+	tst::init();
 	
 	return 0;
 }
