@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
 
-#include <cstddef>
+// TODO
+// explicit operators - http://en.cppreference.com/w/cpp/language/explicit
 
 namespace tst
 {
@@ -34,6 +35,22 @@ namespace tst
 		cout << alignof(double) << endl;
 	}
 
+	void classes_and_structs()
+	{
+		struct A
+		{
+			A(int) { }
+		};
+
+		struct B
+		{
+			explicit B(int) { }
+		};
+
+		A(1);
+		B(1);
+	}
+
 	void literals()
 	{
 		header("Literals");
@@ -46,6 +63,7 @@ int main()
 {
 	tst::alignment();
 	tst::literals();
+	tst::classes_and_structs();
 	
 	return 0;
 }
