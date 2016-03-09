@@ -1,22 +1,12 @@
 #include <iostream>
 #include <string>
-
-// TODO
-// explicit operators - http://en.cppreference.com/w/cpp/language/explicit
+#include <vector>
 
 namespace tst
 {
+	// Namespace and prototypes
 	using namespace std;
-
-	// Pretty print a header for each test
-	void header(const string &name)
-	{
-		static unsigned int id = 0;
-
-		// Print test header and increment ID
-		const string border(20, '-');
-		cout << border << endl << id++ << ". " << name << endl << border << endl;
-	}
+	void header(const string &name);
 
 	void alignment()
 	{
@@ -73,11 +63,17 @@ namespace tst
 		a.const_member_function(); 
 	}
 
-	void lambda_functions()
+	void init()
 	{
-		header("Lambda functions");
+		header("Initialisation");
+		vector<int> vec {1, 2, 3, 4, 5, 6, 7};
+		cout << "Size " << vec.size() << endl;
 	}
+
+	void loops();
+	void lambda();
 }
+
 
 int main()
 {
@@ -85,7 +81,9 @@ int main()
 	tst::literals();
 	tst::classes_and_structs();
 	tst::mutable_keyword();
-	tst::lambda_functions();
+	tst::lambda();
+	tst::init();
+	tst::loops();
 	
 	return 0;
 }
