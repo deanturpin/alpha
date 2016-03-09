@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <vector>
 
 namespace tst
 {
@@ -34,19 +33,23 @@ namespace tst
 	void lambda();
 	void classes();
 	void init();
+	void list_init();
 }
 
 
 int main()
 {
-	tst::alignment();
-	tst::literals();
-	tst::classes();
-	tst::mutable_keyword();
-	tst::lambda();
-	tst::init();
-	tst::loops();
-	tst::init();
+	using namespace tst;
+
+	alignment();
+	tst::literals(); // rename
+	classes();
+	mutable_keyword();
+	lambda();
+	init();
+	loops();
+	init();
+	list_init();
 	
 	return 0;
 }
