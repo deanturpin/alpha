@@ -6,7 +6,7 @@ namespace tst
 
 	void mutable_keyword()
 	{
-		cout << "Mutable keywords" << endl;
+		cout << "\nMutable keywords" << endl;
 
 		struct A
 		{

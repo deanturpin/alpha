@@ -66,6 +66,9 @@ namespace tst
 				void bar(){};
 			};
 
+			cout << "Is A final? " << boolalpha << is_final<A>::value << endl;
+			cout << "Is B final? " << boolalpha << is_final<B>::value << endl;
+
 			// Error - B is final
 			// struct C final : public B {};
 
