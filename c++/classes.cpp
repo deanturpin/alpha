@@ -6,7 +6,33 @@ namespace tst
 
 	void classes()
 	{
-		cout << "Classes" << endl;
+		cout << "\nClasses" << endl;
+
+		// Order of contruction/destruction
+		{
+			class A
+			{
+				public:
+					A() { cout << "A ctor" << endl; }
+					~A() { cout << "A dtor" << endl; }
+			};
+
+			class B : public A
+			{
+				public:
+					B() { cout << "B ctor" << endl; }
+					~B() { cout << "B dtor" << endl; }
+			};
+
+			cout << "Static allocation" << endl;
+			{
+				B b;
+			}
+
+			cout << "Dynamic allocation - leak (A has non-virtual destructor" << endl;
+			A* a = new B();
+			delete a;
+		}
 
 		// Explicit
 		{
@@ -24,23 +50,86 @@ namespace tst
 			B(1);
 		}
 
-		// Final
+		// final keyword 1
 		{
 			struct A
 			{
-				virtual void foo() final {};
-				virtual void bar(){};
+				virtual void foo() final;
+				void bar();
 			};
 
 			struct B final : public A
 			{
-				// Can't do this: A::foo is final
-				// void foo(){};
+				// Error - A::foo is final
+				// void foo();
+
 				void bar(){};
 			};
 
-			// Can't do this: B is final
+			// Error - B is final
 			// struct C final : public B {};
+
+			// Error - A is incomplete
+			// A a;
+
+			// Error - A is incomplete
+			// B b;
 		}
+
+		// override keyword
+		{
+			class A
+			{
+				void foo();
+				// virtual void bar();
+			};
+
+			class B : public A
+			{
+				void foo(){};
+			};
+
+			// A a;
+			// B b;
+		}
+
+		// override keyword
+		#if 0
+		{
+			struct A
+			{
+				void foo();
+				virtual void bar();
+				// void bar2();
+			};
+
+			struct B final : public A
+			{
+				// Error - A::foo is final
+				void foo() { cout << "foo" << endl; }
+
+				// OK - bar overrides ::bar
+				void bar() { cout << "bah" << endl; }
+
+				// Error - signature mismatch
+				// void bar(int) override {};
+
+				// Error - can't override non-virtual
+				// void bar2() override {};
+			};
+
+			// Error: B is final
+			// struct C final : public B {};
+
+			// A a;
+			// cout << "Size A " << sizeof a << endl;
+			// Error - foo is not implemented
+			// a.foo();
+
+			B b;
+			cout << "Size B " << sizeof b << endl;
+			b.foo();
+		}
+		#endif
 	}
 }
