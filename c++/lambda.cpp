@@ -4,13 +4,11 @@
 
 namespace tst
 {
-	// Namespace and prototypes
 	using namespace std;
-	void header(const string &name);
 
 	void lambda()
 	{
-		header("Lambda functions");
+		cout << "Lambda functions" << endl;
 
 		vector<int> vec {1, 2, 3, 4, 5, 6, 7};
 

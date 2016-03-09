@@ -4,13 +4,11 @@
 
 namespace tst
 {
-	// Namespace and prototypes
 	using namespace std;
-	void header(const string &name);
 
 	void alignment()
 	{
-		header("Alignment");
+		cout << "Alignment" << endl;
 
 		class A {};
 		class alignas(32) B {};
@@ -25,32 +23,15 @@ namespace tst
 		cout << alignof(double) << endl;
 	}
 
-	void classes_and_structs()
-	{
-		struct A
-		{
-			A(int) { }
-		};
-
-		struct B
-		{
-			explicit B(int) { }
-		};
-
-		A(1);
-		B(1);
-	}
-
 	void literals()
 	{
-		header("Literals");
-
+		cout << "Literals" << endl;
 		cout << R"((?:[0-9]{1,3}\.?){4}\s+\S+)" << endl;
 	}
 
 	void mutable_keyword()
 	{
-		header("Mutable keywords");
+		cout << "Mutable keywords" << endl;
 
 		struct A
 		{
@@ -65,13 +46,14 @@ namespace tst
 
 	void init()
 	{
-		header("Initialisation");
+		cout << "Initialisation" << endl;
 		vector<int> vec {1, 2, 3, 4, 5, 6, 7};
 		cout << "Size " << vec.size() << endl;
 	}
 
 	void loops();
 	void lambda();
+	void classes();
 }
 
 
@@ -79,7 +61,7 @@ int main()
 {
 	tst::alignment();
 	tst::literals();
-	tst::classes_and_structs();
+	tst::classes();
 	tst::mutable_keyword();
 	tst::lambda();
 	tst::init();
