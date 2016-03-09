@@ -5,6 +5,8 @@
 - [ ] Boost port
 - [ ] git submodules
 - [ ] Use colours for regression report
+- [ ] GDB refresher - something newer than DDD?
+- [ ] IPV6 refresher
 - [x] Make bitmap a library
 - [x] Generate list of directories to build (not hardcoded) - not required
 - [x] Make regress script a makefile
