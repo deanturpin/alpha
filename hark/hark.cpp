@@ -21,7 +21,7 @@ int main()
 		// std::uniform_int_distribution<int> distribution(0, replies.size() - 1);
 		// int i = distribution(generator);
 
-		cout << replies.at(static_cast<unsigned int>(1.0 * rand() * replies.size() / RAND_MAX)) << endl;
+		cout << i << "\t" << replies.at(static_cast<unsigned int>(1.0 * rand() * replies.size() / RAND_MAX)) << endl;
 	}
 
 	return 0;
