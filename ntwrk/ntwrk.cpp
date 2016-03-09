@@ -12,7 +12,7 @@ int main()
 	raw << cin.rdbuf();
 	const string hosts = raw.str();
 
-	regex word_regex(R"((?:[0-9]{1,3}\.?){4}\s+\S+)");
+	const regex word_regex(R"((?:[0-9]{1,3}\.?){4}\s+\S+)");
 
 	const auto words_begin = sregex_iterator(hosts.cbegin(), hosts.cend(), word_regex);
 

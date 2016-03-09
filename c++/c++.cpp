@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 
+#include <cstddef>
+
 namespace tst
 {
 	using namespace std;
@@ -20,9 +22,16 @@ namespace tst
 		header("Alignment");
 
 		class A {};
-		std::cout << std::alignment_of<A>::value << endl;
-		std::cout << std::alignment_of<int>::value << endl;
-		std::cout << std::alignment_of<double>::value << endl;
+		class alignas(32) B {};
+
+		cout << alignment_of<A>::value << endl;
+		cout << alignment_of<B>::value << endl;
+		cout << alignment_of<int>::value << endl;
+		cout << alignment_of<double>::value << endl;
+		cout << alignof(A) << endl;
+		cout << alignof(B) << endl;
+		cout << alignof(int) << endl;
+		cout << alignof(double) << endl;
 	}
 
 	void literals()
