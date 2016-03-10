@@ -1,17 +1,18 @@
 #TODO
-- how do you use escaped characters in a heredoc
-- generate main from filenames
-- rename routines that clash (need tst namespace)
-- raii
-- override specifier
-- chrono
-- threads, thread_local
-- mutex
-- Big O
-- user literals - http://en.cppreference.com/w/cpp/language/user_literal
-- templates, typenames, typeid
-- lambda, nullary lambda - http://en.cppreference.com/w/cpp/language/lambda
-- explicit operators - http://en.cppreference.com/w/cpp/language/explicit
+- [ ] how do you use escaped characters in a heredoc?
+- [x] generate main from filenames
+- [ ] rename routines that clash (need tst namespace)
+- [ ] raii
+- [ ] ratio
+- [ ] override specifier
+- [ ] chrono
+- [ ] threads, thread_local
+- [ ] mutex
+- [ ] Big O
+- [ ] user literals - http://en.cppreference.com/w/cpp/language/user_literal
+- [ ] templates, typenames, typeid
+- [ ] lambda, nullary lambda - http://en.cppreference.com/w/cpp/language/lambda
+- [ ] explicit operators - http://en.cppreference.com/w/cpp/language/explicit
 
 # Memory
 ```
