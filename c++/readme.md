@@ -1,6 +1,15 @@
-#To implement
-- [ ] RAII
-
+#TODO
+- rename routines that clash (need tst namespace)
+- raii
+- override specifier
+- chrono
+- threads, thread_local
+- mutex
+- Big O
+- user literals - http://en.cppreference.com/w/cpp/language/user_literal
+- templates, typenames, typeid
+- lambda, nullary lambda - http://en.cppreference.com/w/cpp/language/lambda
+- explicit operators - http://en.cppreference.com/w/cpp/language/explicit
 
 # Memory
 ```
@@ -16,7 +25,7 @@ bss
 data
 -------------------- compiled code
 text
--------------------- bottom of RAM (0)
+-------------------- bottom of RAM
 
 ```
 
@@ -71,58 +80,61 @@ static_cast reinterpret_cast dynamic_cast const_cast
 
 using(1) namespace
 
-struct switch template this throw true try typedef typeid typename union unsigned virtual void volatile wchar_t while xor xor_eq and and_eq asm auto(1) bitand bitor bool break case catch char class compl const continue default(1) delete(1) do double else enum explicit export(1) extern false float for friend goto if inline int long mutable new not not_eq operator or or_eq private protected public register return short signed sizeof static
+struct class union friend
+
+private protected public 
+
+inline mutable operator virtual explicit 
+
+switch case break default(1) continue
+
+catch throw try
+
+typedef typeid typename
+
+true false
+
+while for if do else
+
+new delete(1)
+
+unsigned signed const long
+
+auto(1) void bool char wchar_t float double short int
+
+xor xor_eq and and_eq bitand bitor not not_eq  or or_eq compl
+
+export(1) extern static
+
+volatile register 
+
+sizeof this template asm enum goto return
 
 ## C++11
-- decltype 
-- constexpr
-- lignas
-- alignof
-- char16_t
-- char32_t
-- static_assert
-- thread_local
-- nullptr
-- noexcept
+decltype constexpr lignas alignof char16_t char32_t static_assert thread_local nullptr noexcept override final
 
 ## Concepts TS
-- requires
-- concept
-
-## TBD
-- override
-- final
+requires concept
 
 #To sort
+- to_string etc
 - parallelism TS
-- explicit operators - http://en.cppreference.com/w/cpp/language/explicit
 - generate main and prototypes from filenames
 - is_class
 - is_polymorphic
 - type alias http://en.cppreference.com/w/cpp/language/type_alias
 - types http://en.cppreference.com/w/cpp/language/types
-- templates, typenames, typeid
-- thread_local
-- http://en.cppreference.com/w/cpp/language/user_literal
 - https://en.wikipedia.org/wiki/Concepts_%28C%2B%2B%29#
 - http://en.cppreference.com/w/cpp/language/override
 - http://en.cppreference.com/w/cpp/language/list_initialization
 - http://en.cppreference.com/w/cpp/language/constexpr
 - http://en.cppreference.com/w/cpp/language/decltype
-- volatile
-- http://en.cppreference.com/w/cpp/language/user_literal
-- lambda - http://en.cppreference.com/w/cpp/language/lambda
-- nullary lambda
+- volatile and register
 - noexcept
 - nullptr
-- Algorithm complexity refresher - Big O
 - Auto pointers, shared pointers
 - Lambda expressions
-- YouTube questions
 - virtual
 - static
-- register keyword
-- heap / stack / data
-- override specifier
 - Agile versus waterfall
 
