@@ -3,4 +3,4 @@ FLAGS+=-I../pxl -I../wavl
 LFLAGS=-lncurses
 
 run: foo
-	./foo < ../wavl/14.wav
+	./foo < /usr/lib/libreoffice/share/gallery/sounds/train.wav 

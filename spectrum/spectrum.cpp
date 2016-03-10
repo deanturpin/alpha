@@ -4,6 +4,8 @@
 #include "riff.h"
 #include "pxl.h"
 
+#include <unistd.h>
+
 int main()
 {
 	using namespace std;
@@ -12,22 +14,26 @@ int main()
 	riff::header h;
 	cin.read(reinterpret_cast<char *>(&h), sizeof h);
 
-	// Read samples
-	const unsigned int total = h.data.size;
-	vector<short> samples(total);
-	cin.read(reinterpret_cast<char *>(samples.data()), samples.size() * sizeof(short));
-
 	// Create bitmap
 	pxl::pxl8 p;
 
-	for (const auto &s:samples)
-	{
-		static int i = 0;
-		p.set(i++ % p.width(), 30 + s / 1200);
+	// Read samples
+	const unsigned int batch = p.width();
+	vector<short> samples(batch);
 
-		if (!(i % p.width()))
-			p.render();
+	while (cin.read(reinterpret_cast<char *>(samples.data()), batch * sizeof(short)))
+	{
+		int i = 0;
+		for (const auto &s:samples)
+			p.set(i++, 30 + s / 1200);
+
+		p.render();
+
+		usleep(100000);
+		p.clear();
 	}
+
+	sleep(2);
 
 	return 0;
 }

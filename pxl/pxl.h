@@ -3,9 +3,6 @@
 
 #include <curses.h>
 
-// Dev only - sleep
-#include <unistd.h>
-
 namespace pxl
 {
 	class pxl8
@@ -24,11 +21,7 @@ namespace pxl
 			}
 
 			// Destructor
-			~pxl8()
-			{
-				sleep(2);
-				endwin();
-			}
+			~pxl8() { endwin(); }
 
 			void set(const int x, const int y) const
 			{
@@ -36,25 +29,10 @@ namespace pxl
 				addstr("*");
 			}
 
-			void render() const
-			{
-				refresh();
-			}
-
-			void clear() const
-			{
-				erase();
-			}
-
-			int width() const
-			{
-				return COLS;
-			}
-
-			int height() const
-			{
-				return LINES;
-			}
+			void render() const { refresh(); }
+			void clear() const { erase(); }
+			int width() const { return COLS; }
+			int height() const { return LINES; }
 	};
 }
 

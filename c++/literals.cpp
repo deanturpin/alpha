@@ -20,5 +20,7 @@ namespace tst
 		auto time3 = time1 + time2;
 
 		cout << "Total time " << time3.count() << endl;
+
+		// template <char...> double operator "" _π(); // OK
 	}
 }
