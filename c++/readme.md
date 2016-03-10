@@ -1,4 +1,5 @@
 #TODO
+- how do you use escaped characters in a heredoc
 - generate main from filenames
 - rename routines that clash (need tst namespace)
 - raii

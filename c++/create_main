@@ -2,13 +2,18 @@
 
 # Create main from all cpp files in the current directory
 # Use a different extension so it's not added to the list
-main_file=$(mktemp)
-
-echo Created temp file $main_file
+main_file=main.cpp
 
 # Delete existing file if there is one
 rm -f $main_file
 
+for file in *.cpp
+do
+	prototypes+="\tvoid ${file%.cpp}();\n"
+	function_calls+="\ttst::${file%.*}();\n"
+done
+
+# Write top bit
 cat <<TOP > $main_file
 #include <iostream>
 #include <string>
@@ -21,10 +26,7 @@ namespace tst
 TOP
 
 # Write prototypes
-for cpp in *.cpp
-do
-	echo -e "\tvoid ${cpp%.*}();" >> $main_file
-done
+echo -e $prototypes >> $main_file
 
 # Write middle bit
 cat <<MIDDLE >> $main_file
@@ -32,15 +34,12 @@ cat <<MIDDLE >> $main_file
 
 int main()
 {
-	using namespace tst;
+	// using namespace tst;
 
 MIDDLE
 
 # Write function calls
-for cpp in *.cpp
-do
-	echo -e "\t${cpp%.*}();" >> $main_file
-done
+echo -e $function_calls >> $main_file
 
 # Write end bit
 cat <<BOTTOM >> $main_file
@@ -48,5 +47,3 @@ cat <<BOTTOM >> $main_file
 	return 0;
 }
 BOTTOM
-
-cat $main_file

@@ -4,9 +4,9 @@ namespace tst
 {
 	using namespace std;
 
-	void mutable_keyword()
+	void keyword_mutable()
 	{
-		cout << "\nMutable keywords" << endl;
+		cout << "\nKeyword mutable" << endl;
 
 		struct A
 		{
