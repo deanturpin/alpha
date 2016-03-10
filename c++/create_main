@@ -1,4 +1,52 @@
 #!/bin/bash
 
-echo Create main routine from all cpp files in the current directory
+# Create main from all cpp files in the current directory
+# Use a different extension so it's not added to the list
+main_file=$(mktemp)
 
+echo Created temp file $main_file
+
+# Delete existing file if there is one
+rm -f $main_file
+
+cat <<TOP > $main_file
+#include <iostream>
+#include <string>
+
+// Prototypes
+namespace tst
+{
+	using namespace std;
+
+TOP
+
+# Write prototypes
+for cpp in *.cpp
+do
+	echo -e "\tvoid ${cpp%.*}();" >> $main_file
+done
+
+# Write middle bit
+cat <<MIDDLE >> $main_file
+}
+
+int main()
+{
+	using namespace tst;
+
+MIDDLE
+
+# Write function calls
+for cpp in *.cpp
+do
+	echo -e "\t${cpp%.*}();" >> $main_file
+done
+
+# Write end bit
+cat <<BOTTOM >> $main_file
+
+	return 0;
+}
+BOTTOM
+
+cat $main_file
