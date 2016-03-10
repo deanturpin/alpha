@@ -1,4 +1,5 @@
 #TODO
+- generate main from filenames
 - rename routines that clash (need tst namespace)
 - raii
 - override specifier
@@ -56,23 +57,26 @@ TBD
 - Too many threads - overhead of creating/managing and partitioning the data is greater than processing advantage; software threads outnumber the available hardware threads and the OS must intervene
 
 # Containers
-## Sequence containers
+**Sequence containers**
+
 array 
 vector
 deque
 forward_list 
 list
 
-## Container adapters
+**Container adapters**
+
 stack
 queue
 priority_queue
 
-## Associative containers
-### Ordered
+**Associative containers (ordered)**
+
 set multiset map multimap 
 
-### Unordered
+**Associative containers (unordered)**
+
 unordered_set unordered_multiset unordered_map unordered_multimap
 
 # Keywords
