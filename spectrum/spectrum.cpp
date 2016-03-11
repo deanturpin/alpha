@@ -1,10 +1,7 @@
-#include <algorithm>
 #include <iostream>
 #include <vector>
 #include "riff.h"
 #include "pxl.h"
-
-#include <unistd.h>
 
 int main()
 {
@@ -25,15 +22,11 @@ int main()
 	{
 		int i = 0;
 		for (const auto &s:samples)
-			p.set(i++, 30 + s / 1200);
+			p.set(i++, (p.height() / 2) + s / 120);
 
 		p.render();
-
-		usleep(100000);
 		p.clear();
 	}
-
-	sleep(2);
 
 	return 0;
 }

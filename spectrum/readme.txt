@@ -1,0 +1,1 @@
+- arecord -t wav -f cd | ./foo
