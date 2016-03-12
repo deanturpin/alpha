@@ -26,7 +26,7 @@ namespace pxl
 			void set(const int x, const int y) const
 			{
 				move(y, x);
-				addstr("*");
+				addstr(".");
 			}
 
 			void render() const { refresh(); }
