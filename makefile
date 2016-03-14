@@ -1,4 +1,4 @@
-all: cppcheck clean foo
+all: foo cppcheck
 
 # List of all directories containing a makefile
 source_dirs := $(dir $(wildcard */makefile))
@@ -16,6 +16,5 @@ clean:
 	$(foreach dir, $(source_dirs), make -C $(dir) clean;)
 
 # Call run script if present
-# .PHONY: run
 run: foo
 	$(foreach dir, $(source_dirs), make -C $(dir) run;)

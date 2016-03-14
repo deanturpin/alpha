@@ -2,9 +2,25 @@
 #define PXL_PXL8_H
 
 #include <curses.h>
+#include <signal.h>
+#include <unistd.h>
+
+namespace
+{
+	void sig_handler(int signo)
+	{
+		// Tidy up ncurses on a ctrl-c
+		if (signo == SIGINT)
+		{
+			endwin();
+			_exit(0);
+		}
+	}
+}
 
 namespace pxl
 {
+
 	class pxl8
 	{
 		public:
@@ -12,6 +28,9 @@ namespace pxl
 			// Constructor
 			pxl8()
 			{
+				// Catch ctrl-c
+				signal(SIGINT, sig_handler);
+
 				// Initialise
 				(void) initscr();
 				erase();

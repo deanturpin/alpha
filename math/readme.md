@@ -1,6 +1,7 @@
-- [ ] - Lambda - std::for_each(nums.begin(), nums.end(), [](int &n){ n++; });
-- [ ] - transform
-- [ ] - OpenMP timings
+- [ ] User defined literals for PI
+- [ ] Lambda - std::for_each(nums.begin(), nums.end(), [](int &n){ n++; });
+- [ ] Transform (?)
+- [ ] OpenMP timings
 
 ```cpp
 int main()

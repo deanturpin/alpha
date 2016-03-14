@@ -1,4 +1,4 @@
-// #include <iostream>
+#include <unistd.h>
 #include <vector>
 #include "pxl.h"
 
@@ -24,6 +24,7 @@ int main()
 			p.set(c.first, c.second);
 
 		p.render();
+		usleep(100000);
 		p.clear();
 	}
 
