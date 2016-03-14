@@ -23,12 +23,7 @@ namespace pxl
 			// Destructor
 			~pxl8() { endwin(); }
 
-			void set(const int x, const int y) const
-			{
-				move(y, x);
-				addstr(".");
-			}
-
+			void set(const int x, const int y) const { mvaddstr(y, x, ">"); }
 			void render() const { refresh(); }
 			void clear() const { erase(); }
 			int width() const { return COLS; }

@@ -7,7 +7,7 @@
 - [ ] Use colours for regression report
 - [ ] GDB refresher - something newer than DDD?
 - [ ] ascii video
-- [ ] live audio/video capture to ascii
+- [x] live audio/video capture to ascii - in progress
 - [x] Make bitmap a library
 - [x] Generate list of directories to build (not hardcoded) - not required
 - [x] Make regress script a makefile
