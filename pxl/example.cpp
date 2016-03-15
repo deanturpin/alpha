@@ -7,8 +7,6 @@ int main()
 	{
 		pxl::pxl8 p;
 
-		p.clear();
-
 		p.set(26, 29);
 		p.set(28, 23);
 		p.set(42, 23);

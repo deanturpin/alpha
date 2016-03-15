@@ -9,7 +9,7 @@ int main()
 	// Create a bitmap
 	pxl::pxl8 p;
 
-	for (int i = 0; i < 360; ++i)
+	for (int i = 0; i < 180; ++i)
 	{
 		// Generate a sine wave
 		for (int j = 0; j < 360; ++j)
