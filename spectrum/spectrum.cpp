@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "unistd.h"
 #include "riff.h"
 #include "pxl.h"
 
@@ -22,10 +23,12 @@ int main()
 	{
 		// Store every other sample (two channels)
 		for (auto s = samples.cbegin(); s != samples.cend(); s += 2)
-			p.set(distance(samples.cbegin(), s) / 2, (p.height() / 2) + *s / 120);
+			p.set(distance(samples.cbegin(), s) / 2, (p.height() / 2) + *s / 1000);
 
 		// Render the buffer
 		p.render();
+
+		usleep(27000);
 	}
 
 	return 0;

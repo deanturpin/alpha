@@ -35,7 +35,7 @@ int main()
 
 	p.render();
 
-	sleep(7);
+	sleep(5);
 
 	return 0;
 }
