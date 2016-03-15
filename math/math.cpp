@@ -1,9 +1,9 @@
 #include <unistd.h>
-#include <vector>
+#include <cmath>
 #include "pxl.h"
 
 // Prototypes
-void sine(std::vector<std::pair<int, int>> &);
+// void sine(std::vector<std::pair<int, int>> &);
 
 int main()
 {
@@ -14,18 +14,19 @@ int main()
 
 	for (int i = 0; i < 360; ++i)
 	{
-		vector<pair<int, int>> coordinates;
+		p.clear();
 
-		// Generate some points
-		sine(coordinates);
+		// Generate a sine wave
+		for(int j = 0; j < 360; ++j)
+		{
+			const auto x = static_cast<unsigned int>(round(p.width() * j / 360.0));
+			const auto y = static_cast<unsigned int>(round(p.height() / 2 + p.height() / 2 * sin(M_PI * (j + i) / 180.0)));
 
-		// Populate
-		for (const auto &c:coordinates)
-			p.set(c.first, c.second);
+			p.set(x, y);
+		}
 
 		p.render();
-		usleep(100000);
-		p.clear();
+		usleep(50000);
 	}
 
 	return 0;
