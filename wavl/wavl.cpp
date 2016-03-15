@@ -1,6 +1,8 @@
 #include <algorithm>
 #include <iostream>
 #include <vector>
+
+#include "unistd.h"
 #include "riff.h"
 #include "pxl.h"
 
@@ -34,6 +36,8 @@ int main()
 	}
 
 	p.render();
+
+	sleep(2);
 
 	return 0;
 }
