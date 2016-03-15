@@ -3,30 +3,8 @@
 #include <vector>
 
 #include "unistd.h"
+#include "riff.h"
 #include "pxl.h"
-
-// RIFF header
-namespace riff
-{
-	struct chunk
-	{
-		unsigned int id;
-		unsigned int size;
-	};
-
-	struct header
-	{
-		chunk riff;
-		unsigned int wave_tag;
-		chunk format;
-		unsigned short format_tag;
-		unsigned short channels;
-		unsigned int sample_rate;
-		unsigned int bytes_per_second;
-		unsigned short block_align;
-		chunk data;
-	};
-}
 
 int main()
 {
@@ -52,7 +30,7 @@ int main()
 	for (const auto &s:samples)
 	{
 		static int i = 0;
-		p.set(i++ / x_bin_size, p.height() / 2 + s / 600);
+		p.set(i++ / x_bin_size, p.height() / 2 + s / 1000);
 	}
 
 	p.render();
