@@ -2,9 +2,6 @@
 #include <cmath>
 #include "pxl.h"
 
-// Prototypes
-// void sine(std::vector<std::pair<int, int>> &);
-
 int main()
 {
 	using namespace std;
@@ -14,10 +11,8 @@ int main()
 
 	for (int i = 0; i < 360; ++i)
 	{
-		p.clear();
-
 		// Generate a sine wave
-		for(int j = 0; j < 360; ++j)
+		for (int j = 0; j < 360; ++j)
 		{
 			const auto x = static_cast<unsigned int>(round(p.width() * j / 360.0));
 			const auto y = static_cast<unsigned int>(round(p.height() / 2 + p.height() / 2 * sin(M_PI * (j + i) / 180.0)));
