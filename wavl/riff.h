@@ -1,8 +1,6 @@
 #ifndef RIFF_RIFF_H
 #define RIFF_RIFF_H
 
-#include <ostream>
-
 namespace riff
 {
 	using namespace std;
@@ -28,29 +26,6 @@ namespace riff
 		unsigned short block_align;
 		chunk data;
 	};
-
-	// Overload << for a chunk
-	ostream& operator<<(ostream &out, const struct chunk &c)
-	{
-		out << c.id << endl;
-		out << c.size;
-		return out;
-	}
-
-	// Overload << for the header
-	ostream& operator<<(ostream &out, const struct header &h)
-	{
-		out << h.riff << endl;
-		out << h.wave_tag << endl;
-		out << h.format << endl;
-		out << h.format_tag << endl;
-		out << h.channels << endl;
-		out << h.sample_rate << endl;
-		out << h.bytes_per_second << endl;
-		out << h.block_align << endl;
-		out << h.data;
-		return out;
-	}
 }
 
 #endif
