@@ -1,1 +1,2 @@
-- arecord -t wav -f cd | ./foo
+- [ ] FFT
+- [ ] VU meter

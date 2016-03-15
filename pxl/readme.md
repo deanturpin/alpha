@@ -1,14 +1,15 @@
 Requires ncurses
+
 ```bash
 sudo apt-get install ncurses-dev
 ```
 
 ##TODO
 - [ ] Add exception handling
-- [ ] Add resize method
 - [ ] Add framerate
 - [ ] Keyboard shortcuts (zoom, pan)
-- [ ] Fit to page
+- [x] Fit to page - handled by ncurses
+- [x] Add resize method - handled by ncurses
 - [x] calculate current shell size  - not required with ncurses
 - [x] Investigate clear screen options - not required with ncurses
 - [x] Rename to pixl8? Or pxl::pxl8?

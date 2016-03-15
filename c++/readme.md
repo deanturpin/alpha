@@ -1,18 +1,18 @@
 #TODO
 - [ ] how do you use escaped characters in a heredoc?
-- [x] generate main from filenames
 - [ ] rename routines that clash (need tst namespace)
 - [ ] raii
 - [ ] ratio
 - [ ] override specifier
 - [ ] chrono
-- [ ] threads, thread_local
+- [ ] threads, thread_local, thread sleep
 - [ ] mutex
 - [ ] Big O
 - [ ] user literals - http://en.cppreference.com/w/cpp/language/user_literal
 - [ ] templates, typenames, typeid
 - [ ] lambda, nullary lambda - http://en.cppreference.com/w/cpp/language/lambda
 - [ ] explicit operators - http://en.cppreference.com/w/cpp/language/explicit
+- [x] generate main from filenames
 
 # Memory
 ```
@@ -108,7 +108,7 @@ unsigned signed const long
 
 auto(1) void bool char wchar_t float double short int
 
-xor xor_eq and and_eq bitand bitor not not_eq  or or_eq compl
+xor xor_eq and and_eq bitand bitor not not_eq or or_eq compl
 
 export(1) extern static
 
