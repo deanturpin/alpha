@@ -1,7 +1,7 @@
 #include <iostream>
 #include <sstream>
 #include <regex>
-
+#include <unistd.h>
 #include "pxl.h"
 
 int main()
@@ -40,6 +40,8 @@ int main()
 	}
 	else
 		cout << "No match" << endl;
+
+	sleep(2);
 
 	return 0;
 }

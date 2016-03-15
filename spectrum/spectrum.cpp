@@ -25,9 +25,8 @@ int main()
 		for (auto s = samples.cbegin(); s != samples.cend(); s += 2)
 			p.set(i++, (p.height() / 2) + *s / 120);
 
-		// Render and clear buffer
+		// Render the buffer
 		p.render();
-		p.clear();
 	}
 
 	return 0;
