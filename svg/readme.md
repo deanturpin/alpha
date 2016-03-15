@@ -6,6 +6,7 @@ curl http://www.fileformat.info/info/unicode/char/0950/devanagari_om.svg | ./bit
 ![alt text](https://github.com/deanturpin/alpha/blob/master/unicode/images/om_plot.png "Excel plot of om symbol")
 
 ##TODO
+- [ ] Use cin.read not streaming (breaks ncurses)
 - [ ] Better way to extract coordinates?
 - [ ] Render should return a string or use operator<<
 - [ ] Allow white space after command

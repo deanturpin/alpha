@@ -21,9 +21,8 @@ int main()
 	while (cin.read(reinterpret_cast<char *>(samples.data()), batch * sizeof(short)))
 	{
 		// Store every other sample (two channels)
-		int i = 0;
 		for (auto s = samples.cbegin(); s != samples.cend(); s += 2)
-			p.set(i++, (p.height() / 2) + *s / 120);
+			p.set(distance(samples.cbegin(), s) / 2, (p.height() / 2) + *s / 120);
 
 		// Render the buffer
 		p.render();
