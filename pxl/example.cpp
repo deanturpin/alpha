@@ -1,3 +1,4 @@
+#include "unistd.h"
 #include "pxl.h"
 
 int main()
@@ -5,6 +6,8 @@ int main()
 	// Create bitmap
 	{
 		pxl::pxl8 p;
+
+		p.clear();
 
 		p.set(26, 29);
 		p.set(28, 23);
@@ -31,6 +34,8 @@ int main()
 
 		p.render();
 	}
+
+	sleep(2);
 
 	return 0;
 }

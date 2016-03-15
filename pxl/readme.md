@@ -5,6 +5,7 @@ sudo apt-get install ncurses-dev
 ```
 
 ##TODO
+- [ ] Add set marker routine
 - [ ] Add exception handling
 - [ ] Add framerate
 - [ ] Keyboard shortcuts (zoom, pan)

@@ -23,21 +23,19 @@ int main()
 	pxl::pxl8 p;
 
 	// Target dimensions
-	const int x = 150;
-
+	const int x = p.width();
 	const int x_bin_size = samples.size() / x;
-	const int y_bin_size = 1200;
 
 	// Populate
 	for (const auto &s:samples)
 	{
 		static int i = 0;
-		p.set(i++ / x_bin_size, 30 + s / y_bin_size);
+		p.set(i++ / x_bin_size, p.height() / 2 + s / 600);
 	}
 
 	p.render();
 
-	sleep(2);
+	sleep(5);
 
 	return 0;
 }
