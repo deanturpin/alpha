@@ -15,10 +15,6 @@ foo:
 clean:
 	$(foreach dir, $(source_dirs), make -C $(dir) clean;)
 
-# Include What You Use
-iwyu:
-	$(foreach dir, $(source_dirs), make -C $(dir) iwyu;)
-
 # Call run script if present
 run: foo
 	$(foreach dir, $(source_dirs), make -C $(dir) run;)

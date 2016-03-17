@@ -11,13 +11,13 @@ target := foo
 
 # Compile and link all source files into a single executable
 objects := $(patsubst %.cpp, %.o, $(wildcard *.cpp))
-$(target) : $(objects)
+$(target): $(objects)
 	$(CC) -o $@ $(objects) $(LFLAGS)
 
-iwyu :
-	$(foreach cpp, $(wildcard *.cpp), iwyu ${standard} -I../pxl -I../wavl $(cpp);)
-
-clean :
+clean:
 	$(RM) $(target) $(objects)
 
-fresh : clean foo
+include:
+	$(foreach cpp, $(wildcard *.cpp), iwyu -std=c++1y $(cpp) || true;)
+
+fresh: clean foo
