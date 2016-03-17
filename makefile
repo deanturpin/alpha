@@ -6,11 +6,11 @@ all: foo cppcheck iwyu
 source_dirs := $(dir $(wildcard */makefile))
 
 # cppcheck from top level
-cppcheck:
+cppcheck: foo iwyu
 	cppcheck --enable=all . 1> /dev/null
 
 # Include What You Use
-iwyu:
+iwyu: foo
 	$(foreach dir, $(source_dirs), make -j -C $(dir) iwyu;)
 
 # Build each project

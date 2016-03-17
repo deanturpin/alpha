@@ -12,7 +12,7 @@ namespace tst
 
 		cout << 1'000'000'000 << endl;
 		cout << hex << 0x0000'1111'2222'3333 << dec << endl;
-		cout << hex << 0b0000'0111'0000'1111 << dec << endl;
+		cout << hex << 0b00000111'0000'1111 << dec << endl; // cppcheck is a bit fussy about apostrophes in binary literals
 
 		// Time related
 		auto time1 = 90s;

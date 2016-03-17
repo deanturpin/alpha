@@ -15,5 +15,7 @@ namespace tst
 		cout << "\nList initialisation" << endl;
 
 		vector<int> blah = ints();
+		for (const auto &i:blah)
+			cout << i << endl;
 	}
 }
