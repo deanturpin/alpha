@@ -5,9 +5,9 @@
 - [ ] Add c++ regex explorer (deep c++)
 - [ ] Boost port
 - [ ] git submodules
-- [ ] Use colours for regression report
 - [ ] GDB refresher - something newer than DDD?
 - [ ] ascii video
+- [x] Use colours for regression report - not necessary, hide the dull stuff
 - [x] live audio/video capture to ascii - in progress
 - [x] Make bitmap a library
 - [x] Generate list of directories to build (not hardcoded) - not required
