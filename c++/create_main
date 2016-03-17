@@ -15,14 +15,9 @@ done
 
 # Write top bit
 cat <<TOP > $main_file
-#include <iostream>
-#include <string>
-
 // Prototypes
 namespace tst
 {
-	using namespace std;
-
 TOP
 
 # Write prototypes
@@ -34,8 +29,6 @@ cat <<MIDDLE >> $main_file
 
 int main()
 {
-	// using namespace tst;
-
 MIDDLE
 
 # Write function calls
@@ -43,7 +36,6 @@ echo -e $function_calls >> $main_file
 
 # Write end bit
 cat <<BOTTOM >> $main_file
-
 	return 0;
 }
 BOTTOM

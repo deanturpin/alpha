@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <iterator>
 #include "unistd.h"
 #include "riff.h"
 #include "pxl.h"
