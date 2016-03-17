@@ -143,4 +143,9 @@ requires concept
 - virtual
 - static
 - Agile versus waterfall
+- Singleton design patterns 
+- Types of cast 
+- Three words to describe yourself 
+- Which skills make you suitable for the role? 
+- Different between class and stryct 
 

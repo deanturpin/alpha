@@ -1,6 +1,7 @@
 CC=clang++
 RM=rm -f
-FLAGS := -Wall -Wextra -pedantic -pedantic-errors -std=c++1z -O2
+standard=-std=c++1y
+FLAGS=-Wall -Wextra -pedantic -pedantic-errors ${standard} -O2
 
 %.o:%.cpp
 	$(CC) $(FLAGS) -o $*.o -c $*.cpp
@@ -9,11 +10,14 @@ FLAGS := -Wall -Wextra -pedantic -pedantic-errors -std=c++1z -O2
 target := foo
 
 # Compile and link all source files into a single executable
-objects := $(patsubst %.cpp,%.o,$(wildcard *.cpp))
+objects := $(patsubst %.cpp, %.o, $(wildcard *.cpp))
 $(target) : $(objects)
 	$(CC) -o $@ $(objects) $(LFLAGS)
 
-clean:
+iwyu :
+	$(foreach cpp, $(wildcard *.cpp), iwyu ${standard} -I../pxl -I../wavl $(cpp);)
+
+clean :
 	$(RM) $(target) $(objects)
 
-fresh: clean foo
+fresh : clean foo

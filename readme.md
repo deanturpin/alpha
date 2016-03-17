@@ -1,4 +1,5 @@
 ##TODO
+- [ ] sort out include paths for iwyu
 - [ ] Simple audio driver
 - [ ] Consolidate makefile and rules.mak
 - [ ] Add c++ regex explorer (deep c++)
