@@ -1,7 +1,7 @@
 CC = clang++
 RM = rm -f
 standard = -std=c++1y
-FLAGS = -Wall -Wextra -pedantic -pedantic-errors ${standard} -O2
+FLAGS = -Wall -Wextra -pedantic -pedantic-errors $(standard) -O2
 
 %.o:%.cpp
 	echo comp $<
@@ -13,10 +13,11 @@ foo: $(objects)
 	$(CC) -o $@ $(objects) $(LFLAGS)
 
 clean:
+	echo tidy $(objects)
 	$(RM) foo $(objects)
 
 iwyu: $(objects)
-	$(foreach cpp, $(wildcard *.cpp), echo iwyu $(cpp) && iwyu ${standard} $(cpp) 2>&1 | grep -- '- #include' || true;)
+	$(foreach cpp, $(wildcard *.cpp), echo iwyu $(cpp) && iwyu $(standard) $(cpp) 2>&1 | grep -- '- #include' || true;)
 
 fresh: clean foo
 
