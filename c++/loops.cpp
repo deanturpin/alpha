@@ -11,9 +11,9 @@ namespace tst
 		vector<int> vec {1, 2, 3, 4, 5, 6, 7};
 
 		for (const auto &v:vec)
-			cout << v << endl;
+			cout << "cont " << v << endl;
 
 		for (const auto &i:{5, 4, 3, 2, 1})
-			cout << i << endl;
+			cout << "iter " << i << endl;
 	}
 }
