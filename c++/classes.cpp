@@ -2,11 +2,9 @@
 
 namespace tst
 {
-	using namespace std;
-
 	void classes()
 	{
-		cout << "\nClasses" << endl;
+		using namespace std;
 
 		// Order of contruction/destruction
 		{

@@ -2,10 +2,9 @@
 
 namespace tst
 {
-	using namespace std;
-
 	void raii()
 	{
+		using namespace std;
 		cout << "RAII - Resource Acquisition Is Initialisation" << endl;
 	}
 }

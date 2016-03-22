@@ -4,12 +4,12 @@
 
 namespace tst
 {
-	using namespace std;
-
 	void c11_ratio()
 	{
-		cout << "c++11 ratio" << endl;
+		using namespace std;
+
 		cout << "Nano is " << nano::num << " / " << nano::den << endl;
 		cout << "Value of third is " << 1.0 * ratio<1,3>::num / ratio<1,3>::den << endl;
+		// cout << "Ratio add " << 1.0 * ratio_add(ratio<1,3>, ratio<1,3>)::den << endl;
 	}
 }

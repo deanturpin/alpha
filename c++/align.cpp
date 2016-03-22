@@ -2,11 +2,9 @@
 
 namespace tst
 {
-	using namespace std;
-
 	void align()
 	{
-		cout << "Align" << endl;
+		using namespace std;
 
 		class A {};
 		class alignas(32) B {};

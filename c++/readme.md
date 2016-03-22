@@ -3,7 +3,8 @@
 - [ ] http://en.cppreference.com/w/cpp/utility/hash
 - [ ] how do you use escaped characters in a heredoc?
 - [ ] raii
-- [ ] ratio
+- [x] ratio
+- [ ] ratio arithmetic
 - [ ] override specifier
 - [ ] chrono
 - [ ] random number generators

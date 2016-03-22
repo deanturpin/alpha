@@ -2,11 +2,9 @@
 
 namespace tst
 {
-	using namespace std;
-
 	void keyword_mutable()
 	{
-		cout << "\nKeyword mutable" << endl;
+		using namespace std;
 
 		struct A
 		{

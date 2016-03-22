@@ -5,13 +5,11 @@
 
 namespace tst
 {
-	using namespace std;
-
-	void literals()
+	void c11_user_literals()
 	{
-		cout << "\nLiterals" << endl;
-		cout << R"((?:[0-9]{1,3}\.?){4}\s+\S+)" << endl;
+		using namespace std;
 
+		cout << R"((?:[0-9]{1,3}\.?){4}\s+\S+)" << endl;
 		cout << 1'000'000'000 << endl;
 		cout << hex << 0x0000'1111'2222'3333 << dec << endl;
 		cout << hex << 0b00000111'0000'1111 << dec << endl; // cppcheck is a bit fussy about apostrophes in binary literals
