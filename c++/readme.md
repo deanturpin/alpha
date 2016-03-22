@@ -1,4 +1,6 @@
 #TODO
+- [ ] dump function name before calling it in create_main
+- [ ] http://en.cppreference.com/w/cpp/utility/hash
 - [ ] how do you use escaped characters in a heredoc?
 - [ ] raii
 - [ ] ratio

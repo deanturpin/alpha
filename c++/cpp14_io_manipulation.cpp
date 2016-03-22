@@ -4,9 +4,11 @@
 
 namespace tst
 {
-	void io_manipulation()
+	void cpp14_io_manipulation()
 	{
 		using namespace std;
+
+		// cout << "\nIO manipulation - c++14" << endl;
 
 		stringstream s;
 		string blah(to_string(1234));
