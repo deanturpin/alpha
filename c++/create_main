@@ -10,7 +10,7 @@ rm -f $main_file
 for file in *.cpp
 do
 	prototypes+="\tvoid ${file%.cpp}();\n"
-	function_calls+="\ttst::${file%.*}();\n"
+	function_calls+="\t${file%.*}();\n"
 done
 
 # Write top bit
@@ -29,6 +29,8 @@ cat <<MIDDLE >> $main_file
 
 int main()
 {
+	using namespace tst;
+
 MIDDLE
 
 # Write function calls

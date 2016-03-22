@@ -15,7 +15,7 @@ int main()
 
 	cout << "Number of replies " << replies.size() << endl;
 
-	for (const auto &r:replies)
+	for (const auto &r : replies)
 		cout << r << endl;
 
 	// std::default_random_engine generator;

@@ -9,10 +9,10 @@
 
 namespace
 {
-	void sig_handler(int signo)
+	void sig_handler(int sig)
 	{
 		// Tidy up ncurses on a ctrl-c
-		if (signo == SIGINT)
+		if (sig == SIGINT)
 		{
 			endwin();
 			_exit(0);

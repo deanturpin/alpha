@@ -1,8 +1,8 @@
 #Text-based GPX processing and What 3 Words integration
 
 ##TODO
+- [ ] ascii route
 - [ ] Add hotspot generator
-- [x] ascii route
 
 #Extract
 ##Usage

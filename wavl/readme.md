@@ -7,11 +7,11 @@ Write a song with a very limited palette of instruments and effects. (In fact, I
 
 ##TODO
 - [ ] Spectrum 
-- [ ] Monitor mic
 - [ ] Tone generator
 - [ ] Sequencer
 - [ ] Reverb (convolution/algorithmic)
 - [ ] Time stretch
+- [x] Monitor mic - using asound
 - [x] Good source of WAVs
 - [x] Read whole file and resize
 

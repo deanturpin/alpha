@@ -1,12 +1,12 @@
 ##TODO
-- [ ] sort out include paths for iwyu
 - [ ] Simple audio driver
-- [ ] Consolidate makefile and rules.mak
 - [ ] Add c++ regex explorer (deep c++)
 - [ ] Boost port
 - [ ] git submodules
 - [ ] GDB refresher - something newer than DDD?
 - [ ] ascii video
+- [x] Consolidate makefile and rules.mak - not doing
+- [x] sort out include paths for iwyu
 - [x] Use colours for regression report - not necessary, hide the dull stuff
 - [x] live audio/video capture to ascii - in progress
 - [x] Make bitmap a library

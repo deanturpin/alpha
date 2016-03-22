@@ -1,10 +1,10 @@
 #TODO
 - [ ] how do you use escaped characters in a heredoc?
-- [ ] rename routines that clash (need tst namespace)
 - [ ] raii
 - [ ] ratio
 - [ ] override specifier
 - [ ] chrono
+- [ ] random number generators
 - [ ] threads, thread_local, thread sleep
 - [ ] mutex
 - [ ] Big O
@@ -12,6 +12,7 @@
 - [ ] templates, typenames, typeid
 - [ ] lambda, nullary lambda - http://en.cppreference.com/w/cpp/language/lambda
 - [ ] explicit operators - http://en.cppreference.com/w/cpp/language/explicit
+- [x] rename routines that clash (need tst namespace)
 - [x] generate main from filenames
 
 # Memory

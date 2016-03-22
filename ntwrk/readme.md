@@ -1,4 +1,6 @@
 ## TODO
+- [ ] Extract numbers using dots as delimiter, print bits
+- [ ] Use std map to build network?
 - [ ] Don't match comments
 - [ ] Create IP map
 - [ ] ascii map
