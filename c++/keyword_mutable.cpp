@@ -1,11 +1,7 @@
-#include <iostream>
-
 namespace tst
 {
 	void keyword_mutable()
 	{
-		using namespace std;
-
 		struct A
 		{
 			// Variable is increment despite being a const method
