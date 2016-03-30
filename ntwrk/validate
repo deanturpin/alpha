@@ -1,0 +1,21 @@
+#!/bin/bash
+
+cat <<MIME
+Content-type:text/plain
+
+MIME
+
+date
+
+IFS=$'\n'
+lines=($(cat hosts))
+
+echo ${#lines[*]} lines in host file
+
+for line in ${lines[*]}
+do
+	ip=$(echo $line | cut -d' ' -f1)
+	echo $ip
+
+	# echo $line
+done
