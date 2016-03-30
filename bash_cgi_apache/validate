@@ -14,9 +14,15 @@ echo ${#lines[*]} lines in host file
 
 for line in ${lines[*]}
 do
+	# Extract IP
 	IP=$(echo $line | cut -d' ' -f1)
-	# echo -en "$line\t"
-	ping -w 1 -c 1 $IP 2>/dev/null | grep '1 received' && echo good || echo bad
 
-	# echo $line
+	# Ping it and set colour according to status
+	[[ $(ping -w 1 -c 1 $IP | grep '1 received') != "" ]] && tput setaf 2 || tput setaf 1
+
+	# Print the line
+	echo $line
 done
+
+# Reset colours
+tput sgr0
