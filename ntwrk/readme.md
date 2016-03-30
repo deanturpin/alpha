@@ -1,4 +1,5 @@
 ## TODO
+- [ ] bash cgi - ping hosts in host file and colour the output
 - [ ] Extract numbers using dots as delimiter, print bits
 - [ ] Use std map to build network?
 - [ ] Don't match comments

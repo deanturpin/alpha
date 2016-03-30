@@ -14,8 +14,9 @@ echo ${#lines[*]} lines in host file
 
 for line in ${lines[*]}
 do
-	ip=$(echo $line | cut -d' ' -f1)
-	echo $ip
+	IP=$(echo $line | cut -d' ' -f1)
+	# echo -en "$line\t"
+	ping -w 1 -c 1 $IP 2>/dev/null | grep '1 received' && echo good || echo bad
 
 	# echo $line
 done
