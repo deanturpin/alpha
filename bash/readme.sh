@@ -1,30 +1,11 @@
-# Simple function - takes all parameters
-function heading() {
-	echo '#######' $*
-}
-
-# Here document (heredoc)
-heading Preformatted text
-cat <<ONE
-one
-two
-three
-ONE
-
-# Use a ! delimiter if you're feeling edgy
-cat <<!
-four
-five
-six
-!
-
-heading Loops
+# Loops
+echo Loops
 for i in 1 2 3 4 5
 do
 	echo Iteration $i
 done
 
-heading Search and replace
+echo Search and replace
 sar='abcabcabcabcabc'
 
 echo Original $sar
