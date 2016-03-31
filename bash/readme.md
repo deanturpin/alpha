@@ -1,0 +1,9 @@
+- [ ] Replace last (search and replace)
+- [ ] Send all stderr to stdout (or file)
+- [ ] Pipes
+- [ ] mkfifo /tmp/reponse
+- [ ] Adhoc network connections
+- [ ] cat </dev/tcp/time.nist.gov/13
+- [ ] String manipulation
+- [ ] http://www.thegeekstuff.com/2010/07/bash-string-manipulation/
+- [ ] http://tldp.org/LDP/abs/html/string-manipulation.html
