@@ -1,24 +1,37 @@
 #!/bin/bash
 
-# Set MIME type
-cat <<MIME
-Content-type:text/plain
+# Set CSS style and terminal colour
+function red { tput setaf 1; color="red"; }
+function grey { tput sgr0; color="grey"; }
+function green { tput setaf 2; color="green"; }
 
-MIME
+# MIME type and page header
+cat <<HEADER
+Content-type:text/html
+
+<html>
+<body>
+<p style='background-color:black; font-family:sans-serif;'>
+HEADER
 
 # Read hosts line by line
 while read line
 do
-	# Check if it starts with a IP
+	# Check if line starts with an IP
 	if [[ $line =~ ^[0-9.]+ ]]
 	then
-		[[ $(ping -w 1 -c 1 $BASH_REMATCH | grep '1 received') != "" ]] && tput setaf 2 || tput setaf 1
+		[[ $(ping -w 1 -c 1 $BASH_REMATCH | grep '1 received') != "" ]] && green || red
 	else
-		tput sgr0
+		grey
 	fi
 
-	echo $line
+	echo "<span style='color:$color;'>$line</span><br />"
 done < hosts
 
-# Reset colours
-tput sgr0
+grey
+
+cat <<FOOTER
+</p>
+</body>
+</html>
+FOOTER
