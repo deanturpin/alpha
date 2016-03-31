@@ -1,4 +1,4 @@
 ###todo
-- [ ] print blank lines
-- [ ] colorise host file
-- [ ] handle comments
+- [x] print blank lines
+- [x] colorise host file
+- [x] handle comments

@@ -6,24 +6,19 @@ Content-type:text/plain
 
 MIME
 
-date
-
-IFS=$'\n'
-lines=($(cat hosts))
-
-echo ${#lines[*]} lines in host file
-
-for line in ${lines[*]}
+# Read hosts line by line
+while read line
 do
-	# Extract IP
-	IP=$(echo $line | cut -d' ' -f1)
+	# Check if it starts with a IP
+	if [[ $line =~ ^[0-9.]+ ]]
+	then
+		[[ $(ping -w 1 -c 1 $BASH_REMATCH | grep '1 received') != "" ]] && tput setaf 2 || tput setaf 1
+	else
+		tput sgr0
+	fi
 
-	# Ping it and set colour according to status
-	[[ $(ping -w 1 -c 1 $IP | grep '1 received') != "" ]] && tput setaf 2 || tput setaf 1
-
-	# Print the line
 	echo $line
-done
+done < hosts
 
 # Reset colours
 tput sgr0
