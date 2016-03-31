@@ -2,8 +2,7 @@
 - [ ] dump function name before calling it in create_main
 - [ ] http://en.cppreference.com/w/cpp/utility/hash
 - [ ] how do you use escaped characters in a heredoc?
-- [ ] raii
-- [x] ratio
+- [ ] RAII
 - [ ] ratio arithmetic
 - [ ] override specifier
 - [ ] chrono
@@ -15,6 +14,7 @@
 - [ ] templates, typenames, typeid
 - [ ] lambda, nullary lambda - http://en.cppreference.com/w/cpp/language/lambda
 - [ ] explicit operators - http://en.cppreference.com/w/cpp/language/explicit
+- [x] ratio
 - [x] rename routines that clash (need tst namespace)
 - [x] generate main from filenames
 

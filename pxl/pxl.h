@@ -49,7 +49,7 @@ namespace pxl
 			}
 
 			// Write a point to the internal buffer
-			void set(const int x, const int y) const { mvaddstr(y, x, "."); }
+			void set(const int x, const int y) const { mvaddstr(y, x, ">"); }
 
 			// Buffer dimensions
 			int width() const { return COLS; }

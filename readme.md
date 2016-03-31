@@ -1,4 +1,5 @@
 ##TODO
+- [ ] command line battery monitor
 - [ ] https://en.wikipedia.org/wiki/Homomorphic_encryption
 - [ ] Simple audio driver
 - [ ] Add c++ regex explorer (deep c++)
