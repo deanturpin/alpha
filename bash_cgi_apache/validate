@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Set MIME type
 cat <<MIME
 Content-type:text/plain
 
