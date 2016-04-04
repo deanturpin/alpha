@@ -1,11 +1,7 @@
 include ../rules.mak
 
-# Create main, build foo, remove main
-all: main.cpp foo # remove_main
-
-.PHONY: remove_main
-remove_main:
-	$(RM) main.cpp main.o
+# Create main, build foo
+all: main.cpp foo
 
 .PHONY: main.cpp
 main.cpp:
