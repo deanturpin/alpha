@@ -49,3 +49,48 @@ BLAH
 
 cat hello.txt
 rm hello.txt
+
+# Assign to a variable
+var=$(cat <<!
+This
+And
+That
+!
+)
+
+echo $var
+
+# Supply to a function
+function printer {
+	read one
+	read two
+	read three
+	echo \"$one\"
+	echo \"$two\"
+	echo \"$three\"
+}
+
+printer <<PRINTME
+ONE
+TWO
+THREE
+PRINTME
+
+# Anonymous heredoc - check variables
+hello=yes
+: <<TESTVARS
+$(hello?)
+$(goodbye?)
+TESTVARS
+
+# Anonymous heredoc as a comment block
+: <<"JUSTACOMMENT"
+Blah
+JUSTACOMMENT
+
+# Suppress tabs
+cat <<-NOTABS
+one
+		two
+				three
+NOTABS
