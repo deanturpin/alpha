@@ -39,13 +39,13 @@ twelve
 COMMENT
 
 # A clunky way to script vi
-vi <<BLAH
+vi <<VI
 i
 hello
 
 :w hello.txt
 :q
-BLAH
+VI
 
 cat hello.txt
 rm hello.txt
@@ -94,3 +94,14 @@ one
 		two
 				three
 NOTABS
+
+# Escape characters
+temp=$(mktemp)
+cat <<NOESCAPE > $temp
+blah\nblahblah
+
+Doesn't work, in fact nothing after the ^M is printed
+NOESCAPE
+
+cat $temp
+rm -f $temp
