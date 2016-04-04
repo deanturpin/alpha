@@ -1,6 +1,6 @@
 .SILENT:
 
-all: foo cppcheck iwyu
+all: foo
 
 # List of all directories containing a makefile
 source_dirs := $(dir $(wildcard */makefile))
