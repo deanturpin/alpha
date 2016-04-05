@@ -1,12 +1,10 @@
 ##TODO
-- [ ] command line battery monitor
-- [ ] https://en.wikipedia.org/wiki/Homomorphic_encryption
 - [ ] Simple audio driver
-- [ ] Add c++ regex explorer (deep c++)
-- [ ] Boost port
 - [ ] git submodules
 - [ ] GDB refresher - something newer than DDD?
 - [ ] ascii video
+
+- [x] command line battery monitor - install acpi
 - [x] Consolidate makefile and rules.mak - not doing
 - [x] sort out include paths for iwyu
 - [x] Use colours for regression report - not necessary, hide the dull stuff

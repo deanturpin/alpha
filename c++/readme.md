@@ -1,53 +1,34 @@
 #TODO
+- [ ] Big O
+- [ ] templates, typenames, typeid
+- [ ] Variadic templates - http://www.cplusplus.com/articles/EhvU7k9E/
+- [ ] chrono
+- [ ] threads, thread_local, thread sleep
+- [ ] random number generators
+- [ ] mutex
+- [ ] Add c++ regex explorer (deep c++)
 - [ ] http://en.cppreference.com/w/cpp/utility/hash
+- [ ] Boost
 - [ ] RAII
 - [ ] ratio arithmetic
 - [ ] override specifier
-- [ ] chrono
-- [ ] random number generators
-- [ ] threads, thread_local, thread sleep
-- [ ] mutex
-- [ ] Big O
 - [ ] user literals - http://en.cppreference.com/w/cpp/language/user_literal
-- [ ] templates, typenames, typeid
 - [ ] lambda, nullary lambda - http://en.cppreference.com/w/cpp/language/lambda
 - [ ] explicit operators - http://en.cppreference.com/w/cpp/language/explicit
+
 - [x] dump function name before calling it in create_main
 - [x] ratio
 - [x] rename routines that clash (need tst namespace)
 - [x] generate main from filenames
-
-# Memory
-```
---------------------
-stack (static)
-
-
-
-heap (dynamic)
--------------------- global variables and static variables that are initialized to zero or do not have explicit initialization in source code
-bss
--------------------- any global or static variables which have a pre-defined value and can be modifie
-data
--------------------- compiled code
-text
--------------------- bottom of RAM
-
-```
-
-#RAII
-Acquire resources on construction and release them on destruction
-
-# Big 'O' Notation
-"In mathematics, big O notation describes the limiting behavior of a function when the argument tends towards a particular value or infinity, usually in terms of simpler functions. It is a member of a larger family of notations that is called Landau notation, Bachmann–Landau notation (after Edmund Landau and Paul Bachmann),[1][2] or asymptotic notation."
-
-"In computer science, big O notation is used to classify algorithms by how they respond (e.g., in their processing time or working space requirements) to changes in input size."
 
 ##Examples
 - Local variables - memory released when out of scope
 - Which resources?
 
 #Exceptions
+TBD
+
+# Regex
 TBD
 
 #Threads
@@ -150,5 +131,5 @@ requires concept
 - Types of cast 
 - Three words to describe yourself 
 - Which skills make you suitable for the role? 
-- Different between class and stryct 
+- Difference between class and stryct 
 

@@ -1,3 +1,6 @@
+##TODO
+- [ ] https://en.wikipedia.org/wiki/Homomorphic_encryption
+
 ```bash
 $ ./create_secret 
 Creating secrets
