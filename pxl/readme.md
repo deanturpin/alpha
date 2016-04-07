@@ -8,6 +8,7 @@ sudo apt-get install ncurses-dev
 - [ ] Add framerate
 - [ ] Keyboard shortcuts (zoom, pan)
 - [ ] add min/max on opposite corners
+
 - [x] Add exception handling - no required
 - [x] Add set marker routine - not sure what this means
 - [x] Fit to page - handled by ncurses

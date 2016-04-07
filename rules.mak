@@ -16,7 +16,7 @@ clean:
 	echo tidy $(objects)
 	$(RM) foo $(objects)
 
-iwyu: # $(objects)
+iwyu: # $(objects) - why did I comment this?
 	$(foreach cpp, $(wildcard *.cpp), echo iwyu $(cpp) && iwyu $(standard) $(cpp) 2>&1 | grep -- '- #include' || true;)
 
 fresh: clean foo
