@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo Regular expressions
+
+if [[ "blah 10.10.11.12 blah blah" =~ [0-9.]+ ]]
+then
+	echo $BASH_REMATCH
+else
+	echo No match
+fi
