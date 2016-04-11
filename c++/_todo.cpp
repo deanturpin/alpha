@@ -4,9 +4,10 @@ void _todo()
 {
 	using namespace std;
 
+	cout << "Implicit members - shallow/deep copy" << endl;
 	cout << "Lambda capture clause" << endl;
 	cout << "Reimplement template loop with algorithm::for_each" << endl;
-	cout << "Exceptions" << endl;
+	cout << "Exceptions - explore standard exceptions" << endl;
 	cout << "Regex" << endl;
 	cout << "RAII examples" << endl;
 
@@ -16,5 +17,8 @@ void _todo()
 	// http://www.codeproject.com/Articles/570638/Ten-Cplusplus-Features-Every-Cplusplus-Developer#smartpointers"
 	cout << "Smart pointers" << endl;
 
-	cout << "static assert and type traits" << endl;
+	cout << "Static assert and type traits" << endl;
+
+	// http://www.codeproject.com/Articles/570638/Ten-Cplusplus-Features-Every-Cplusplus-Developer#movesemantics
+	cout << "Move semantics" << endl;
 }
