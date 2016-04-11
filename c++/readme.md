@@ -17,7 +17,7 @@ TBD
 #Threads
 - OpenMP
 - Mutex / semaphores
-- *http://www.drdobbs.com/tools/avoiding-classic-threading-problems/231000499
+- http://www.drdobbs.com/tools/avoiding-classic-threading-problems/231000499
 
 ##Issues
 - Data races, deadlocks and livelocks - unsynchonised access to shared memory can introduce race conditions and undefined behaviour (program results depend nondeterministcially on the relative timings of two or more threads)
@@ -115,4 +115,3 @@ requires concept
 - Three words to describe yourself 
 - Which skills make you suitable for the role? 
 - Difference between class and stryct 
-

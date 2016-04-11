@@ -1,0 +1,18 @@
+#!/bin/bash
+
+pushd ../
+
+dirs="private doc dev deanturpin.github.io"
+
+for dir in $dirs
+do
+	if [[ -d $dir ]]
+	then
+		pushd $dir
+		git status
+		git push
+		popd
+	fi
+done
+
+popd
