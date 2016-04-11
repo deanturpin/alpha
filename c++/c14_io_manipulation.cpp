@@ -4,7 +4,7 @@
 
 namespace tst
 {
-	void cpp14_io_manipulation()
+	void c14_io_manipulation()
 	{
 		using namespace std;
 
