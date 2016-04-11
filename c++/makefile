@@ -1,3 +1,5 @@
+.SILENT:
+
 include ../rules.mak
 
 # Create main, build foo
