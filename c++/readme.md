@@ -1,10 +1,7 @@
-#TODO
-- [x] dump function name before calling it in create_main
-- [x] ratio
-- [x] rename routines that clash (need tst namespace)
-- [x] generate main from filenames
+## TODO
+- [ ] reimplement template loop with algorithm::for_each
 
-##Examples
+##RAII examples
 - Local variables - memory released when out of scope
 - Which resources?
 
