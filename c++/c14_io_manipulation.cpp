@@ -2,16 +2,13 @@
 #include <iomanip>
 #include <sstream>
 
-namespace tst
+void c14_io_manipulation()
 {
-	void c14_io_manipulation()
-	{
-		using namespace std;
+	using namespace std;
 
-		stringstream s;
-		string blah(to_string(1234));
-		s << quoted(string(blah));
+	stringstream s;
+	string blah(to_string(1234));
+	s << quoted(string(blah));
 
-		cout << "Quite a lot of code quote something like this: " << s.str() << "?" << endl;
-	}
+	cout << "Quoted: " << s.str() << endl;
 }

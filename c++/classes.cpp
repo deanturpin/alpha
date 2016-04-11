@@ -1,141 +1,99 @@
 #include <iostream>
 
-namespace tst
+void classes()
 {
-	void classes()
+	using namespace std;
+
+	// Explicit
 	{
-		using namespace std;
-
-		// Explicit
+		struct A
 		{
-			struct A
-			{
-				A(int) { ; }
-			};
+			A(int) { ; }
+		};
 
-			struct B
-			{
-				explicit B(int) { ; }
-			};
-
-			A(1);
-			B(1);
-			// Error - candidate constructor (the implicit copy constructor) not
-			// viable:
-			// B("blah");
-		}
-
-		// Overload not override
+		struct B
 		{
-			class A
-			{
-				public:
-					void foo()
-					{
-						cout << "foo" << endl;
-					}
-			};
+			explicit B(int) { ; }
+		};
 
-			class B : public A
-			{
-				public:
-					void foo() const
-					{
-						cout << "bar" << endl;
-					}
-			};
+		A(1);
+		B(1);
+		// Error - candidate constructor (the implicit copy constructor) not
+		// viable:
+		// B("blah");
+	}
 
-			cout << "Overload not override" << endl;
-			A a;
-			B b;
-
-			a.foo();
-			b.foo();
-		}
-
-		// final keyword 1
+	// Overload not override
+	{
+		class A
 		{
-			struct A
-			{
-				virtual void foo() final;
-				void bar();
-			};
+			public:
+				void foo()
+				{
+					cout << "foo" << endl;
+				}
+		};
 
-			struct B final : public A
-			{
-				// Error - A::foo is final
-				// void foo();
-
-				void bar(){};
-			};
-
-			cout << "Is A final? " << boolalpha << is_final<A>::value << endl;
-			cout << "Is B final? " << boolalpha << is_final<B>::value << endl;
-
-			// Error - B is final
-			// struct C final : public B {};
-
-			// Error - A is incomplete
-			// A a;
-
-			// Error - A is incomplete
-			// B b;
-		}
-
-		// override keyword
+		class B : public A
 		{
-			class A
-			{
-				void foo();
-				// virtual void bar();
-			};
+			public:
+				void foo() const
+				{
+					cout << "bar" << endl;
+				}
+		};
 
-			class B : public A
-			{
-				void foo(){};
-			};
+		cout << "Overload not override" << endl;
+		A a;
+		B b;
 
-			// A a;
-			// B b;
-		}
+		a.foo();
+		b.foo();
+	}
 
-		// override keyword
-		#if 0
+	// final keyword 1
+	{
+		struct A
 		{
-			struct A
-			{
-				void foo();
-				virtual void bar();
-				// void bar2();
-			};
+			virtual void foo() final;
+			void bar();
+		};
 
-			struct B final : public A
-			{
-				// Error - A::foo is final
-				void foo() { cout << "foo" << endl; }
+		struct B final : public A
+		{
+			// Error - A::foo is final
+			// void foo();
 
-				// OK - bar overrides ::bar
-				void bar() { cout << "bah" << endl; }
+			void bar(){};
+		};
 
-				// Error - signature mismatch
-				// void bar(int) override {};
+		cout << "Is A final? " << boolalpha << is_final<A>::value << endl;
+		cout << "Is B final? " << boolalpha << is_final<B>::value << endl;
 
-				// Error - can't override non-virtual
-				// void bar2() override {};
-			};
+		// Error - B is final
+		// struct C final : public B {};
 
-			// Error: B is final
-			// struct C final : public B {};
+		// Error - A is incomplete
+		// A a;
 
-			// A a;
-			// cout << "Size A " << sizeof a << endl;
-			// Error - foo is not implemented
-			// a.foo();
+		// Error - A is incomplete
+		// B b;
+	}
 
-			B b;
-			cout << "Size B " << sizeof b << endl;
-			b.foo();
-		}
-		#endif
+	// override keyword
+	{
+		class A
+		{
+			void foo();
+			// virtual void bar();
+		};
+
+		class B : public A
+		{
+			void foo(){};
+		};
+
+		// A a;
+		// B b;
 	}
 }

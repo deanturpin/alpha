@@ -1,7 +1,7 @@
 CC = clang++
 RM = rm -f
 standard = -std=c++1y
-FLAGS = -Wall -Wextra -pedantic -pedantic-errors $(standard) # -O2
+FLAGS = -Wall -Wextra -pedantic -pedantic-errors $(standard)
 
 %.o:%.cpp
 	echo comp $<

@@ -1,10 +1,7 @@
 #include <iostream>
 
-namespace tst
+void raii()
 {
-	void raii()
-	{
-		using namespace std;
-		cout << "RAII - Resource Acquisition Is Initialisation" << endl;
-	}
+	using namespace std;
+	cout << "RAII - Resource Acquisition Is Initialisation" << endl;
 }

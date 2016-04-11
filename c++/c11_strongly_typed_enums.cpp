@@ -1,28 +1,25 @@
 #include <iostream>
 
-namespace tst
+void c11_strongly_typed_enums()
 {
-	void c11_strongly_typed_enums()
+	using namespace std;
+
+	enum nmb1
 	{
-		using namespace std;
+		one,
+		two
+	};
 
-		enum nmb1
-		{
-			one,
-			two
-		};
+	enum class nmb2
+	{
+		one,
+		two,
+		three,
+	};
 
-		enum class nmb2
-		{
-			one,
-			two,
-			three,
-		};
+	// OK
+	cout << nmb1::one << endl;
 
-		// OK
-		cout << nmb1::one << endl;
-
-		// Error - no known conversion
-		// cout << nmb2::one << endl;
-	}
+	// Error - no known conversion
+	// cout << nmb2::one << endl;
 }

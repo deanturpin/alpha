@@ -9,7 +9,7 @@ rm -f $main_file
 
 for file in *.cpp
 do
-	prototypes+="\tvoid ${file%.cpp}();\n"
+	prototypes+="void ${file%.cpp}();\n"
 	function_calls+="${file%.*} "
 done
 
@@ -18,8 +18,6 @@ cat <<TOP > $main_file
 #include <iostream>
 
 // Prototypes
-namespace tst
-{
 TOP
 
 # Write prototypes
@@ -27,12 +25,10 @@ echo -e $prototypes >> $main_file
 
 # Write middle bit
 cat <<MIDDLE >> $main_file
-}
 
 int main()
 {
 	using namespace std;
-	using namespace tst;
 
 MIDDLE
 
