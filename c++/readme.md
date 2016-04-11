@@ -1,5 +1,7 @@
 ## TODO
 - [ ] reimplement template loop with algorithm::for_each
+- [ ] smart pointers - http://www.codeproject.com/Articles/570638/Ten-Cplusplus-Features-Every-Cplusplus-Developer#smartpointers
+- [ ] static assert and type traits
 
 ##RAII examples
 - Local variables - memory released when out of scope
@@ -90,25 +92,18 @@ requires concept
 - to_string etc
 - parallelism TS
 - generate main and prototypes from filenames
-- is_class
-- is_polymorphic
+- is_class, is_integral, is_polymorphic
 - type alias http://en.cppreference.com/w/cpp/language/type_alias
 - types http://en.cppreference.com/w/cpp/language/types
 - https://en.wikipedia.org/wiki/Concepts_%28C%2B%2B%29#
-- http://en.cppreference.com/w/cpp/language/override
-- http://en.cppreference.com/w/cpp/language/list_initialization
 - http://en.cppreference.com/w/cpp/language/constexpr
 - http://en.cppreference.com/w/cpp/language/decltype
-- volatile and register
 - noexcept
 - nullptr
 - Auto pointers, shared pointers
-- Lambda expressions
 - virtual
 - static
 - Agile versus waterfall
 - Singleton design patterns 
 - Types of cast 
-- Three words to describe yourself 
-- Which skills make you suitable for the role? 
-- Difference between class and stryct 
+- Difference between class and struct 
