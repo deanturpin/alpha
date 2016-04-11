@@ -3,6 +3,7 @@
 - [ ] git submodules
 - [ ] GDB refresher - something newer than DDD?
 - [ ] ascii video
+- [ ] OpenMP
 
 - [x] command line battery monitor - install acpi
 - [x] Consolidate makefile and rules.mak - not doing

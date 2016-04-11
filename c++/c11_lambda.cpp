@@ -13,8 +13,6 @@ void c11_lambda()
 	for (const auto &v:vec)
 		cout << v << endl;
 
-	cout << "for_each increment" << endl;
-
 	// Increment each element
 	for_each(vec.begin(), vec.end(), [](int &n){ ++n; });
 
