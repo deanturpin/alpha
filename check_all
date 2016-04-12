@@ -2,9 +2,15 @@
 
 dirs="private doc dev deanturpin.github.io"
 
+gitcommand=status
+
+# Override
+[[ $1 == "push" ]] && gitcommand=push
+
+# For each repo
 pushd ../ > /dev/null
 for dir in $dirs
 do
-	[[ -d $dir ]] && (cd $dir; git status)
+	[[ -d $dir ]] && (cd $dir; git $gitcommand)
 done
 popd > /dev/null
