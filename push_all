@@ -1,18 +1,10 @@
 #!/bin/bash
 
-pushd ../
-
 dirs="private doc dev deanturpin.github.io"
 
+pushd ../ > /dev/null
 for dir in $dirs
 do
-	if [[ -d $dir ]]
-	then
-		pushd $dir
-		git status
-		# git push
-		popd
-	fi
+	[[ -d $dir ]] && (cd $dir; git push)
 done
-
-popd
+popd > /dev/null
