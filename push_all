@@ -10,7 +10,7 @@ do
 	then
 		pushd $dir
 		git status
-		git push
+		# git push
 		popd
 	fi
 done
