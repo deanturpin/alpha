@@ -4,6 +4,8 @@
 - [ ] GDB refresher - something newer than DDD?
 - [ ] ascii video
 - [ ] OpenMP
+- [ ] IPV6 refresher
+- [ ] Algorithm complexity - Big O etc.
 
 - [x] command line battery monitor - install acpi
 - [x] Consolidate makefile and rules.mak - not doing

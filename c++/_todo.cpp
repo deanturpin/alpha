@@ -15,6 +15,7 @@ void _todo()
 	cout << "Threads/mutexes/semaphores" << endl;
 
 	// http://www.codeproject.com/Articles/570638/Ten-Cplusplus-Features-Every-Cplusplus-Developer#smartpointers"
+	// http://www.codeproject.com/Articles/570638/Ten-Cplusplus-Features-Every-Cplusplus-Developer#smartpointers
 	cout << "Smart pointers" << endl;
 
 	cout << "Static assert and type traits" << endl;
