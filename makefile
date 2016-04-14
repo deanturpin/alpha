@@ -6,7 +6,7 @@ all: foo
 source_dirs := $(dir $(wildcard */makefile))
 
 # cppcheck from top level
-cppcheck: foo iwyu
+cppcheck:
 	cppcheck --enable=all . 1> /dev/null
 
 # Include What You Use

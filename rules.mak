@@ -21,5 +21,5 @@ iwyu:
 
 fresh: clean foo
 
-cppcheck: foo
+cppcheck:
 	cppcheck --enable=all . 1> /dev/null

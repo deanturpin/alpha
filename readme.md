@@ -3,6 +3,7 @@
 - [ ] GDB refresher - something newer than DDD?
 - [ ] ascii video
 - [ ] Algorithm complexity - Big O etc.
+- [ ] Allow projects to override compiler
 
 ## Done
 - [x] git submodules - not now
