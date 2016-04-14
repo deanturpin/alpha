@@ -1,10 +1,11 @@
 ## TODO
 - [ ] Extract numbers using dots as delimiter, print bits (bitset)
 - [ ] Use std map to build network?
-- [ ] Create IP map
-- [ ] ascii map
+- [ ] Text topology
+- [ ] ASCII topology
 - [ ] Extract CIDR
-- [ ] IPV6 refresher
+- [ ] IPsec vs SSH/TLS
+- [ ] IPv6
 
 - [x] Don't match comments
 - [x] bash cgi - ping hosts in host file and colour the output - done in bash_cgi_apache

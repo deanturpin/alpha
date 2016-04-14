@@ -2,12 +2,7 @@
 - [ ] Simple audio driver
 - [ ] GDB refresher - something newer than DDD?
 - [ ] ascii video
-- [ ] OpenMP
 - [ ] Algorithm complexity - Big O etc.
-
-## Networking
-- [ ] IPsec vs SSH/TLS
-- [ ] IPv6
 
 ## Done
 - [x] git submodules - not now

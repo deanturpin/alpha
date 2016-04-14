@@ -2,7 +2,7 @@
 #include <iomanip>
 #include <sstream>
 
-void c14_io_manipulation()
+void c14_string_manipulation()
 {
 	using namespace std;
 

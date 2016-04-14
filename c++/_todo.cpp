@@ -5,6 +5,8 @@ void _todo()
 	using namespace std;
 
 	// cout << "" << endl;
+	cout << "Split into C++ std folders" << endl;
+	cout << "String manipulation - toupper" << endl;
 	cout << "Implicit members - shallow/deep copy" << endl;
 	cout << "value_type (templates)" << endl;
 	cout << "Lambda capture clause" << endl;
