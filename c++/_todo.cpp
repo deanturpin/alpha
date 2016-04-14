@@ -4,7 +4,9 @@ void _todo()
 {
 	using namespace std;
 
+	// cout << "" << endl;
 	cout << "Implicit members - shallow/deep copy" << endl;
+	cout << "value_type (templates)" << endl;
 	cout << "Lambda capture clause" << endl;
 	cout << "Reimplement template loop with algorithm::for_each" << endl;
 	cout << "Exceptions - explore standard exceptions" << endl;

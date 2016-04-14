@@ -11,6 +11,7 @@ gitcommand=status
 pushd ../ > /dev/null
 for dir in $dirs
 do
-	[[ -d $dir ]] && (cd $dir; git $gitcommand)
+	echo
+	[[ -d $dir ]] && (pushd $dir; git $gitcommand)
 done
 popd > /dev/null

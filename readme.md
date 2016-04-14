@@ -1,12 +1,16 @@
-##TODO
+## TODO
 - [ ] Simple audio driver
-- [ ] git submodules
 - [ ] GDB refresher - something newer than DDD?
 - [ ] ascii video
 - [ ] OpenMP
-- [ ] IPV6 refresher
 - [ ] Algorithm complexity - Big O etc.
 
+## Networking
+- [ ] IPsec vs SSH/TLS
+- [ ] IPv6
+
+## Done
+- [x] git submodules - not now
 - [x] command line battery monitor - install acpi
 - [x] Consolidate makefile and rules.mak - not doing
 - [x] sort out include paths for iwyu
