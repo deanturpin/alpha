@@ -10,7 +10,7 @@ cppcheck: foo iwyu
 	cppcheck --enable=all . 1> /dev/null
 
 # Include What You Use
-iwyu: foo
+iwyu:
 	$(foreach dir, $(source_dirs), make -j -C $(dir) iwyu;)
 
 # Build each project

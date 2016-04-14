@@ -1,7 +1,7 @@
 #include <iostream>
 #include <ratio>
 
-void c11_ratio()
+void ratios()
 {
 	using namespace std;
 

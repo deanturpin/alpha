@@ -3,7 +3,7 @@
 #include <vector>
 
 // Lambda - anonymous functions
-void c11_lambda()
+void lambda()
 {
 	using namespace std;
 
