@@ -4,6 +4,9 @@ hosts=$(cat simple.svg)
 
 while [[ $hosts =~ ([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})(.*) ]]
 do
+	# Print match
 	echo ${BASH_REMATCH[1]}
+
+	# Jump to remainder
 	hosts=${BASH_REMATCH[2]}
 done
