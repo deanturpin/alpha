@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# MIME type
+cat <<MIME
+Content-type: text/plain
+
+MIME
+
+# Read SVG line by line
+while read line
+do
+	# Check if line includes an IP
+	if [[ $line =~ (^.*)([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})(.*$) ]]
+	then
+		[[ $(ping -w 1 -c 1 ${BASH_REMATCH[2]} | grep '1 received') == "" ]] && alive=no || alive=yes
+		echo ${BASH_REMATCH[1]}${BASH_REMATCH[2]} $alive${BASH_REMATCH[3]}
+	else
+		echo $line
+	fi
+done < simple.svg
