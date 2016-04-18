@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# MIME type
+cat <<MIME
+Content-type: text/plain
+
+MIME
+
 hosts=$(cat simple.svg)
 
 while [[ $hosts =~ ([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})(.*) ]]
