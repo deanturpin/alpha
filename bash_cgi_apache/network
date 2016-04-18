@@ -18,7 +18,7 @@ HEADER
 while read line
 do
 	# Check if line starts with an IP
-	if [[ $line =~ ^[0-9.]+ ]]
+	if [[ $line =~ ^[0-9\.]+ ]]
 	then
 		[[ $(ping -w 1 -c 1 $BASH_REMATCH | grep '1 received') != "" ]] && green || red
 	else
