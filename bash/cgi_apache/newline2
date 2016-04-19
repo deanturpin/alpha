@@ -6,9 +6,9 @@ Content-type: text/plain
 
 MIME
 
-mapfile hosts < simple.svg
+mapfile < simple.svg
 
-for line in ${hosts[@]}
+for line in ${MAPFILE[@]}
 do
 	[[ $line =~ [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3} ]] && echo $BASH_REMATCH
 done

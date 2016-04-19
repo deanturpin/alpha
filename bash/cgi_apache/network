@@ -14,19 +14,21 @@ Content-type:text/html
 <p style='background-color:black; font-family:sans-serif;'>
 HEADER
 
+mapfile hostlist < hosts
+
 # Read hosts line by line
-while read line
+for host in ${hostlist[@]}
 do
 	# Check if line starts with an IP
-	if [[ $line =~ ^[0-9\.]+ ]]
+	if [[ $host =~ ^[[:digit:]\.]+ ]]
 	then
 		[[ $(ping -w 1 -c 1 $BASH_REMATCH | grep '1 received') != "" ]] && green || red
 	else
 		grey
 	fi
 
-	echo "<span style='color:$color;'>$line</span><br />"
-done < hosts
+	echo "<span style='color:$color;'>$host</span><br />"
+done
 
 grey
 
