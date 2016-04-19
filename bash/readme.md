@@ -7,6 +7,7 @@
 - [ ] POSIX character classes
 - [ ] extended arithmetic
 - [ ] extglob - extended glob ?(pattern)
+- [ ] redirection using file descriptors
 - [ ] cat </dev/tcp/time.nist.gov/13
 - [ ] http://www.thegeekstuff.com/2010/07/bash-string-manipulation/
 - [ ] http://tldp.org/LDP/abs/html/string-manipulation.html
