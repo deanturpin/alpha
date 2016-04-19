@@ -5,6 +5,7 @@
 - [ ] Adhoc network connections
 - [ ] String manipulation
 - [ ] POSIX character classes
+- [ ] extended arithmetic
 - [ ] extglob - extended glob ?(pattern)
 - [ ] cat </dev/tcp/time.nist.gov/13
 - [ ] http://www.thegeekstuff.com/2010/07/bash-string-manipulation/
