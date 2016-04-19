@@ -4,6 +4,8 @@
 - [ ] mkfifo /tmp/reponse
 - [ ] Adhoc network connections
 - [ ] String manipulation
+- [ ] POSIX character classes
+- [ ] extglob - extended glob ?(pattern)
 - [ ] cat </dev/tcp/time.nist.gov/13
 - [ ] http://www.thegeekstuff.com/2010/07/bash-string-manipulation/
 - [ ] http://tldp.org/LDP/abs/html/string-manipulation.html
