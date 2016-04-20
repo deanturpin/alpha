@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-void c11_vector_initialisation()
+void vector_initialisation()
 {
 	using namespace std;
 

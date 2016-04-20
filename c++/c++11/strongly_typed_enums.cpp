@@ -1,6 +1,6 @@
 #include <iostream>
 
-void c11_strongly_typed_enums()
+void strongly_typed_enums()
 {
 	using namespace std;
 

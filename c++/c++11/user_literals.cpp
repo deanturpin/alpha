@@ -1,7 +1,7 @@
 #include <iostream>
 #include <chrono>
 
-void c11_user_literals()
+void user_literals()
 {
 	using namespace std;
 
