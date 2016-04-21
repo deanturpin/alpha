@@ -1,2 +1,2 @@
 run:
-	for file in *.sh; do echo ./$$file; done
+	for file in *.sh; do ./$$file; done

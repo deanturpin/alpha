@@ -11,6 +11,7 @@ Write a song with a very limited palette of instruments and effects. (In fact, I
 - [ ] Sequencer
 - [ ] Reverb (convolution/algorithmic)
 - [ ] Time stretch
+- [ ] Look at scale command
 - [x] Spectrum - started
 - [x] Monitor mic - using asound
 - [x] Good source of WAVs
