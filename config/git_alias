@@ -15,7 +15,7 @@ alias gl='git log --graph --oneline --decorate --all'
 function gm {
 	if [[ $# > 0 ]]
 	then
-		git commit -a "$@"
+		git commit -m "$@"
 	else
 		echo git merge message empty
 	fi
