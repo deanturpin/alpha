@@ -13,6 +13,7 @@ void _todo()
 	cout << "Exceptions - explore standard exceptions" << endl;
 	cout << "Regex" << endl;
 	cout << "RAII examples" << endl;
+	cout << "c++11 attributes [[ noreturn ]]" << endl;
 
 	// http://www.drdobbs.com/tools/avoiding-classic-threading-problems/231000499
 	cout << "Threads/mutexes/semaphores" << endl;

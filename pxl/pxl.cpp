@@ -32,7 +32,7 @@ int main()
 
 	// Render and pause
 	p.render();
-	sleep(2);
+	sleep(10);
 
 	return 0;
 }
