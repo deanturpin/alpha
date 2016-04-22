@@ -87,3 +87,4 @@ requires concept
 - Singleton design patterns 
 - Types of cast 
 - Difference between class and struct 
+- hexfloat - https://github.com/cplusplus/draft/issues/680
