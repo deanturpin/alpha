@@ -20,3 +20,9 @@ function gm {
 		echo git merge message empty
 	fi
 }
+
+# Make aliases
+alias mc='make clean'
+alias mr='make run'
+alias mj='make -j'
+
