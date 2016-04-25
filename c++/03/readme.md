@@ -1,4 +1,5 @@
 # TODO
+- [ ] rel_ops
 - [ ] C++ containers
 - [ ] Algorithm complexity refresher - Big O
 - [ ] C++ keywords - http://en.cppreference.com/w/cpp/keyword

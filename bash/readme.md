@@ -1,3 +1,4 @@
+##TODO
 - [ ] Replace last (search and replace)
 - [ ] Send all stderr to stdout (or file)
 - [ ] Pipes
@@ -16,7 +17,11 @@
 - [ ] http://tldp.org/LDP/abs/html/string-manipulation.html
 - [x] how do you use escaped characters in a heredoc?
 
-#Resources
+##Resources
+- http://www.tldp.org/LDP/abs/html/arithexp.html
+- http://shop.oreilly.com/product/0636920010166.do
+
+
 
 '''
        id++ id--
