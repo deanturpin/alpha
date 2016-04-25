@@ -35,7 +35,7 @@ MIDDLE
 # Write function calls
 for func in $function_calls
 do
-	echo -e "\tcout << \"### $func() \" << endl;" >> $main_file
+	echo -e "\tcout << \"### ${func//_/ }() \" << endl;" >> $main_file
 	echo -e "\t$func();" >> $main_file
 	echo -e "\tcout << endl;\n" >> $main_file
 done
