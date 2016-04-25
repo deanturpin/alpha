@@ -4,3 +4,4 @@
 - [ ] JSON
 - [ ] Big O
 - [ ] Sorting algorithms
+- [ ] Embed compiler in markdown
