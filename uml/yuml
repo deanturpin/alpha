@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# List of waypoints
+# waypoints='google.co.uk bbc.co.uk'
+
+tpath=$(cat <<!
+1?: [LOCALHOST]                                         pmtu 1500
+1:  192.168.1.1                                          23.050ms 
+1:  192.168.1.1                                           2.643ms 
+2:  no reply
+3:  10.248.28.145                                        55.059ms 
+4:  10.247.84.25                                         55.006ms 
+5:  10.247.84.6                                          72.629ms 
+6:  10.247.84.9                                          59.235ms 
+7:  10.247.84.18                                         56.779ms 
+8:  87.237.20.224                                        54.277ms 
+9:  87.237.20.73                                         57.053ms 
+!
+)
+
+# Extract all the IPs
+while [[ $tpath =~ [0-9\.]{7,} ]]
+do
+	IPs+=($BASH_REMATCH)
+
+	# Remove the current match
+	tpath=${tpath/$BASH_REMATCH//}
+done
+
+echo IPs ${#IPs[@]}
+
+# for w in $waypoints
+# do
+# tracepath -n $w
+# done
+
