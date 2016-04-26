@@ -2,7 +2,7 @@
 
 http://www.yuml.me/
 
-### Create a network topology from a few hosts
+### Create a network topology from list of hosts
 ```bash
 $ ./yuml sky.com ee.com bbc.co.uk twitter.com github.com google.com | sort | uniq
 [129.250.204.110]->[129.250.204.114],
