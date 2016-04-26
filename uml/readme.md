@@ -5,7 +5,6 @@ http://www.yuml.me/
 
 ## Embed using markdown syntax across multiple lines
 ![](http://yuml.me/diagram/scruffy/class/
-
 [note: You can stick notes on diagrams too!{bg:cornsilk}],
 [Customer]<>1-orders 0..*>[Order],
 [Order]++*-*>[LineItem],
@@ -14,5 +13,4 @@ http://www.yuml.me/
 [Category]<->[Product],
 [DeliveryMethod]^[National],
 [DeliveryMethod]^[International]
-
 )
