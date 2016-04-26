@@ -1,8 +1,12 @@
 http://www.yuml.me/
 
-<img src="http://yuml.me/diagram/scruffy/class/[Customer]<>1->*[Order],
-[Customer]-[note: Aggregate Root{bg:cornsilk}]" />
+&gt;
+img src="http://yuml.me/diagram/scruffy/class/[Customer]<>1->*[Order],
+[Customer]-[note: Aggregate Root{bg:cornsilk}]"
+/&gt;
 
-<!-- <img
-src="http://yuml.me/diagram/scruffy/class/[Account]++owner-0..*>[Repository]"/>
--->
+#Blah
+![](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+# Blah 2
+![](http://yuml.me/diagram/scruffy/class/[Customer]<>1->*[Order] "yUML")
