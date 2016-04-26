@@ -1,8 +1,8 @@
 #!/bin/bash
 
-waypoints='ee.co.uk google.co.uk bbc.co.uk'
+# waypoints='ee.co.uk google.co.uk bbc.co.uk'
 
-for w in $waypoints
+for w in $@
 do
 	tpath=$(traceroute -n -m 13 $w)
 
@@ -18,6 +18,6 @@ do
 	# Format for yUML
 	for (( i = 0; i < ${#IPs[@]} - 1; ++i ))
 	do
-		echo "[${IPs[$i]}]-[${IPs[$i + 1]}]"
+		echo "[${IPs[$i]}]->[${IPs[$i + 1]}],"
 	done
 done
