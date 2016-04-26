@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# For each host give non the command line
+# For each host given on the command line
 for w in $@
 do
 	# Find route to host
