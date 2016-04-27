@@ -25,4 +25,4 @@ function gm {
 alias mc='make clean'
 alias mr='make run'
 alias mj='make -j'
-
+alias j=jobs

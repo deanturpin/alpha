@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# For each host given on the command line
+for w in $@
+do
+	# Find route to host
+	unset IPs
+	tpath=$(traceroute -n -m 13 $w)
+
+	# Extract the IPs en route
+	# Note the leading space so the first IP in the trace is not matched
+	while [[ $tpath =~ \ [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3} ]]
+	do
+		# Store the IP
+		IPs+=($BASH_REMATCH)
+
+		# Remove the current match
+		tpath=${tpath/$BASH_REMATCH//}
+	done
+
+	# Format trace for yUML
+	for (( i = 0; i < ${#IPs[@]} - 1; ++i ))
+	do
+		echo \"${IPs[$i]}\" -- \"${IPs[$i + 1]}\"
+	done
+done

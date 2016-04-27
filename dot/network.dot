@@ -1,0 +1,20 @@
+graph
+{
+	// Highlighting
+	node [style=filled]
+	A [label="netgear switch" fillcolor=blue]
+	B [label="internal switch" fillcolor=blue]
+
+	// Interconnections
+	"192.168.109.1" -- A
+	"192.168.109.2" -- A
+	"192.168.109.3" -- A
+	"192.168.109.4" -- A
+	"192.168.109.5" -- A
+	"192.168.109.6" -- A
+	A -- B
+	"192.168.109.7" -- B
+	"192.168.109.8" -- B
+	"192.168.109.9" -- B
+
+}
