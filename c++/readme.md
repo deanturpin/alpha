@@ -1,11 +1,7 @@
-##Issues
-- Data races, deadlocks and livelocks - unsynchonised access to shared memory can introduce race conditions and undefined behaviour (program results depend nondeterministcially on the relative timings of two or more threads)
-- Threads versus processes
-- Too few threads - alogorithm is sub-optimal
-- Too many threads - overhead of creating/managing and partitioning the data is greater than processing advantage; software threads outnumber the available hardware threads and the OS must intervene
+#C++ refresher
 
-# Containers
-**Sequence containers**
+## Containers
+_Sequence containers_
 
 array 
 vector
@@ -13,21 +9,21 @@ deque
 forward_list 
 list
 
-**Container adapters**
+_Container adapters_
 
 stack
 queue
 priority_queue
 
-**Associative containers (ordered)**
+_Associative containers (ordered)_
 
 set multiset map multimap 
 
-**Associative containers (unordered)**
+_Associative containers (unordered)_
 
 unordered_set unordered_multiset unordered_map unordered_multimap
 
-# Keywords
+## Keywords
 static_cast reinterpret_cast dynamic_cast const_cast
 
 using(1) namespace
@@ -62,29 +58,16 @@ volatile register
 
 sizeof this template asm enum goto return
 
-## C++11
+_C++11_
+
 decltype constexpr lignas alignof char16_t char32_t static_assert thread_local nullptr noexcept override final
 
-## Concepts TS
+_Concepts TS_
+
 requires concept
 
-#To sort
-- to_string etc
-- parallelism TS
-- generate main and prototypes from filenames
-- is_class, is_integral, is_polymorphic
-- type alias http://en.cppreference.com/w/cpp/language/type_alias
-- types http://en.cppreference.com/w/cpp/language/types
-- https://en.wikipedia.org/wiki/Concepts_%28C%2B%2B%29#
-- http://en.cppreference.com/w/cpp/language/constexpr
-- http://en.cppreference.com/w/cpp/language/decltype
-- noexcept
-- nullptr
-- Auto pointers, shared pointers
-- virtual
-- static
-- Agile versus waterfall
-- Singleton design patterns 
-- Types of cast 
-- Difference between class and struct 
-- hexfloat - https://github.com/cplusplus/draft/issues/680
+##Issues
+- Data races, deadlocks and livelocks - unsynchonised access to shared memory can introduce race conditions and undefined behaviour (program results depend nondeterministcially on the relative timings of two or more threads)
+- Threads versus processes
+- Too few threads - alogorithm is sub-optimal
+- Too many threads - overhead of creating/managing and partitioning the data is greater than processing advantage; software threads outnumber the available hardware threads and the OS must intervene

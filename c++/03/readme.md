@@ -1,5 +1,5 @@
 # TODO
-- [ ] rel_ops
+- [ ] IO manipulation
 - [ ] C++ containers
 - [ ] Algorithm complexity refresher - Big O
 - [ ] C++ keywords - http://en.cppreference.com/w/cpp/keyword
@@ -18,6 +18,7 @@
 - [ ] Static assert and type traits
 - [ ] http://www.codeproject.com/Articles/570638/Ten-Cplusplus-Features-Every-Cplusplus-Developer#movesemantics
 - [ ] Move semantics
+- [x] rel_ops
 
 # URLS
 - [ ] http://www.cplusplus.com/forum/general/74020/
