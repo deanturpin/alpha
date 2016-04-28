@@ -2,6 +2,7 @@ graph
 {
 	// Highlighting
 	node [style=filled fillcolor=white]
+	node [shape=circle]
 	s1 [label="Netgear switch"]
 	s2 [label="Internal switch"]
 

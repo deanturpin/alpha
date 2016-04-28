@@ -1,5 +1,36 @@
 #!/bin/bash
 
+tpath=$(cat <<!
+1?: [LOCALHOST]                                         pmtu 1500
+1:  SkyRouter.Home                                        2.431ms 
+1:  SkyRouter.Home                                        1.431ms 
+2:  no reply
+3:  be331.pr3.hobir.isp.sky.com                          18.993ms asymm  4 
+4:  178.236.15.25                                        19.059ms 
+!
+)
+
+echo $tpath
+
+# 1?: [LOCALHOST] pmtu 1500 1
+# /: SkyRouter.Home 2.431ms 1
+# /: SkyRouter.Home 1.431ms 2
+# /: no reply 3
+# /: be331.pr3.hobir.isp.sky.com 18.993ms asymm 4 4
+# /: 178.236.15.25 19.059ms
+
+# Extract betwixt the colons
+while [[ $tpath =~ [[:digit:]\?\/]+:[^:]+ ]]
+do
+	line=$BASH_REMATCH
+	tpath=${tpath/"$line"//}
+
+	# Get the host
+	[[ $line =~ [[:alpha:]\.]+ ]] && echo $BASH_REMATCH
+done
+
+exit
+
 # For each host given on the command line
 for w in $@
 do
