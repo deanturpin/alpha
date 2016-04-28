@@ -1,16 +1,44 @@
 #!/bin/bash
 
+# Create array of hosts
+hosts=(
+192.168.109.1
+192.168.109.2
+192.168.109.3
+192.168.109.4
+192.168.109.5
+192.168.109.7
+192.168.109.8
+10.226.0.1
+10.226.0.2
+10.226.0.3
+192.168.109.6
+)
+
+mask=192.168.109
+
+# Header
 cat <<!
 graph
 {
-	node [style=filled fillcolor=cyan]
+	node [style=filled fillcolor=grey shape=box]
+
 !
 
-for i in {1..9}
+# Examine hosts
+for ip in ${hosts[@]}
 do
-	echo \"192.168.109.$i\"\-\-switch
+	if [[ $ip =~ $mask ]]
+	then
+		echo -e "\t\"$ip\" -- \"$mask\""
+	else
+		echo -e "\t\"$ip\" -- unknown"
+	fi
 done
 
+# Footer
 cat <<!
+
+	// $(date)
 }
 !
