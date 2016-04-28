@@ -1,23 +1,6 @@
 #!/bin/bash
 
-tpath=$(cat <<!
-1?: [LOCALHOST]                                         pmtu 1500
-1:  SkyRouter.Home                                        2.431ms 
-1:  SkyRouter.Home                                        1.431ms 
-2:  no reply
-3:  be331.pr3.hobir.isp.sky.com                          18.993ms asymm  4 
-4:  178.236.15.25                                        19.059ms 
-!
-)
-
-echo $tpath
-
-# 1?: [LOCALHOST] pmtu 1500 1
-# /: SkyRouter.Home 2.431ms 1
-# /: SkyRouter.Home 1.431ms 2
-# /: no reply 3
-# /: be331.pr3.hobir.isp.sky.com 18.993ms asymm 4 4
-# /: 178.236.15.25 19.059ms
+tpath=$(tracepath -m 5 $1)
 
 # Extract betwixt the colons
 while [[ $tpath =~ [[:digit:]\?\/]+:[^:]+ ]]
@@ -26,32 +9,16 @@ do
 	tpath=${tpath/"$line"//}
 
 	# Get the host
-	[[ $line =~ [[:alpha:]\.]+ ]] && echo $BASH_REMATCH
+	[[ $line =~ [[:alpha:][:digit:]\.]+ ]] && hosts+=($BASH_REMATCH)
 done
 
-exit
+# for h in ${hosts[@]}
+# do
+# 	echo $h
+# done
 
-# For each host given on the command line
-for w in $@
+# Format for dot
+for (( i = 0; i < ${#hosts[@]} - 1; ++i ))
 do
-	# Find route to host
-	unset IPs
-	tpath=$(tracepath -n -m 5 $w)
-
-	# Extract the IPs en route
-	# Note the leading space so the first IP in the trace is not matched
-	while [[ $tpath =~ \ [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3} ]]
-	do
-		# Store the IP
-		IPs+=($BASH_REMATCH)
-
-		# Remove the current match
-		tpath=${tpath/$BASH_REMATCH//}
-	done
-
-	# Format trace for yUML
-	for (( i = 0; i < ${#IPs[@]} - 1; ++i ))
-	do
-		echo \"${IPs[$i]}\" -- \"${IPs[$i + 1]}\"
-	done
+echo \"${hosts[$i]}\" -- \"${hosts[$i + 1]}\"\;
 done
