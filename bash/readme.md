@@ -1,4 +1,5 @@
 ##TODO
+- [ ] Write to stderr
 - [ ] Replace last (search and replace)
 - [ ] Send all stderr to stdout (or file)
 - [ ] Pipes

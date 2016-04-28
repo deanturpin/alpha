@@ -3,10 +3,10 @@
 cat <<!
 graph
 {
-	node [style=filled fillcolor=red]
+	node [style=filled fillcolor=cyan]
 !
 
-for i in {1..31}
+for i in {1..9}
 do
 	echo \"192.168.109.$i\"\-\-switch
 done

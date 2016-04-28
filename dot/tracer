@@ -1,21 +1,20 @@
 #!/bin/bash
 
-tpath=$(tracepath -m 5 $1)
-
-# Extract betwixt the colons
-while [[ $tpath =~ [[:digit:]\?\/]+:[^:]+ ]]
+for w in $@
 do
-	line=$BASH_REMATCH
-	tpath=${tpath/"$line"//}
+	tpath=$(tracepath -m 5 $w)
 
-	# Get the host
-	[[ $line =~ [[:alpha:][:digit:]\.]+ ]] && hosts+=($BASH_REMATCH)
+	# Extract betwixt the colons
+	while [[ $tpath =~ [[:digit:]\?\/]+:[^:]+ ]]
+	do
+		line=$BASH_REMATCH
+		tpath=${tpath/"$line"//}
+
+		# Get the host
+		[[ $line =~ [[:alpha:][:digit:]\.]+ ]] && hosts+=($BASH_REMATCH)
+	done
+
 done
-
-# for h in ${hosts[@]}
-# do
-# 	echo $h
-# done
 
 # Format for dot
 for (( i = 0; i < ${#hosts[@]} - 1; ++i ))
