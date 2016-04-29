@@ -1,39 +1,52 @@
 #!/bin/bash
 
-# Create array of hosts
+# Create associative array of hosts
+declare -A hosts
 hosts=(
-192.168.109.1
-192.168.109.2
-192.168.109.3
-192.168.109.4
-192.168.109.5
-192.168.109.7
-192.168.109.8
-10.226.0.1
-10.226.0.2
-10.226.0.3
-192.168.109.6
+[192.168.109.1]=unknown
+[192.168.109.2]=unknown
+[192.168.109.3]=unknown
+[192.168.109.4]=unknown
+[192.168.109.5]=unknown
+[192.168.109.7]=unknown
+[192.168.109.8]=unknown
+[10.226.0.1]=unknown
+[10.226.0.2]=unknown
+[10.226.1.3]=unknown
+[192.168.109.6]=unknown
+[10.226.0.4]=unknown
 )
 
-mask=192.168.109
+# Known subnets
+masks=(
+192.168.109
+10.226.0
+)
 
 # Header
 cat <<!
 graph
 {
-	node [style=filled fillcolor=grey shape=box]
+	node [style=filled fillcolor=cyan]
 
 !
 
 # Examine hosts
-for ip in ${hosts[@]}
+# for (( i = 0; i < ${#hosts[@]}; ++i ))
+for ip in ${!hosts[@]}
 do
-	if [[ $ip =~ $mask ]]
-	then
-		echo -e "\t\"$ip\" -- \"$mask\""
-	else
-		echo -e "\t\"$ip\" -- unknown"
-	fi
+	# Test each mask
+	for mask in ${masks[@]}
+	do
+		# Stash mask if it matches and stop search
+		[[ $ip =~ $mask ]] && hosts[$ip]=$mask && break
+	done
+done
+
+# Dump connections
+for ip in ${!hosts[@]}
+do
+	echo -e "\t\"$ip\" -- \"${hosts[$ip]}\""
 done
 
 # Footer
