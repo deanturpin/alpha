@@ -18,9 +18,10 @@ hosts=(
 )
 
 # Known subnets
+declare -A masks
 masks=(
-192.168.109
-10.226.0
+[192.168.109]=foonet
+[10.226.0]=barnet
 )
 
 # Header
@@ -32,18 +33,32 @@ graph
 !
 
 # Examine hosts
-# for (( i = 0; i < ${#hosts[@]}; ++i ))
-for ip in ${!hosts[@]}
+for ip in ${!hosts[*]}
 do
+	echo -e \\n$ip
+
 	# Test each mask
-	for mask in ${masks[@]}
+	for mask in ${!masks[*]}
 	do
-		# Stash mask if it matches and stop search
-		[[ $ip =~ $mask ]] && hosts[ip]=$mask && break
+		echo try $mask
+		# Stash mask name if the ip matches and stop search
+		if [[ $ip =~ $mask ]]
+		then
+			echo match $BASH_REMATCH
+
+			hosts[$ip]=${masks[$mask]}
+
+			echo stash ${hosts[$ip]}
+
+			break
+		else
+			echo no match
+		fi
 	done
 done
 
 # Dump connections
+: <<!
 for ip in ${!hosts[@]}
 do
 	echo -e "\t\"$ip\" -- \"${hosts[ip]}\""
