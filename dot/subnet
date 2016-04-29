@@ -39,14 +39,14 @@ do
 	for mask in ${masks[@]}
 	do
 		# Stash mask if it matches and stop search
-		[[ $ip =~ $mask ]] && hosts[$ip]=$mask && break
+		[[ $ip =~ $mask ]] && hosts[ip]=$mask && break
 	done
 done
 
 # Dump connections
 for ip in ${!hosts[@]}
 do
-	echo -e "\t\"$ip\" -- \"${hosts[$ip]}\""
+	echo -e "\t\"$ip\" -- \"${hosts[ip]}\""
 done
 
 # Footer

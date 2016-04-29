@@ -1,5 +1,7 @@
 ##TODO
+- [ ] convert to different base $(( 16#$num ))
 - [ ] Write to stderr
+- [ ] Substrings
 - [ ] Replace last (search and replace)
 - [ ] Send all stderr to stdout (or file)
 - [ ] Pipes
@@ -8,7 +10,7 @@
 - [ ] String manipulation
 - [ ] POSIX character classes
 - [ ] extended arithmetic
-- [ ] extglob - extended glob ?(pattern) http://wiki.bash-hackers.org/syntax/pattern
+- [ ] extglob (shopt) - extended glob ?(pattern) http://wiki.bash-hackers.org/syntax/pattern
 - [ ] redirection using file descriptors
 - [ ] expr
 - [ ] until
@@ -21,8 +23,7 @@
 ##Resources
 - http://www.tldp.org/LDP/abs/html/arithexp.html
 - http://shop.oreilly.com/product/0636920010166.do
-
-
+- http://mywiki.wooledge.org/
 
 '''
        id++ id--
