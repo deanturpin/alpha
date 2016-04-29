@@ -17,10 +17,6 @@ echo ${!array[@]}
 unset -v array[2]
 echo ${array[*]}
 
-# Mapfile
-mapfile array2 < <(ls)
-echo lines ${#array2[*]}
-
 # Square brackets are a math context (no $)
 i=2
 echo ${array2[i + 1]}
