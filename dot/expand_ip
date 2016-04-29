@@ -1,0 +1,34 @@
+#!/bin/bash
+
+ip1=192.168.109.76
+ip2=192.168.10.30
+
+while [[ $ip1 =~ [[:digit:]]+ ]]
+do
+	hex1+=$(printf "%02x" $BASH_REMATCH)
+	ip1=${ip1/$BASH_REMATCH//}
+done
+
+while [[ $ip2 =~ [[:digit:]]+ ]]
+do
+	hex2+=$(printf "%02x" $BASH_REMATCH)
+	ip2=${ip2/$BASH_REMATCH//}
+done
+
+hex1=0x$hex1
+hex2=0x$hex2
+
+echo $hex1
+echo $hex2
+
+# Minimal subnet mask
+hexmask=$(printf %x $(( hex1 & hex2 )))
+
+# Convert to decimal
+while [[ $hexmask =~ [[:xdigit:]]{2} ]]
+do
+	mask+=$(printf %d 0x$BASH_REMATCH).
+	hexmask=${hexmask/$BASH_REMATCH//}
+done
+
+echo $mask
