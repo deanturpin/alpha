@@ -1,4 +1,6 @@
 ##TODO
+- [ ] https://gnu.org/software/plotutils/ -
+  https://www.gnu.org/software/plotutils/manual/en/html_node/Simple-Examples.html
 - [ ] C#
 - [ ] UML refresher and markdown integration
 - [ ] JSON
