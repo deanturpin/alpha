@@ -1,5 +1,5 @@
-'''bash
+```bash
 sudo apt-get install graphviz
 
-echo 'graph {' $(./network ee.co.uk) '}' | circo -Tsvg > gen.svg
-'''
+circo -T svg < network.dot > network.svg
+```

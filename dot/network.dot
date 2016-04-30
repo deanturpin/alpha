@@ -1,5 +1,8 @@
 graph
 {
+	labelloc="t";
+	label="Simple network";
+
 	// Highlighting
 	node [style=filled fillcolor=white]
 	node [shape=circle]
