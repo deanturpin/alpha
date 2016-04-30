@@ -1,4 +1,4 @@
-# Git Aliases
+# Git
 # Derived from here: https://jonsuh.com/blog/git-command-line-shortcuts/
 
 # Everyday operations
@@ -21,8 +21,11 @@ function gm {
 	fi
 }
 
-# Make aliases
+# Make
 alias mc='make clean'
 alias mr='make run'
 alias mj='make -j'
 alias j=jobs
+
+# Network
+dig +nostats +nocomments +nocmd painarchist.uk
