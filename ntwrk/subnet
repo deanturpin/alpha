@@ -9,13 +9,7 @@ hosts=(
 
 # Declare masks - CIDR
 declare -A netmasks
-netmasks=(
-[10.226.0.0]=16
-# [192.168.109.0]=27 [192.168.107.0]=24
-)
-
-# echo hosts ${#hosts[*]}
-# echo masks ${#netmasks[*]}
+netmasks=( [10.226.0.0]=16 [192.168.109.0]=27 [192.168.107.0]=24 )
 
 # Decimal to binary netmask converter
 function decimal2binary {
@@ -35,23 +29,29 @@ function decimal2binary {
 	echo $binary
 }
 
+# Initialise nodes
+declare -A nodes
+
+for host in ${hosts[*]}
+do
+	nodes[$host]=unknown
+done
+
 # Iterate through each netmask and compare it to each host
 for netmask in ${!netmasks[*]}
 do
-	binary=$(decimal2binary $netmask)
-	echo ${binary}
+	# Convert netmask
+	netmask_binary=$(decimal2binary $netmask)
+
+	# Trim host identifier
+	width=${netmasks[$netmask]}
+	netmask_binary=${netmask_binary:0:$width}
 
 	for host in ${hosts[*]}
 	do
-		echo -e \\t$(decimal2binary $host)
+		host_binary=$(decimal2binary $host)
+		[[ $host_binary =~ ^$netmask_binary ]] && nodes[$host]=$netmask
 	done
-done
-
-exit ########### end
-
-for line in "${hosts[*]}"
-do
-	echo $line
 done
 
 # Header
@@ -62,25 +62,10 @@ graph
 
 !
 
-# Examine hosts
-for ip in ${!hosts[*]}
+# Dump nodes
+for node in ${!nodes[*]}
 do
-	# Test each mask
-	for mask in ${!masks[*]}
-	do
-		# Stash mask name if the ip matches and stop search
-		if [[ $ip =~ $mask ]]
-		then
-			hosts[$ip]=${masks[$mask]}
-			break
-		fi
-	done
-done
-
-# Dump connections
-for ip in ${!hosts[@]}
-do
-	echo -e "\t\"$ip\" -- \"${hosts[$ip]}\""
+	echo -e "\t\"$node\" -- \"${nodes[$node]}\""
 done
 
 # Footer
