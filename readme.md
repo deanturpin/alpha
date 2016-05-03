@@ -8,3 +8,5 @@
 - [ ] Big O
 - [ ] Sorting algorithms
 - [ ] Embed compiler in markdown
+- [ ] IPsec vs SSH/TLS
+- [ ] IPv6

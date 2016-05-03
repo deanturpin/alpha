@@ -1,5 +1,6 @@
 ##TODO
 - [ ] convert to different base $(( 16#$num ))
+- [ ] return values
 - [ ] Write to stderr
 - [ ] Substrings
 - [ ] Replace last (search and replace)
