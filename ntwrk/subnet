@@ -1,54 +1,45 @@
 #!/bin/bash
 
-# mapfile hosts < hosts
-
 # Declare hosts
-declare -A hosts
 hosts=(
-[192.168.109.1]=unknown
-[192.168.109.2]=unknown
-[192.168.109.3]=unknown
-[192.168.109.4]=unknown
-[192.168.109.5]=unknown
-[192.168.109.7]=unknown
-[192.168.109.8]=unknown
-[10.226.0.1]=unknown
-[10.226.0.2]=unknown
-[10.226.1.3]=unknown
-[10.227.1.3]=unknown
-[192.168.109.6]=unknown
-[10.226.0.4]=unknown
-[10.22.0.4]=unknown
-[10.22.0.5]=unknown
+192.168.109.1 192.168.109.2 192.168.109.3 192.168.109.4 192.168.109.5
+192.168.109.7 192.168.109.8 10.226.0.1 10.226.0.2 10.226.1.3 10.227.1.3
+192.168.109.6 10.226.0.4 10.22.0.4 10.22.0.5 192.168.107.230 192.168.107.231
 )
 
 # Declare masks - CIDR
-declare -A masks
-masks=(
-[10.226.0.0]=16
-[192.168.109.0]=27
+declare -A netmasks
+netmasks=(
+[10.226.0.0]=16 [192.168.109.0]=27 [192.168.107.0]=24
 )
 
 echo hosts ${#hosts[*]}
-echo masks ${#masks[*]}
+echo masks ${#netmasks[*]}
 
-# Expand masks
-decimal2binary=({0,1}{0,1}{0,1}{0,1}{0,1}{0,1}{0,1}{0,1})
+# Decimal to binary netmask converter
+function decimal2binary {
 
-for mask in ${!masks[*]}
-do
-	ip=$mask
+	readonly local d2b=({0,1}{0,1}{0,1}{0,1}{0,1}{0,1}{0,1}{0,1})
+	local binary=
+	local ip=$1
 
-	unset binary
-	while [[ $mask =~ [[:digit:]]{1,3} ]]
+	while [[ $ip =~ [[:digit:]]{1,3} ]]
 	do
-		binary+=${decimal2binary[BASH_REMATCH]}
-
+		binary+=${d2b[$BASH_REMATCH]}
+		
 		# Remove the match from current search
-		mask=${mask/$BASH_REMATCH//}
+		ip=${ip/$BASH_REMATCH//}
 	done
 
-	echo $binary - ${masks[$ip]}
+	echo $binary
+}
+
+for netmask in ${!netmasks[*]}
+do
+	binary=$(decimal2binary $netmask)
+
+	# echo $binary - ${masks[$ip]}
+	echo $binary
 done
 
 exit ########### end
