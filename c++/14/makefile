@@ -1,4 +1,2 @@
-# all:
-	# ../create_main
-
 include ../rules.mak
+STANDARD=c++14
