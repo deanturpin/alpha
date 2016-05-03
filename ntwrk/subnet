@@ -22,7 +22,7 @@ hosts=(
 [10.22.0.5]=unknown
 )
 
-# Declare masks
+# Declare masks - CIDR
 declare -A masks
 masks=(
 [10.226.0.0]=16
@@ -32,28 +32,28 @@ masks=(
 echo hosts ${#hosts[*]}
 echo masks ${#masks[*]}
 
+# Expand masks
+decimal2binary=({0,1}{0,1}{0,1}{0,1}{0,1}{0,1}{0,1}{0,1})
+
+for mask in ${!masks[*]}
+do
+	# echo $mask
+
+	while [[ $mask =~ [[:digit:]]{1,3} ]]
+	do
+		echo ${decimal2binary[BASH_REMATCH]}
+
+		# Remove the match from current search
+		mask=${mask/$BASH_REMATCH//}
+	done
+done
+
 exit ########### end
 
 for line in "${hosts[*]}"
 do
 	echo $line
 done
-
-
-# Create associative array of hosts and initialise
-declare -A hosts
-
-for h in ${raw[*]}
-do
-	hosts[$h]=unknown
-done
-
-# Declare known subnets
-declare -A masks
-masks=(
-[192.168.109]=foonet
-[10.226.0]=barnet
-)
 
 # Header
 cat <<!
