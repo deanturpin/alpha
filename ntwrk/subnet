@@ -58,11 +58,24 @@ done
 cat <<!
 graph
 {
-	node [style=filled fillcolor=cyan]
-
+	node [style=filled]
+	node [fillcolor=red] // default
 !
 
-# Dump nodes
+# Dump netmasks
+echo -e "\n\t// Netmasks"
+for netmask in ${!netmasks[*]}
+do
+	echo -e "\t\"$netmask\" [fillcolor=cyan]"
+done
+
+# Dump node info
+for node in ${!nodes[*]}
+do
+	echo -e "\t\"$node\" [fillcolor=white]"
+done
+
+# Dump connections
 for node in ${!nodes[*]}
 do
 	echo -e "\t\"$node\" -- \"${nodes[$node]}\""
