@@ -8,8 +8,7 @@ hosts=(
 )
 
 # Declare masks - CIDR
-declare -A netmasks
-netmasks=( [10.226.0.0]=16 [192.168.109.0]=27 [192.168.107.0]=24 )
+declare -A netmasks=( [10.226.0.0]=16 [192.168.109.0]=27 [192.168.107.0]=24 )
 
 # Decimal to binary netmask converter
 function decimal2binary {
@@ -18,8 +17,10 @@ function decimal2binary {
 	local binary=
 	local ip=$1
 
+	# Extract decimals
 	while [[ $ip =~ [[:digit:]]{1,3} ]]
 	do
+		# Convert decimal to binary and append to result
 		binary+=${d2b[$BASH_REMATCH]}
 		
 		# Remove the match from current search
@@ -55,12 +56,7 @@ do
 done
 
 # Header
-cat <<!
-graph
-{
-	node [style=filled]
-	node [fillcolor=red] // default
-!
+echo "graph { node [style=filled]; node [fillcolor=red];"
 
 # Dump netmasks
 echo -e "\n\t// Netmasks"
@@ -82,8 +78,4 @@ do
 done
 
 # Footer
-cat <<!
-
-	// $(date)
-}
-!
+echo "}"
