@@ -1,0 +1,92 @@
+#!/bin/bash
+
+# mapfile hosts < hosts
+
+# Declare hosts
+declare -A hosts
+hosts=(
+[192.168.109.1]=unknown
+[192.168.109.2]=unknown
+[192.168.109.3]=unknown
+[192.168.109.4]=unknown
+[192.168.109.5]=unknown
+[192.168.109.7]=unknown
+[192.168.109.8]=unknown
+[10.226.0.1]=unknown
+[10.226.0.2]=unknown
+[10.226.1.3]=unknown
+[10.227.1.3]=unknown
+[192.168.109.6]=unknown
+[10.226.0.4]=unknown
+[10.22.0.4]=unknown
+[10.22.0.5]=unknown
+)
+
+# Declare masks
+declare -A masks
+masks=(
+[10.226.0.0]=16
+[192.168.109.0]=27
+)
+
+echo hosts ${#hosts[*]}
+echo masks ${#masks[*]}
+
+exit ########### end
+
+for line in "${hosts[*]}"
+do
+	echo $line
+done
+
+
+# Create associative array of hosts and initialise
+declare -A hosts
+
+for h in ${raw[*]}
+do
+	hosts[$h]=unknown
+done
+
+# Declare known subnets
+declare -A masks
+masks=(
+[192.168.109]=foonet
+[10.226.0]=barnet
+)
+
+# Header
+cat <<!
+graph
+{
+	node [style=filled fillcolor=cyan]
+
+!
+
+# Examine hosts
+for ip in ${!hosts[*]}
+do
+	# Test each mask
+	for mask in ${!masks[*]}
+	do
+		# Stash mask name if the ip matches and stop search
+		if [[ $ip =~ $mask ]]
+		then
+			hosts[$ip]=${masks[$mask]}
+			break
+		fi
+	done
+done
+
+# Dump connections
+for ip in ${!hosts[@]}
+do
+	echo -e "\t\"$ip\" -- \"${hosts[$ip]}\""
+done
+
+# Footer
+cat <<!
+
+	// $(date)
+}
+!
