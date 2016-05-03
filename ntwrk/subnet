@@ -10,11 +10,12 @@ hosts=(
 # Declare masks - CIDR
 declare -A netmasks
 netmasks=(
-[10.226.0.0]=16 [192.168.109.0]=27 [192.168.107.0]=24
+[10.226.0.0]=16
+# [192.168.109.0]=27 [192.168.107.0]=24
 )
 
-echo hosts ${#hosts[*]}
-echo masks ${#netmasks[*]}
+# echo hosts ${#hosts[*]}
+# echo masks ${#netmasks[*]}
 
 # Decimal to binary netmask converter
 function decimal2binary {
@@ -34,12 +35,16 @@ function decimal2binary {
 	echo $binary
 }
 
+# Iterate through each netmask and compare it to each host
 for netmask in ${!netmasks[*]}
 do
 	binary=$(decimal2binary $netmask)
+	echo ${binary}
 
-	# echo $binary - ${masks[$ip]}
-	echo $binary
+	for host in ${hosts[*]}
+	do
+		echo -e \\t$(decimal2binary $host)
+	done
 done
 
 exit ########### end
