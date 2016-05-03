@@ -51,6 +51,23 @@ void classes()
 		b.foo();
 	}
 
+	// final keyword 1
+	{
+		struct A
+		{
+			virtual void foo() final;
+			void bar();
+		};
+
+		struct B final : public A
+		{
+			// Error - A::foo is final
+			// void foo();
+
+			void bar(){};
+		};
+	}
+
 	// override keyword
 	{
 		class A
