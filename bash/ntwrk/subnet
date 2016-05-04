@@ -52,19 +52,19 @@ for netmask in ${!netmasks[*]}; do
 done
 
 # Header
-echo "graph { node [style=filled]; node [fillcolor=red];"
+dot+=$(echo "graph { node [style=filled]; node [fillcolor=red];")
 
 # Dump netmasks
-echo -e "\n\t// Netmasks"
-for netmask in ${!netmasks[*]}; do echo -e "\t\"$netmask\" [fillcolor=cyan]"; done
+for netmask in ${!netmasks[*]}; do dot+=$(echo -e "\t\"$netmask\" [fillcolor=cyan];"); done
 
 # Dump node info
-echo -e "\n\t// Nodes"
-for node in ${!nodes[*]}; do echo -e "\t\"$node\" [fillcolor=white]"; done
+for node in ${!nodes[*]}; do dot+=$(echo -e "\t\"$node\" [fillcolor=white];"); done
 
 # Dump connections
-echo -e "\n\t// Connections"
-for node in ${!nodes[*]}; do echo -e "\t\"$node\" -- \"${nodes[$node]}\""; done
+for node in ${!nodes[*]}; do dot+=$(echo -e "\t\"$node\" -- \"${nodes[$node]}\";"); done
 
 # Footer
-echo "}"
+dot+=$(echo "}")
+
+# Generate topology
+circo -T png > topology.png <<< $dot
