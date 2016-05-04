@@ -60,19 +60,19 @@ for ip in ${!nodes[*]}; do
 done
 
 # Header
-dot+=$(echo "graph { node [style=filled]; node [fillcolor=red];")
+dot="graph { node [style=filled]; node [fillcolor=red]; "
 
 # Dump netmasks
-for netmask in ${!netmasks[*]}; do dot+=$(echo -e "\t\"$netmask\" [fillcolor=cyan];"); done
+for netmask in ${!netmasks[*]}; do dot+="\"$netmask\" [fillcolor=cyan]; "; done
 
 # Dump node info
-for node in ${!nodes[*]}; do dot+=$(echo -e "\t\"$node\" [fillcolor=white];"); done
+for node in ${!nodes[*]}; do dot+="\"$node\" [fillcolor=white]; "; done
 
 # Dump connections
-for node in ${!nodes[*]}; do dot+=$(echo -e "\t\"$node\" -- \"${nodes[$node]}\";"); done
+for node in ${!nodes[*]}; do dot+="\"$node\"--\"${nodes[$node]}\"; "; done
 
 # Footer
-dot+=$(echo "}")
+dot+="}"
 
 # Generate topology
 circo -T png > topology.png <<< $dot
