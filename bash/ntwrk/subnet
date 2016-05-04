@@ -3,10 +3,6 @@
 # Read hosts
 mapfile hosts < hosts
 
-
-# Declare masks - CIDR
-declare -A netmasks=( [10.10]=16 [192.168.0.0]=16 )
-
 # Decimal to binary netmask converter
 function decimal2binary {
 
@@ -26,14 +22,24 @@ function decimal2binary {
 	echo $binary
 }
 
-# Extract IPs and initialise nodes
+# Extract IPs and netmasks and initialise nodes
 declare -A nodes
+declare -A netmasks
 
 for (( i=0; i<${#hosts[*]}; ++i )); do
-	[[ ${hosts[i]} =~ ^[[:digit:]\.]{7,} ]] && nodes[$BASH_REMATCH]=unknown
+
+	entry=${hosts[i]}
+
+	# Does entry match an IP?
+	if [[ $entry =~ ^[[:digit:]\.]{7,} ]]; then
+		nodes[$BASH_REMATCH]=unknown
+	else
+		# Does line match a CIDR netmask?
+		[[ $entry =~ ([[:digit:]\.]{7,})/([[:digit:]]{2}) ]] && netmasks[${BASH_REMATCH[1]}]=${BASH_REMATCH[2]}
+	fi
 done
 
-# Iterate through the netmasks and compare them to each host
+# Iterate through the netmasks and compare them to each ip
 for netmask in ${!netmasks[*]}; do
 	# Convert netmask
 	netmask_binary=$(decimal2binary $netmask)
@@ -42,9 +48,9 @@ for netmask in ${!netmasks[*]}; do
 	width=${netmasks[$netmask]}
 	netmask_binary=${netmask_binary:0:$width}
 
-	for host in ${hosts[*]}; do
-		host_binary=$(decimal2binary $host)
-		[[ $host_binary =~ ^$netmask_binary ]] && nodes[$host]=$netmask
+	for ip in ${!hosts[*]}; do
+		host_binary=$(decimal2binary $ip)
+		[[ $host_binary =~ ^$netmask_binary ]] && nodes[$ip]=$netmask
 	done
 done
 
