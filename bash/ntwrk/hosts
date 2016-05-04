@@ -1,51 +1,22 @@
 127.0.0.1 localhost
 
 # 192.168.0.0/27
-
 192.168.0.1 neque
-8.8.8.8 real1
-8.8.4.4 real2
-
-# 192.168.0.2 architectocomment
-# 192.168.0.3 nemocomment
-# 192.168.0.4 velitcomment
 192.168.0.5 maxime
 192.168.0.6 ea
 192.168.0.7 occaecati
-192.168.0.8 aut
-192.168.0.9 sunt
-192.168.0.10 nihil
-192.168.0.11 quisquam
-192.168.0.12 nemo
-192.168.0.13 voluptatem
-192.168.0.14 omnis
-192.168.0.15 pariatur
-192.168.0.16 aliquam
-192.168.0.17 similique
-192.168.0.18 iste
-192.168.0.19 impedit
-192.168.0.20 et
 
-# 10.10.0.0/16
+# 10.10.10.0/24
 10.10.10.1 sit
 10.10.10.2 dignissimos
 10.10.10.3 consequatur
-10.10.10.4 optio
-10.10.10.5 similique
-10.10.10.6 velit
-10.10.10.7 quo
-10.10.10.8 earum
-10.10.10.9 esse
-10.10.10.10 fugit
-10.10.10.11 sit
 
-10.10.11.12 rem
-10.10.12.13 dolor
-10.10.12.14 dolorem
-10.10.12.15 molestiae
-10.10.12.16 est
+# 10.11.0.0/16
+10.11.10.1 one
+10.12.10.2 two
+10.13.10.3 three
+10.13.10.4 four
 
-20.10.10.17 facilis
-20.10.10.18 non
-20.10.10.19 et
-20.10.10.20 beatae
+# A couple of randoms
+8.8.8.8 real1
+8.8.4.4 real2
