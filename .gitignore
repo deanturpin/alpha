@@ -1,7 +1,2 @@
-# Intermediate files
 *.o
-*.swp
 foo
-*.png
-*.gpx
-*~
