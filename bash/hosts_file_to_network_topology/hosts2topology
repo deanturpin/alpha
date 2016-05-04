@@ -33,28 +33,12 @@ for (( i=0; i<${#hosts[*]}; ++i )); do
 	if [[ ${hosts[i]} =~ ^[[:digit:]\.]{7,} ]]; then
 		nodes[$BASH_REMATCH]=unknown
 	else
-		# Does line match a CIDR netmask?
+		# Does entry match a CIDR netmask?
 		[[ ${hosts[i]} =~ ([[:digit:]\.]{7,})/([[:digit:]]{2}) ]] && netmasks[${BASH_REMATCH[1]}]=${BASH_REMATCH[2]}
 	fi
 done
 
-# Iterate through the netmasks and compare them to each ip
-for netmask in ${!netmasks[*]}; do
-
-	# Convert netmask
-	netmask_binary=$(decimal2binary $netmask)
-
-	# Trim off host identifier
-	width=${netmasks[$netmask]}
-	netmask_binary=${netmask_binary:0:$width}
-
-	for ip in ${!nodes[*]}; do
-		host_binary=$(decimal2binary $ip)
-		[[ $host_binary =~ ^$netmask_binary ]] && nodes[$ip]=$netmask
-	done
-done
-
-# Iterate through each node and compare with the netmasks
+# Compare each IP with the netmasks
 for ip in ${!nodes[*]}; do
 
 	# Convert IP to binary
