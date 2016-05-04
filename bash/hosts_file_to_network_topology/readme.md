@@ -17,7 +17,3 @@ the comments.
 ```
 
 ![](topology.png)
-
-### TODO
-- [ ] add CIDR format to graph
-
