@@ -12,6 +12,7 @@ function decimal2binary {
 
 	# Extract decimals
 	while [[ $ip =~ [[:digit:]]{1,3} ]]; do
+
 		# Convert decimal to binary and append to result
 		binary+=${d2b[$BASH_REMATCH]}
 		
@@ -27,6 +28,7 @@ declare -A nodes
 declare -A netmasks
 
 for (( i=0; i<${#hosts[*]}; ++i )); do
+
 	# Does entry match an IP?
 	if [[ ${hosts[i]} =~ ^[[:digit:]\.]{7,} ]]; then
 		nodes[$BASH_REMATCH]=unknown
@@ -38,6 +40,7 @@ done
 
 # Iterate through the netmasks and compare them to each ip
 for netmask in ${!netmasks[*]}; do
+
 	# Convert netmask
 	netmask_binary=$(decimal2binary $netmask)
 
@@ -48,6 +51,27 @@ for netmask in ${!netmasks[*]}; do
 	for ip in ${!nodes[*]}; do
 		host_binary=$(decimal2binary $ip)
 		[[ $host_binary =~ ^$netmask_binary ]] && nodes[$ip]=$netmask
+	done
+done
+
+# Iterate through each node and compare with the netmasks
+for ip in ${!nodes[*]}; do
+
+	# Convert IP to binary
+	ip_binary=$(decimal2binary $ip)
+
+	# Compare with the netmasks
+	for netmask in ${!netmasks[*]}; do
+
+		# Convert netmask to binary
+		netmask_binary=$(decimal2binary $netmask)
+
+		# Trim off host identifier
+		bits=${netmasks[$netmask]}
+		netmask_binary=${netmask_binary:0:$bits}
+
+		# Compare with IP and stop looking if we find a match
+		[[ $ip_binary =~ ^$netmask_binary ]] && nodes[$ip]=$netmask && break
 	done
 done
 
