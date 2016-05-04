@@ -17,3 +17,9 @@ for line in ${array[*]}; do
 	echo $line
 done
 unset IFS
+
+# Or without the IFS
+for (( i = 0; i < ${#array[*]}; ++i )); do
+	echo ${array[i]}
+done
+
