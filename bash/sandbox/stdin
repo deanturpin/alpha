@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# $ ./stdin < mapfile
+# lines on stdin 22
+
+mapfile
+
+echo lines on stdin ${#MAPFILE[*]}
