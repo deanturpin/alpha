@@ -1,0 +1,42 @@
+#!/bin/bash
+
+echo 'plocket revision $Id: 19f0c57fcc56a6082ac4c0730d635faec89095ad $'
+
+# Check params
+if [[ $# == 1 ]]
+then
+	# Use the first parameter as file name
+	locket=$1
+
+	# Create temp file
+	temp=$(mktemp)
+
+	# Check file exists
+	if [[ ! -e $locket ]]
+	then
+		echo Creating new locket \"$locket\"
+
+		# Add some instructions
+		echo '# Add your information, write and quit' > $temp
+	fi
+
+	# Check if the file needs decrypting first
+	if [[ ${locket##*.} == "gpg" ]]
+	then
+		echo Decrypting
+		gpg --decrypt --output=$temp $locket
+	else
+		# Append extension
+		[[ ${locket##*.} != "gpg" ]] && locket+=.gpg
+	fi
+
+	vi $temp
+
+	echo Encrypting $locket
+	gpg --symmetric --cipher-algo=AES256 --output=$locket $temp
+
+	# Remove temp file
+	rm $temp
+else
+	echo Usage: plocket file
+fi

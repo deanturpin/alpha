@@ -1,0 +1,22 @@
+#!/bin/bash
+
+hosts=$(cat <<!
+192.168.109.1 one
+192.168.109.2 two
+192.168.109.3 three
+!
+)
+
+# Mapfile
+mapfile array2 < <(echo $hosts)
+echo lines ${#array2[*]}
+
+# This every single number
+for line in ${array2[*]}; do
+	echo $line
+done
+
+# But if you quote it you get everything on one line
+for line in "${array2[*]}"; do
+	echo $line
+done
