@@ -1,17 +1,13 @@
 #!/bin/bash
 
-dirs="private doc dev deanturpin.github.io"
+# Search for folders with a .git
+mapfile repos < <(find . -name .git)
 
-gitcommand=status
+echo repos ${#repos[*]}
 
-# Override
-[[ $1 == "push" ]] && gitcommand=push
+for repo in ${repos[*]}; do
 
-# For each repo
-pushd ../ > /dev/null
-for dir in $dirs
-do
-	echo
-	[[ -d $dir ]] && (pushd $dir; git $gitcommand)
+	pushd ${repo%/.git}
+	git status
+	popd
 done
-popd > /dev/null
