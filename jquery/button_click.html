@@ -9,16 +9,19 @@
 <script>
 $(function(){
 
-		// First button appends to the first element
 		$("#one").click(function(){
 				// $("li").append("blah");
-				$("#debug").text("click one");
+				$("#debug").text("Click");
 				});
 
-		// Second button appends to the list
 		$("#two").dblclick(function(){
 				// $("ul").append("blah");
-				$("#debug").text("double click two");
+				$("#debug").text("Double click");
+				});
+
+		$("#three").hover(function(){
+				// $("ul").append("blah");
+				$("#debug").text("Hover");
 				});
 
 		});
@@ -29,6 +32,7 @@ $(function(){
 
 <button id=one>Click me</button>
 <button id=two>Double-click me</button>
+<button id=three>Hover (over) me</button>
 
 <p id=debug>
 Nothing to see here
