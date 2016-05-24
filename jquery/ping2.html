@@ -33,9 +33,18 @@ $( document ).ready(function(){
 		// $( document ).load( "test.html" );
 		// $.get( "test.html" );
 
-		$("li").each(function() {
-		    console.log($(this).text());
+		// Hover handler
+		$("li").hover(
+			function() {
+				$(this).css('color', 'green');
+			}, function() {
+				$(this).css('color', 'red');
 			});
+
+		// $("li").each(function() {
+		//     console.log($(this).text());
+		//     $(this).css('color', 'red');
+		// 	});
 
 		console.log("Complete " + new Date);
 });
