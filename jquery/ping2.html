@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <meta charset="UTF-8"> 
 
-<!-- local copy -->
 <script src="jquery-2.2.4.js"></script>
 
-<!-- jQuery code -->
+<!-- jQuery -->
 <script>
 $( document ).ready(function(){
 		console.log("Loaded " + new Date);
@@ -35,6 +33,10 @@ $( document ).ready(function(){
 		// $( document ).load( "test.html" );
 		// $.get( "test.html" );
 
+		$("li").each(function() {
+		    console.log($(this).text());
+			});
+
 		console.log("Complete " + new Date);
 });
 </script>
@@ -42,7 +44,7 @@ $( document ).ready(function(){
 </head>
 <body>
 
-<table>
+<table width=100%>
 <tr>
 
 <!--
