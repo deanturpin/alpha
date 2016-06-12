@@ -2,7 +2,7 @@ sources = $(wildcard *.hs)
 objects = $(patsubst %.hs, %.o, $(wildcard *.hs))
 
 %.o: %.hs
-	ghc $<
+	ghc --make $<
 
 all: ${objects}
 
