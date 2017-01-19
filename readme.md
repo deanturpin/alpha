@@ -32,9 +32,9 @@
 - physics engines
 
 ### Python
-- number one most taught introductory language
-- bioinformatics
-- number crunching (ahead of ruby)
+- Most taught introductory language
+- Bioinformatics
+- Number crunching (ahead of Ruby)
 
 ### Java
 - native Android dev
