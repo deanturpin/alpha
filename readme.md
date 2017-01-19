@@ -12,8 +12,9 @@
 | 10            | C             |               | Elm                   |
 
 ## Features
-### GoLang
-- garbage collection
+### Go
+- Created by Google
+- Garbage collection
 
 ### Ruby (on rails)
 - web
@@ -48,6 +49,9 @@
 - jQuery
 - backbone
 - knockout
+
+### Rust
+- Created by Mozilla
 
 # 2016
 
