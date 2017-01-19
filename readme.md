@@ -1,5 +1,16 @@
 # 2017
 
+1. C#
+2. JavaScript
+3. Java
+4. Python
+5. Swift
+6. TypeScript
+7. C++
+8. Go
+9. Assembler
+10. Haskell
+
 ## New languages (< 10 years old)
 10.  Elm - created 2012, functional
 
