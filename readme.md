@@ -1,3 +1,9 @@
+# 2017
+
+TBD
+
+# 2016
+
 **Bjarne**
 c++, java, python, ruby javascript, c, c# - one of the functional languages,
 high performance numerical computation
