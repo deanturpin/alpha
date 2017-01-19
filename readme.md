@@ -13,50 +13,9 @@
 
 [Chris on YouTube](https://www.youtube.com/watch?v=Z56GLRXxh88)
 
-## Go
-- Created by Google
-- Garbage collection
-
-## Ruby (on rails)
-- web
-
-## Swift
-- Replacement for Objective C - OSX
-
-## C#
-- .Net framework: forms, websites, Windows phone
-- Only works with Windows
-
-## C++
-- No mem management
-- Game engines
-- Physics engines
-
-## Python
-- Most taught introductory language
-- Bioinformatics
-- Number crunching (ahead of Ruby)
-
-## Java
-- Native Android dev
-- Servers
-- GUIs
-- Search engines
-- Has the most jobs
-- "If you know Java you'll have a job"
-- "the Cobol of the 21st Century" -- Larry Wall
-
-## JavaScript
-- jQuery
-- Backbone
-- Knockout
-
-## Rust
-- Created by Mozilla
-
 # 2017
-## Simple Programmer
 
+## Simple Programmer
 [Simple Programmer on YouTube](https://www.youtube.com/watch?v=R4hNmWvFcxo)
 
 # 2016
@@ -103,3 +62,47 @@
 - Haskell
 - Assembly
 - APL
+
+# Language features
+
+## Go
+- Created by Google
+- Garbage collection
+
+## Ruby (on rails)
+- web
+
+## Swift
+- Replacement for Objective C - OSX
+
+## C#
+- .Net framework: forms, websites, Windows phone
+- Only works with Windows
+
+## C++
+- No mem management
+- Game engines
+- Physics engines
+
+## Python
+- Most taught introductory language
+- Bioinformatics
+- Number crunching (ahead of Ruby)
+
+## Java
+- Native Android dev
+- Servers
+- GUIs
+- Search engines
+- Has the most jobs
+- "If you know Java you'll have a job"
+- "the Cobol of the 21st Century" -- Larry Wall
+
+## JavaScript
+- jQuery
+- Backbone
+- Knockout
+
+## Rust
+- Created by Mozilla
+
