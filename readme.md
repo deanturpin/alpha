@@ -1,6 +1,25 @@
 # 2017
 
-TBD
+## New languages (< 10 years old)
+10.  Elm - created 2012, functional
+
+9. Kotlin - Java runtime
+
+8. Julia
+
+7. Hack - created by devs at Facebook
+
+6. Typescript
+
+5. Clojure - functional
+
+4. Elixir - functional, used in conjunction with Erlang
+
+3. Swift
+
+2. Go - created with concurrency in mind by Google (Go-pher!)
+
+1. Rust - Mozilla, fast, thread safe, concurrent, immutable variables
 
 # 2016
 
