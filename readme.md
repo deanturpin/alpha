@@ -1,50 +1,53 @@
-| #             | 2016          | 2017          |
-|---------------|---------------|---------------|
-| 1             |               |               |
-| 2             |               |               |
-| 3             |               |               |
-| 4             |               |               |
-| 5             |               |               |
-| 6             |               |               |
-| 7             |               |               |
-| 8             |               |               |
-| 9             |               |               |
-| 10            |               |               |
+| #             | 2016          | 2017          | 2017 (new languages)	|
+|---------------|---------------|---------------|-----------------------|
+| 1             | JavaScript    | JavaScript    | Rust                  |
+| 2             | Java          |               | Go                    |
+| 3             | Python        |               | Swift                 |
+| 4             | C++           |               | Elixir                |
+| 5             | C#            |               | Clojure               |
+| 6             | Swift         |               | TypeScript            |
+| 7             | Ruby          |               | Hack                  |
+| 8             | PHP           |               | Julia                 |
+| 9             | Go            |               | Kotlin                |
+| 10            | C             |               | Elm                   |
 
-# 2017
-This list was later revised.
+## Features
+### GoLang
+- garbage collection
 
-1. C#
-2. JavaScript
-3. Java
-4. Python
-5. Swift
-6. TypeScript
-7. C++
-8. Go
-9. Assembler
-10. Haskell
+### Ruby (on rails)
+- web
 
-## New languages (< 10 years old)
-10.  Elm - created 2012, functional
+### Swift
+- Replacement for Objective C - OSX
 
-9. Kotlin - Java runtime
+### C#
+- .net framework - forms, websites, Win phone
+- only works with Windows
 
-8. Julia
+### C++
+- no mem management
+- game engines
+- physics engines
 
-7. Hack - created by devs at Facebook
+### Python
+- number one most taught introductory language
+- bioinformatics
+- number crunching (ahead of ruby)
 
-6. Typescript
+### Java
+- native Android dev
+- servers
+- GUIs
+- search engines
+- has the most jobs
+- "If you know Java you'll have a job"
+- "the Cobol of the 21st Century" -- Larry Wall
 
-5. Clojure - functional
-
-4. Elixir - functional, used in conjunction with Erlang
-
-3. Swift
-
-2. Go - created with concurrency in mind by Google (Go-pher!)
-
-1. Rust - Mozilla, fast, thread safe, concurrent, immutable variables
+### JavaScript
+- jQuery
+- backbone
+- knockout
 
 # 2016
 
@@ -64,33 +67,12 @@ Python, Ruby, Perl
 
 **Chris Hawkes - top 10 languages in 2016**
 
-10. C
-
-9. GoLang (garbage collection)
-
-8. php
-
-7. ruby (on rails) - web
-
-6. swift (replacement for Objective C - OSX)
-
-5. C# (.net framework - forms, websites, Win phone) only works with Windows
-
-4. C++ (11) - no mem management, game engines, physics engines
-
-3. python (number one most taught introductory), bioinformatics, number crunching (ahead of ruby)
-
-2. Java (native Android dev, servers, GUIs, search engines, most jobs) - "If yo
-uknow Java you'll have a job"
-
-1. JavaScript (jQuery, backbone, knockout)
-
 [Chris on YouTube](https://www.youtube.com/watch?v=Z56GLRXxh88)
 
-**misc hard programming languages**
+# Difficult programming languages
 - Scala
 - Prolog
 - Lisp
-- Haskell (pure functional)
+- Haskell
 - Assembly
 - APL
