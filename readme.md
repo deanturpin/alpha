@@ -11,6 +11,8 @@
 | 9             | Go            |               | Kotlin                |
 | 10            | C             |               | Elm                   |
 
+[Chris on YouTube](https://www.youtube.com/watch?v=Z56GLRXxh88)
+
 ## Go
 - Created by Google
 - Garbage collection
@@ -52,25 +54,28 @@
 ## Rust
 - Created by Mozilla
 
-# 2016
-
-**Bjarne**
-c++, java, python, ruby javascript, c, c# - one of the functional languages,
-high performance numerical computation
+# Bjarne 2016
+- C++ 
+- Java 
+- Python 
+- Ruby
+- Javascript
+- C 
+- C#
+- One of the functional languages
+- High performance numerical computation
 
 [Bjarne on YouTube](https://www.youtube.com/watch?v=NvWTnIoQZj4)
 
-**Larry Wall**
-Java (the Cobol of the 21st Century)
-Haskell (functional - mathematical - a modern Lisp)
-C
-Python, Ruby, Perl
+# Larry Wall 2016
+- Java (the Cobol of the 21st Century)
+- Haskell (functional - mathematical - a modern Lisp)
+- C
+- Python
+- Ruby
+- Perl
 
 [Larry on YouTube](https://www.youtube.com/watch?v=LR8fQiskYII)
-
-**Chris Hawkes - top 10 languages in 2016**
-
-[Chris on YouTube](https://www.youtube.com/watch?v=Z56GLRXxh88)
 
 # Difficult programming languages
 
@@ -89,8 +94,8 @@ Python, Ruby, Perl
 - PHP
 - SQL
 
-[Hitesh Choudhary](https://www.youtube.com/watch?v=bz1VbsukA9E)
+[Hitesh on YouTube](https://www.youtube.com/watch?v=bz1VbsukA9E)
 
 # Simple Programmer 2017
 
-[Simple Programmer 2017](https://www.youtube.com/watch?v=R4hNmWvFcxo)
+[Simple Programmer on YouTube](https://www.youtube.com/watch?v=R4hNmWvFcxo)
