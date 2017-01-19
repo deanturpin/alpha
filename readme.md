@@ -73,9 +73,24 @@ Python, Ruby, Perl
 [Chris on YouTube](https://www.youtube.com/watch?v=Z56GLRXxh88)
 
 # Difficult programming languages
+
 - Scala
 - Prolog
 - Lisp
 - Haskell
 - Assembly
 - APL
+
+# Hitesh Choudhary 2016
+
+- JavaScript
+- Python
+- Java / Swift
+- PHP
+- SQL
+
+[Hitesh Choudhary](https://www.youtube.com/watch?v=bz1VbsukA9E)
+
+# Simple Programmer 2017
+
+[Simple Programmer 2017](https://www.youtube.com/watch?v=R4hNmWvFcxo)
