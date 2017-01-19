@@ -1,7 +1,7 @@
-| #             | 2016          | 2017          | 2017 (new languages)	|
+|               | 2016          | 2017          | 2017 (new languages)	|
 |---------------|---------------|---------------|-----------------------|
 | 1             | JavaScript    | JavaScript    | Rust                  |
-| 2             | Java          |               | Go                    |
+| 2             | Java          | Python        | Go                    |
 | 3             | Python        |               | Swift                 |
 | 4             | C++           |               | Elixir                |
 | 5             | C#            |               | Clojure               |
@@ -11,46 +11,45 @@
 | 9             | Go            |               | Kotlin                |
 | 10            | C             |               | Elm                   |
 
-## Features
-### Go
+## Go
 - Created by Google
 - Garbage collection
 
-### Ruby (on rails)
+## Ruby (on rails)
 - web
 
-### Swift
+## Swift
 - Replacement for Objective C - OSX
 
-### C#
-- .net framework - forms, websites, Win phone
-- only works with Windows
+## C#
+- .Net framework: forms, websites, Windows phone
+- Only works with Windows
 
-### C++
-- no mem management
-- game engines
-- physics engines
+## C++
+- No mem management
+- Game engines
+- Physics engines
 
-### Python
+## Python
 - Most taught introductory language
 - Bioinformatics
 - Number crunching (ahead of Ruby)
 
-### Java
-- native Android dev
-- servers
+## Java
+- Native Android dev
+- Servers
 - GUIs
-- search engines
-- has the most jobs
+- Search engines
+- Has the most jobs
 - "If you know Java you'll have a job"
 - "the Cobol of the 21st Century" -- Larry Wall
 
-### JavaScript
+## JavaScript
 - jQuery
-- backbone
-- knockout
+- Backbone
+- Knockout
 
-### Rust
+## Rust
 - Created by Mozilla
 
 # 2016
