@@ -54,7 +54,14 @@
 ## Rust
 - Created by Mozilla
 
-# Bjarne 2016
+# 2017
+## Simple Programmer
+
+[Simple Programmer on YouTube](https://www.youtube.com/watch?v=R4hNmWvFcxo)
+
+# 2016
+
+## Bjarne Stroustrup
 - C++ 
 - Java 
 - Python 
@@ -67,7 +74,7 @@
 
 [Bjarne on YouTube](https://www.youtube.com/watch?v=NvWTnIoQZj4)
 
-# Larry Wall 2016
+## Larry Wall
 - Java (the Cobol of the 21st Century)
 - Haskell (functional - mathematical - a modern Lisp)
 - C
@@ -77,6 +84,17 @@
 
 [Larry on YouTube](https://www.youtube.com/watch?v=LR8fQiskYII)
 
+
+## Hitesh Choudhary
+
+1. JavaScript
+2. Python
+3. Java / Swift
+4. PHP
+5. SQL
+
+[Hitesh on YouTube](https://www.youtube.com/watch?v=bz1VbsukA9E)
+
 # Difficult programming languages
 
 - Scala
@@ -85,17 +103,3 @@
 - Haskell
 - Assembly
 - APL
-
-# Hitesh Choudhary 2016
-
-- JavaScript
-- Python
-- Java / Swift
-- PHP
-- SQL
-
-[Hitesh on YouTube](https://www.youtube.com/watch?v=bz1VbsukA9E)
-
-# Simple Programmer 2017
-
-[Simple Programmer on YouTube](https://www.youtube.com/watch?v=R4hNmWvFcxo)
