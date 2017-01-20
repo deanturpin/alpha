@@ -16,6 +16,15 @@
 # 2017
 
 ## Simple Programmer
+- Java
+- C#
+- C++
+- JavaScript
+- Rust
+- Swift
+- Elixir
+- Python
+
 [Simple Programmer on YouTube](https://www.youtube.com/watch?v=R4hNmWvFcxo)
 
 # 2016
@@ -25,7 +34,7 @@
 - Java 
 - Python 
 - Ruby
-- Javascript
+- JavaScript
 - C 
 - C#
 - One of the functional languages
