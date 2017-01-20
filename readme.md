@@ -1,5 +1,5 @@
-A summary of various programming luminaries and relative unknowns with good
-YouTube channels.
+A summary of the opinions of various programming luminaries and relative
+unknowns with good YouTube channels.
 
 |               | 2016          | 2017          | 2017 (new languages)	|
 |---------------|---------------|---------------|-----------------------|
