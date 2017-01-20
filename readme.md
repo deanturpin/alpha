@@ -30,7 +30,8 @@ summary of the general consensus of research so far.
 - Python
 - Go
 
-To avoid
+### To avoid
+
 - Objective C
 - Ruby
 
