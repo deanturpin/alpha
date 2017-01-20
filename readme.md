@@ -1,3 +1,6 @@
+A summary of various programming luminaries and relative unknowns with good
+YouTube channels.
+
 |               | 2016          | 2017          | 2017 (new languages)	|
 |---------------|---------------|---------------|-----------------------|
 | 1             | JavaScript    | JavaScript    | Rust                  |
