@@ -14,8 +14,8 @@ unknowns with good YouTube channels.
 | 9             | Go            | C             | Kotlin                |
 | 10            | C             | Ruby          | Elm                   |
 
-This table is the opinion of one man: Chris Hawkes. But I think it describes the
-general consensus of research so far.
+This table is actually the opinion of one man: Chris Hawkes. But I think it
+describes the general consensus of research so far.
 
 [Chris on YouTube](https://www.youtube.com/watch?v=Z56GLRXxh88)
 
