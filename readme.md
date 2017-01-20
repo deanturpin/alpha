@@ -24,6 +24,11 @@
 - Swift
 - Elixir
 - Python
+- Go
+
+To avoid
+- Objective C
+- Ruby
 
 [Simple Programmer on YouTube](https://www.youtube.com/watch?v=R4hNmWvFcxo)
 
