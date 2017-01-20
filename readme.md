@@ -2,20 +2,21 @@
 |---------------|---------------|---------------|-----------------------|
 | 1             | JavaScript    | JavaScript    | Rust                  |
 | 2             | Java          | Python        | Go                    |
-| 3             | Python        |               | Swift                 |
-| 4             | C++           |               | Elixir                |
-| 5             | C#            |               | Clojure               |
-| 6             | Swift         |               | TypeScript            |
-| 7             | Ruby          |               | Hack                  |
-| 8             | PHP           |               | Julia                 |
-| 9             | Go            |               | Kotlin                |
-| 10            | C             |               | Elm                   |
+| 3             | Python        | Java          | Swift                 |
+| 4             | C++           | C#            | Elixir                |
+| 5             | C#            | Go            | Clojure               |
+| 6             | Swift         | C++           | TypeScript            |
+| 7             | Ruby          | Swift         | Hack                  |
+| 8             | PHP           | PHP           | Julia                 |
+| 9             | Go            | C             | Kotlin                |
+| 10            | C             | Ruby          | Elm                   |
 
 [Chris on YouTube](https://www.youtube.com/watch?v=Z56GLRXxh88)
 
 # 2017
 
 ## Simple Programmer
+
 - Java
 - C#
 - C++
@@ -35,6 +36,7 @@ To avoid
 # 2016
 
 ## Bjarne Stroustrup
+
 - C++ 
 - Java 
 - Python 
@@ -48,6 +50,7 @@ To avoid
 [Bjarne on YouTube](https://www.youtube.com/watch?v=NvWTnIoQZj4)
 
 ## Larry Wall
+
 - Java (the Cobol of the 21st Century)
 - Haskell (functional - mathematical - a modern Lisp)
 - C
