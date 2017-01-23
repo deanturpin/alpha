@@ -1,5 +1,4 @@
-A summary of the opinions of various programming luminaries and relative
-unknowns with good YouTube channels.
+A collection of opinions from various programming luminaries and unknowns with good YouTube channels. Obviously this is general programming and not your niche but you still need to employ people from "the outside": perhaps future projects should take this into account? 
 
 |               | 2016          | 2017          | 2017 (new languages)	|
 |---------------|---------------|---------------|-----------------------|
