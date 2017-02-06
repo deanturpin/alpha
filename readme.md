@@ -18,6 +18,8 @@ describes the general consensus of research so far.
 
 [Chris on YouTube](https://www.youtube.com/watch?v=Z56GLRXxh88)
 
+There are some good stats on [Tiobe](http://www.tiobe.com/tiobe-index/).
+
 # 2017
 
 ## Simple Programmer
