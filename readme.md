@@ -1,88 +1,19 @@
-A collection of opinions from various programming luminaries and unknowns with good YouTube channels. Obviously this is general programming and not your niche but you still need to employ people from "the outside": perhaps future projects should take this into account? 
+A summary of opinions from various programming luminaries and unknowns with good
+YouTube channels. 
 
-|               | 2016          | 2017          | 2017 (new languages)	| 2018
-|---------------|---------------|---------------|-----------------------|--------------------
-| 1             | JavaScript    | JavaScript    | Rust                  | 
-| 2             | Java          | Python        | Go                    |
-| 3             | Python        | Java          | Swift                 |
-| 4             | C++           | C#            | Elixir                |
-| 5             | C#            | Go            | Clojure               |
-| 6             | Swift         | C++           | TypeScript            |
-| 7             | Ruby          | Swift         | Hack                  |
-| 8             | PHP           | PHP           | Julia                 |
-| 9             | Go            | C             | Kotlin                |
-| 10            | C             | Ruby          | Elm                   |
+|    | 2016       | 2017       | 2017 (new)	| 2018
+|----|------------|------------|------------|------------
+| 1  | JavaScript | JavaScript | Rust       | C#
+| 2  | Java       | Python     | Go         | JavaScript
+| 3  | Python     | Java       | Swift      | Java
+| 4  | C++        | C#         | Elixir     | Python
+| 5  | C#         | Go         | Clojure    | Swift
+| 6  | Swift      | C++        | TypeScript | TypeScript
+| 7  | Ruby       | Swift      | Hack       | C++
+| 8  | PHP        | PHP        | Julia      | Go
+| 9  | Go         | C          | Kotlin     | Assembler
+| 10 | C          | Ruby       | Elm        | Haskell
 
-This table is actually the opinion of one man: Chris Hawkes. But I think it
-describes the general consensus of research so far.
+There are some good stats on [Tiobe](http://www.tiobe.com/tiobe-index/). Latest column by Kurdistany Gawra.
 
-[Chris on YouTube](https://www.youtube.com/watch?v=Z56GLRXxh88)
-
-There are some good stats on [Tiobe](http://www.tiobe.com/tiobe-index/).
-
-# 2017
-
-## Simple Programmer
-
-- Java
-- C#
-- C++
-- JavaScript
-- Rust
-- Swift
-- Elixir
-- Python
-- Go
-
-### To avoid
-
-- Objective C
-- Ruby
-
-[Simple Programmer on YouTube](https://www.youtube.com/watch?v=R4hNmWvFcxo)
-
-# 2016
-
-## Bjarne Stroustrup
-
-- C++ 
-- Java 
-- Python 
-- Ruby
-- JavaScript
-- C 
-- C#
-- One of the functional languages
-- High performance numerical computation
-
-[Bjarne on YouTube](https://www.youtube.com/watch?v=NvWTnIoQZj4)
-
-## Larry Wall
-
-- Java (the Cobol of the 21st Century)
-- Haskell (functional - mathematical - a modern Lisp)
-- C
-- Python
-- Ruby
-- Perl
-
-[Larry on YouTube](https://www.youtube.com/watch?v=LR8fQiskYII)
-
-## Hitesh Choudhary
-
-1. JavaScript
-2. Python
-3. Java / Swift
-4. PHP
-5. SQL
-
-[Hitesh on YouTube](https://www.youtube.com/watch?v=bz1VbsukA9E)
-
-# Difficult programming languages
-
-- Scala
-- Prolog
-- Lisp
-- Haskell
-- Assembly
-- APL
+See [references](references.md).
