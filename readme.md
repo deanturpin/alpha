@@ -1,8 +1,8 @@
 A collection of opinions from various programming luminaries and unknowns with good YouTube channels. Obviously this is general programming and not your niche but you still need to employ people from "the outside": perhaps future projects should take this into account? 
 
-|               | 2016          | 2017          | 2017 (new languages)	|
-|---------------|---------------|---------------|-----------------------|
-| 1             | JavaScript    | JavaScript    | Rust                  |
+|               | 2016          | 2017          | 2017 (new languages)	| 2018
+|---------------|---------------|---------------|-----------------------|--------------------
+| 1             | JavaScript    | JavaScript    | Rust                  | 
 | 2             | Java          | Python        | Go                    |
 | 3             | Python        | Java          | Swift                 |
 | 4             | C++           | C#            | Elixir                |
