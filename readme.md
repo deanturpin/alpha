@@ -1,5 +1,5 @@
 A summary of opinions from various programming luminaries and unknowns with good
-YouTube channels. 
+YouTube channels.
 
 |    | 2016       | 2017       | 2018
 |----|------------|------------|------------
@@ -14,22 +14,23 @@ YouTube channels.
 | 9  | Go         | C          | Assembler
 | 10 | C          | Ruby       | Haskell
 
-There are some good stats on [Tiobe](http://www.tiobe.com/tiobe-index/). Latest column by Kurdistany Gawra.
+There are some good stats on [Tiobe](http://www.tiobe.com/tiobe-index/). Latest
+column by Kurdistany Gawra.
 
 See [references](references.md).
 
 
 # New languages
 
-| 2017 |
+| 2017       |
 |------------|
-| Rust       | 
-| Go         | 
-| Swift      | 
-| Elixir     | 
-| Clojure    | 
-| TypeScript | 
-| Hack       | 
-| Julia      | 
-| Kotlin     | 
-| Elm        | 
+| Rust       |
+| Go         |
+| Swift      |
+| Elixir     |
+| Clojure    |
+| TypeScript |
+| Hack       |
+| Julia      |
+| Kotlin     |
+| Elm        |
